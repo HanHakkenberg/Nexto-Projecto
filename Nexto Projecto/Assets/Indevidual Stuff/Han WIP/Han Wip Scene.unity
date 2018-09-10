@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6197a1a7fa8fead4ea49dca6b5007b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myEvent: {fileID: 0}
+  myEvent: {fileID: 11400000, guid: 9fcf1d9a4f55d8049ac51ea3e14ac4bf, type: 2}
   myUnityEvent:
     m_PersistentCalls:
       m_Calls:
