@@ -8,7 +8,9 @@ public class InputDownEvent : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetButtonDown(myInput)) {
-			myEvent.Raise();
+            if(myEvent != null) {
+                myEvent.Raise();
+            }
             myUnityEvent.Invoke();
         }
 	}

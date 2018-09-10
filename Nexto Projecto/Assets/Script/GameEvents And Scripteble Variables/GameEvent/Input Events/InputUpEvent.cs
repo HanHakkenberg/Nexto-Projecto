@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class InputUpEvent : MonoBehaviour {
 	[SerializeField] GameEvent myEvent;
-	[SerializeField] string myInput;
+    [SerializeField] UnityEvent myUnityEvent;
+    [SerializeField] string myInput;
 
 	void Update() {
 		if (Input.GetButtonUp(myInput)) {
-			myEvent.Raise();
+            if(myEvent != null) {
+                myEvent.Raise();
+            }
+            myEvent.Raise();
 		}
 	}
 }
