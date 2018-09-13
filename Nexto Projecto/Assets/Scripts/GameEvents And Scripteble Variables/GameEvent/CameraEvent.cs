@@ -23,6 +23,6 @@ public class CameraEvent : MonoBehaviour {
 	}
 
 	public void UpdatePhysicalCamera() {
-		Target.usePhysicalProperties = physicalCamera.Value;
+		//Target.ph = physicalCamera.Value;
 	}
 }
