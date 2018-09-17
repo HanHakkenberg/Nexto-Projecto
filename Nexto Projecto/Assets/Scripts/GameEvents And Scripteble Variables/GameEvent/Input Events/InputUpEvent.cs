@@ -11,7 +11,7 @@ public class InputUpEvent : MonoBehaviour {
             if(myEvent != null) {
                 myEvent.Raise();
             }
-            myEvent.Raise();
+            myUnityEvent.Invoke();
 		}
 	}
 }
