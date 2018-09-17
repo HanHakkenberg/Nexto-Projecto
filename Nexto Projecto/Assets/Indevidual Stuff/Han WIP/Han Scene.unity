@@ -4117,176 +4117,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1453061523}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1531198050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1531198051}
-  - component: {fileID: 1531198055}
-  - component: {fileID: 1531198054}
-  - component: {fileID: 1531198053}
-  - component: {fileID: 1531198052}
-  m_Layer: 0
-  m_Name: Inputs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1531198051
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531198050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1758757661}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1531198052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531198050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 962a6d8d4583ae249818189bb82a1230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myEvent: {fileID: 0}
-  myUnityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1758757662}
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  myInput: Fire2
---- !u!114 &1531198053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531198050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 962a6d8d4583ae249818189bb82a1230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myEvent: {fileID: 0}
-  myUnityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1758757662}
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  myInput: Fire1
---- !u!114 &1531198054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531198050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6197a1a7fa8fead4ea49dca6b5007b7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myEvent: {fileID: 0}
-  myUnityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1758757663}
-        m_MethodName: ChangeBool
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1758757662}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  myInput: Fire2
---- !u!114 &1531198055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1531198050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6197a1a7fa8fead4ea49dca6b5007b7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myEvent: {fileID: 0}
-  myUnityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1758757663}
-        m_MethodName: ChangeBool
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Backward
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1758757662}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  myInput: Fire1
 --- !u!1 &1536773715
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,8 +4653,6 @@ GameObject:
   - component: {fileID: 1758757666}
   - component: {fileID: 1758757665}
   - component: {fileID: 1758757664}
-  - component: {fileID: 1758757662}
-  - component: {fileID: 1758757663}
   m_Layer: 0
   m_Name: Turning Wheal trigger
   m_TagString: Untagged
@@ -4841,42 +4669,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1531198051}
+  m_Children: []
   m_Father: {fileID: 1684556635}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1758757662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1758757660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36032fd6db675024c9f41b9ad7f0f0bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnimator: {fileID: 1775051183}
-  turnAtStart: 0
---- !u!114 &1758757663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1758757660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a2464ddc5816a45a1ce7dcfbfda444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnimator: {fileID: 1775051183}
-  Parameter: Forward
-  newReferense:
-    value: 0
-    variable: {fileID: 0}
-    useConstant: 0
-    myEvent: {fileID: 0}
 --- !u!114 &1758757664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4892,8 +4688,8 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531198050}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1775051186}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4920,8 +4716,8 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531198050}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1775051186}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4961,6 +4757,7 @@ GameObject:
   - component: {fileID: 1775051185}
   - component: {fileID: 1775051184}
   - component: {fileID: 1775051183}
+  - component: {fileID: 1775051186}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -4974,14 +4771,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775051181}
-  m_LocalRotation: {x: 0.5000001, y: 0.50000006, z: 0.49999997, w: 0.49999997}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 1.49, z: -0.28999996}
   m_LocalScale: {x: 1, y: 0.22128692, z: 1}
   m_Children:
   - {fileID: 1449850528}
   m_Father: {fileID: 1684556635}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!95 &1775051183
 Animator:
   serializedVersion: 3
@@ -4989,7 +4786,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775051181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c27dc5f837ac19a4e80732f9ca2d346e, type: 2}
   m_CullingMode: 0
@@ -5042,6 +4839,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775051181}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1775051186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1775051181}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efeda6af9dbdeb4ebe620980adf5a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  minRot: 0
+  maxRot: 540
 --- !u!95 &1804458166 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95922513256835224, guid: a7da03077c8a5b644aeae893cecf452d,
