@@ -3,14 +3,16 @@
 public class Destructible : MonoBehaviour {
     [SerializeField] string destructionTag;
     [SerializeField] string getFromPool;
+    [SerializeField] bool doesAddToPool;
     [SerializeField] string addToPool;
 
     void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.CompareTag("Projectile")) {
-            Debug.Log("kS");
+            ObjectPooler.instance.GetFromPool(getFromPool, transform.position, transform.rotation);
 
-            ObjectPooler.instance.GetFromPool(getFromPool,transform.position,transform.rotation);
-            ObjectPooler.instance.AddToPool(addToPool,gameObject);
+            if(doesAddToPool == true) {
+                ObjectPooler.instance.AddToPool(addToPool, gameObject);
+            }
         }
     }
 }

@@ -17,7 +17,6 @@ public class Gumball : MonoBehaviour {
 
         currentLifeSpen -= Time.deltaTime;
         if(currentLifeSpen <= 0) {
-            Debug.Log("s");
             onDestroy.Invoke();
         }
     }
@@ -27,7 +26,6 @@ public class Gumball : MonoBehaviour {
             transform.localEulerAngles = Quaternion.LookRotation(Vector3.Reflect(transform.forward, collision.contacts[0].normal), Vector3.up).eulerAngles;
         }
         else {
-            Debug.Log("s");
             onDestroy.Invoke();
         }
     }
