@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour {
 			if(currentObjectInRange != null) {
 				if(objectCarried != null) {
 					Drop();
+					return;
 				}
 
 			objectCarried = currentObjectInRange;
@@ -85,14 +86,22 @@ public class PlayerController : MonoBehaviour {
 			pickupLocation.GetComponent<BoxCollider>().enabled = true;
 			objectCarried.transform.position = pickupLocation.position;
 			objectCarried.isKinematic = true;
+
+			foreach(Collider _Col in objectCarried.GetComponents<Collider>())
+				if(_Col.isTrigger == false)
+					_Col.enabled = false;
 		} else if(objectCarried != null)
 			Drop();
 		}
 	}
 
 	private void Drop() {
+		foreach(Collider _Col in objectCarried.GetComponents<Collider>())
+			if(_Col.isTrigger == false)
+			_Col.enabled = true;
 		objectCarried.transform.SetParent(null);
 		objectCarried.isKinematic = false;
+		objectCarried = null;
 		pickupLocation.GetComponent<BoxCollider>().enabled = false;
 	}
 
