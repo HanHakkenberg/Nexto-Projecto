@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dffef66376be4fa480fb02b19edbe903
+guid: e134c8eaa2e389d4a9e245df54664bba
 TextureImporter:
   fileIDToRecycleName:
     21300000: EmojiOne_0
@@ -58,8 +58,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
