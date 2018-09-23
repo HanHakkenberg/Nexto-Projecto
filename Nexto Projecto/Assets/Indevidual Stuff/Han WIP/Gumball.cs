@@ -23,7 +23,9 @@ public class Gumball : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.CompareTag("GumballInteraction")) {
-            transform.localEulerAngles = Quaternion.LookRotation(Vector3.Reflect(transform.forward, collision.contacts[0].normal), Vector3.up).eulerAngles;
+            Vector3 v = Vector3.Reflect(transform.forward, collision.contacts[0].normal);
+            float newYRot = 90 - Mathf.Atan2(v.z, v.x) * Mathf.Rad2Deg;
+            transform.eulerAngles = new Vector3(0, newYRot, 0);
         }
         else {
             onDestroy.Invoke();
