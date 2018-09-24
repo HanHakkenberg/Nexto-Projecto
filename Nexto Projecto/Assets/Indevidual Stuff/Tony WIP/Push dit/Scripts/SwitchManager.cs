@@ -39,7 +39,7 @@ public class SwitchManager : MonoBehaviour
                 FollowsCompanion = false;
                 baby.GetComponent<PlayerController>().ToggleController(true);
                 camTarget.SetParent(baby.transform);
-                Destroy(companion.transform.parent);
+                Destroy(companion.transform.parent.gameObject);
 
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 4f;
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 6f;
