@@ -9,17 +9,27 @@ public class PlayerController : MonoBehaviour {
 	[Header("Pickup Settings:")]
 	public Transform pickupLocation;
 	public Rigidbody objectCarried;
+	public Rigidbody currentObjectInRange;
+
+	[Header("Collision Detection:")]
+	public float distanceTillGrounded = 0.51f;
 
 	[Header("Movement:")]
+	public bool canControl = true;
 	public float sensitivity = 10;
 	public float sprintSpeed = 5;
 	public float walkSpeed = 2.5f;
 
 	[Header("Abilities:")]
 	public int maxJumpAmount = 2;
+	public float stompForce = 2;
+	public bool canStomp;
+	public Collider stompCollider;
+
+	[Header("Collider Settings:")]
+	public LayerMask ignoreMask;
 
 	#region Private References
-	Rigidbody currentObjectInRange;
 	Rigidbody thisBody;
 	Vector3 currentPosition;
 	Camera mainCamera;
@@ -36,7 +46,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void OnTriggerExit(Collider _C) {
-		if(_C.gameObject == currentObjectInRange)
+	if(_C.GetComponent<Rigidbody>())
+		if(currentObjectInRange == _C.GetComponent<Rigidbody>())
 				currentObjectInRange = null;
 	}
 
@@ -47,19 +58,36 @@ public class PlayerController : MonoBehaviour {
 		anim = GetComponent<Animator>();
 	}
 
+	public void ToggleController(bool _Toggle) {
+		canControl = _Toggle;
+
+		if(canControl == false)
+			anim.SetInteger("WalkingState", 0);
+	}
+
 	public void Update() {
+		anim.SetBool("Grounded", CheckGrounded());
+
+		if(canControl == true) {
 		Jump();
 		Move();
 		Rotate();
 		Pickup();
+		Stomp();
+		}
 	}
 
 	private bool CheckGrounded() {
 		RaycastHit hit;  
-			if(Physics.Raycast(col.transform.position, Vector3.down, out hit,  0.51f)) {
+			if(Physics.Raycast(col.transform.position, Vector3.down, out hit,  distanceTillGrounded, ignoreMask)) {
 				if(hit.transform.gameObject.tag != "Player") {
 					if(!Input.GetKey(KeyCode.Space))
 					ResetJumpCount();
+
+					if(stompCollider == true) {
+						stompCollider.enabled = false;
+					}
+
 					return true;
 				}
 			}
@@ -74,14 +102,13 @@ public class PlayerController : MonoBehaviour {
 
 	private void Pickup() {
 		if(Input.GetButtonDown("Fire1")) {
-			if(currentObjectInRange != null) {
-				if(objectCarried != null) {
+			if(objectCarried != null) {
 					Drop();
 					return;
-				}
+			}
 
+			if(currentObjectInRange != null) {
 			objectCarried = currentObjectInRange;
-			currentObjectInRange = null;
 			objectCarried.transform.SetParent(pickupLocation);
 			pickupLocation.GetComponent<BoxCollider>().enabled = true;
 			objectCarried.transform.position = pickupLocation.position;
@@ -90,8 +117,7 @@ public class PlayerController : MonoBehaviour {
 			foreach(Collider _Col in objectCarried.GetComponents<Collider>())
 				if(_Col.isTrigger == false)
 					_Col.enabled = false;
-		} else if(objectCarried != null)
-			Drop();
+			}
 		}
 	}
 
@@ -102,13 +128,14 @@ public class PlayerController : MonoBehaviour {
 		objectCarried.transform.SetParent(null);
 		objectCarried.isKinematic = false;
 		objectCarried = null;
+		if(currentObjectInRange != null)
+		currentObjectInRange = null;
 		pickupLocation.GetComponent<BoxCollider>().enabled = false;
 	}
 
 	private void Move() {
 		var forward = mainCamera.transform.TransformDirection(Vector3.forward);
         var right = mainCamera.transform.TransformDirection(Vector3.right);
-		anim.SetBool("Grounded", CheckGrounded());
 		inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 		forward.y = 0;
         targetDirection = inputs.x * right + inputs.y * forward;
@@ -151,6 +178,19 @@ public class PlayerController : MonoBehaviour {
 				 jumpCount++;
 			}
 		}
+	}
+
+    private void Stomp() {
+		if(Input.GetKeyDown(KeyCode.LeftAlt)) {
+			if(canStomp == true) {
+				if(stompCollider.enabled == false) {
+					if(!CheckGrounded()) {
+						stompCollider.enabled = true;
+						thisBody.AddForce(Vector3.down * stompForce);
+					}
+				}
+			}
+		}	
 	}
 
 #region Animation Events

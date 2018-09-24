@@ -5,7 +5,8 @@ using UnityEngine;
 public class SwitchManager : MonoBehaviour
 {
 
-    public Cinemachine.CinemachineFreeLook Vcam { get { return GameObject.Find("CM vcam1").GetComponent<Cinemachine.CinemachineFreeLook>(); } }
+    public Cinemachine.CinemachineFreeLook Vcam { get { return GameObject.Find("Main Virtual Camera").GetComponent<Cinemachine.CinemachineFreeLook>(); } }
+    public GameObject companionInstance;
 
     public bool FollowsCompanion;
 
@@ -17,11 +18,6 @@ public class SwitchManager : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
-    private void Awake()
-    {
-        companion.GetComponent<CompanionMovement>().enabled =false;
-    }
-
     void Update()
     {
         if (Input.GetButtonDown("SwitchKey"))
@@ -29,8 +25,9 @@ public class SwitchManager : MonoBehaviour
             if (!FollowsCompanion)
             {
                 FollowsCompanion = true;
-                baby.GetComponent<BabyMovement>().enabled = false;
-                companion.GetComponent<CompanionMovement>().enabled = true;
+                baby.GetComponent<PlayerController>().ToggleController(false);
+                companion = Instantiate(companionInstance, baby.transform.position, Quaternion.identity);
+                companion = companion.transform.GetChild(0).gameObject;
                 camTarget.SetParent(companion.transform);
 
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 2f;
@@ -40,9 +37,9 @@ public class SwitchManager : MonoBehaviour
             else
             {
                 FollowsCompanion = false;
-                companion.GetComponent<CompanionMovement>().enabled = false;
-                baby.GetComponent<BabyMovement>().enabled = true;
+                baby.GetComponent<PlayerController>().ToggleController(true);
                 camTarget.SetParent(baby.transform);
+                Destroy(companion.transform.parent.gameObject);
 
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 4f;
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 6f;
@@ -51,7 +48,7 @@ public class SwitchManager : MonoBehaviour
         }
         if (!FollowsCompanion)
         {
-            camTarget.position = Vector3.Lerp(camTarget.transform.position, baby.transform.position, 2f*Time.deltaTime);
+            camTarget.position = Vector3.Lerp(camTarget.transform.position, baby.transform.position + new Vector3(0, 0.7f, 0), 2f*Time.deltaTime);
 
         }
         else if (FollowsCompanion)
