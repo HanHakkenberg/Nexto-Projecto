@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	[Header("Pickup Settings:")]
 	public Transform pickupLocation;
 	public Rigidbody objectCarried;
+	public Rigidbody currentObjectInRange;
 
 	[Header("Collision Detection:")]
 	public float distanceTillGrounded = 0.51f;
@@ -21,9 +22,14 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Abilities:")]
 	public int maxJumpAmount = 2;
+	public float stompForce = 2;
+	public bool canStomp;
+	public Collider stompCollider;
+
+	[Header("Collider Settings:")]
+	public LayerMask ignoreMask;
 
 	#region Private References
-	public Rigidbody currentObjectInRange;
 	Rigidbody thisBody;
 	Vector3 currentPosition;
 	Camera mainCamera;
@@ -67,15 +73,21 @@ public class PlayerController : MonoBehaviour {
 		Move();
 		Rotate();
 		Pickup();
+		Stomp();
 		}
 	}
 
 	private bool CheckGrounded() {
 		RaycastHit hit;  
-			if(Physics.Raycast(col.transform.position, Vector3.down, out hit,  distanceTillGrounded)) {
+			if(Physics.Raycast(col.transform.position, Vector3.down, out hit,  distanceTillGrounded, ignoreMask)) {
 				if(hit.transform.gameObject.tag != "Player") {
 					if(!Input.GetKey(KeyCode.Space))
 					ResetJumpCount();
+
+					if(stompCollider == true) {
+						stompCollider.enabled = false;
+					}
+
 					return true;
 				}
 			}
@@ -168,6 +180,18 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    private void Stomp() {
+		if(Input.GetKeyDown(KeyCode.LeftAlt)) {
+			if(canStomp == true) {
+				if(stompCollider.enabled == false) {
+					if(!CheckGrounded()) {
+						stompCollider.enabled = true;
+						thisBody.AddForce(Vector3.down * stompForce);
+					}
+				}
+			}
+		}	
+	}
 
 #region Animation Events
 	private void ResetJumpCount() {
