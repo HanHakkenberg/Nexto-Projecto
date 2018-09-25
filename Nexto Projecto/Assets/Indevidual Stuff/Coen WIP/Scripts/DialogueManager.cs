@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour {
 	public Text uiName;
 	public Text uiDialogue;
 	public GameObject progressIndicator;
+	public GameObject tooltip;
 
 	[Header("Visual Effects:")]
 	public float timeTillNewChar = 0.15f;

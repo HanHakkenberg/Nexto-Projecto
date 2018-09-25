@@ -47,7 +47,6 @@ public class CompanionMovement : MonoBehaviour {
         var forward = Camera.main.transform.TransformDirection(Vector3.forward*5);
         var right = Camera.main.transform.TransformDirection(Vector3.right*5);
         var up = Camera.main.transform.TransformDirection(Vector3.up * 5);
-            print("yes");
             rigidbody.AddForce(forward* Input.GetAxis("Vertical"), ForceMode.Force);
             rigidbody.AddForce(right*Input.GetAxis("Horizontal"), ForceMode.Force);
 

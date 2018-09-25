@@ -9,20 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
-  m_Name: Dialogue Container
+  m_Name: Fairy
   m_EditorClassIdentifier: 
   dialogue:
-  - name: Henk
-    currDialogueBox: Well, hey there.
-  - name: Henk
-    currDialogueBox: 'Soooo......
-
-'
+  - name: Navi
+    currDialogueBox: Hey listen!
   - name: You
-    currDialogueBox: Mhm...
-  - name: Henk
-    currDialogueBox: Game finiiiiiiiiiiiiiiiished yet??????
+    currDialogueBox: Uhm, is this a reference.
+  - name: Navi
+    currDialogueBox: '...'
   - name: You
-    currDialogueBox: Nope...
-  - name: Henk
-    currDialogueBox: Cool.
+    currDialogueBox: I knew it.
+  - name: Navi
+    currDialogueBox: Copyright strike?
+  - name: You
+    currDialogueBox: ./././*sigh*

@@ -16,12 +16,14 @@ public class DialogueContainer : MonoBehaviour {
 	void OnTriggerEnter(Collider _C) {
 		if(_C.transform.tag == "Player") {
 			canLoadUpDialogue = true;
+			DialogueManager.dialogueManager.tooltip.SetActive(true);
 		}
 	}
 
 	void OnTriggerExit(Collider _C) {
 		if(_C.transform.tag == "Player") {
 			canLoadUpDialogue = false;
+			DialogueManager.dialogueManager.tooltip.SetActive(false);
 		}
 	}
 
@@ -30,6 +32,7 @@ public class DialogueContainer : MonoBehaviour {
 			if(canLoadUpDialogue == true) {
 				if(GameManager.gameManager.gameTimeout == false) {
 					DialogueManager.dialogueManager.LoadInNewDialogue(dialogue);
+					DialogueManager.dialogueManager.tooltip.SetActive(false);
 					}
 				}
 			}
