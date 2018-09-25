@@ -11,11 +11,12 @@ public class GameManager : MonoBehaviour {
 	public bool gameTimeout = false;
 
 	void Awake() {
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Confined;
+
 		if(gameManager != null)
 		return;
 		else
 		gameManager = this;
 	}
-	
-
 }
