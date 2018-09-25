@@ -37,7 +37,12 @@ public class CompanionMovement : MonoBehaviour {
     }
 
     void Move()
-    {
+    {   
+        if(GameManager.gameManager.gameTimeout == true) {
+            rigidbody.velocity = Vector3.zero;
+            return;
+        }
+
         if(hasFullyInstantiated == true) {
         var forward = Camera.main.transform.TransformDirection(Vector3.forward*5);
         var right = Camera.main.transform.TransformDirection(Vector3.right*5);
@@ -53,6 +58,5 @@ public class CompanionMovement : MonoBehaviour {
           
             rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, Vector3.zero, 5f * Time.deltaTime);
         }
-        
     }
 }

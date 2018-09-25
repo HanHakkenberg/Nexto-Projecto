@@ -20,6 +20,8 @@ public class SwitchManager : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.gameManager.gameTimeout == true) return;
+
         if (Input.GetButtonDown("SwitchKey"))
         {
             if (!FollowsCompanion)

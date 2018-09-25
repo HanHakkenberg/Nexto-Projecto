@@ -68,13 +68,16 @@ public class PlayerController : MonoBehaviour {
 	public void Update() {
 		anim.SetBool("Grounded", CheckGrounded());
 
-		if(canControl == true) {
+		if(GameManager.gameManager.gameTimeout == false && canControl == true) {
 		Jump();
 		Move();
 		Rotate();
 		Pickup();
 		Stomp();
+		return;
 		}
+
+		anim.SetInteger("WalkingState", 0);
 	}
 
 	private bool CheckGrounded() {
