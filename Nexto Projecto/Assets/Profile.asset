@@ -43,10 +43,10 @@ MonoBehaviour:
     value: 2
   toneCurveToeStrength:
     overrideState: 1
-    value: 0
+    value: 1
   toneCurveToeLength:
     overrideState: 1
-    value: 0.5
+    value: 0.295
   toneCurveShoulderStrength:
     overrideState: 1
     value: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     value: 0.5
   toneCurveShoulderAngle:
     overrideState: 1
-    value: 0
+    value: 1
   toneCurveGamma:
     overrideState: 1
     value: 1
@@ -1343,19 +1343,23 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.41
+    value: 21.19
   threshold:
     overrideState: 1
-    value: 0.6
+    value: 2.8
   softKnee:
     overrideState: 1
+<<<<<<< HEAD
+    value: 0.893
+=======
     value: 0.98
+>>>>>>> origin/master
   clamp:
     overrideState: 0
     value: 65472
   diffusion:
     overrideState: 1
-    value: 9.4
+    value: 10
   anamorphicRatio:
     overrideState: 1
     value: 0
@@ -1435,7 +1439,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0
+    value: 1
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -1453,7 +1457,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 1
+    value: 1.3
   directLightingStrength:
     overrideState: 1
     value: 0

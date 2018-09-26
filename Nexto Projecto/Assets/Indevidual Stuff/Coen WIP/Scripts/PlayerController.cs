@@ -202,6 +202,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void AddJumpForce() {
+		thisBody.velocity = Vector3.zero;
 		thisBody.AddForce(new Vector3(0, 1.2f, 0), ForceMode.Impulse);
 	}
 

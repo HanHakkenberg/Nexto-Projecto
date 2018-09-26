@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour {
 
+	bool hasBeenPickedUp = false;
+
 	void OnTriggerEnter(Collider _C) {
 		if(_C.transform.tag == "Player") {
+			if(hasBeenPickedUp == false) {
+			hasBeenPickedUp = true;
+			StartCoroutine(GameManager.gameManager.AddDiaper());
 			StartCoroutine(DestroySelf());
+			}
 		}
 	}
 
