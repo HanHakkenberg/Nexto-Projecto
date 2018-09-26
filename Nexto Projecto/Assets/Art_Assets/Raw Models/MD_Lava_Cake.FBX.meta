@@ -1,53 +1,21 @@
 fileFormatVersion: 2
-guid: f038c985e3588a04b937e5b6fa043aff
+guid: 40672f36c4373184f95a1fc42b48b1d0
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Bak_Blue
-    100002: Bak_Green
-    100004: Bak_Orange
-    100006: Bak_Purple
-    100008: Bak_Red
-    100010: Bak_Yellow
-    100012: Ferris_Wheel_Base
-    100014: Ferris_Wheel_Spinning_Part
-    100016: //RootNode
-    400000: Bak_Blue
-    400002: Bak_Green
-    400004: Bak_Orange
-    400006: Bak_Purple
-    400008: Bak_Red
-    400010: Bak_Yellow
-    400012: Ferris_Wheel_Base
-    400014: Ferris_Wheel_Spinning_Part
-    400016: //RootNode
+    100000: Cake_Waterfall
+    100002: Ceiling
+    100004: //RootNode
+    400000: Cake_Waterfall
+    400002: Ceiling
+    400004: //RootNode
     2100000: No Name
-    2300000: Bak_Blue
-    2300002: Bak_Green
-    2300004: Bak_Orange
-    2300006: Bak_Purple
-    2300008: Bak_Red
-    2300010: Bak_Yellow
-    2300012: Ferris_Wheel_Base
-    2300014: Ferris_Wheel_Spinning_Part
-    3300000: Bak_Blue
-    3300002: Bak_Green
-    3300004: Bak_Orange
-    3300006: Bak_Purple
-    3300008: Bak_Red
-    3300010: Bak_Yellow
-    3300012: Ferris_Wheel_Base
-    3300014: Ferris_Wheel_Spinning_Part
-    4300000: Ferris_Wheel_Base
-    4300002: Ferris_Wheel_Spinning_Part
-    4300004: Bak_Yellow
-    4300006: Bak_Red
-    4300008: Bak_Purple
-    4300010: Bak_Orange
-    4300012: Bak_Green
-    4300014: Bak_Blue
-    7400000: Take 001
-    9500000: //RootNode
+    2300000: Cake_Waterfall
+    2300002: Ceiling
+    3300000: Cake_Waterfall
+    3300002: Ceiling
+    4300000: Ceiling
+    4300002: Cake_Waterfall
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -123,7 +91,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
