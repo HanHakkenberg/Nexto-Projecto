@@ -110,16 +110,6 @@ public class OptionManager : MonoBehaviour {
 			}
 		}
 
-		//SUBTITLE RELATED
-		if(subtitles)
-		{
-			//zodra in game UI klaar is kan ik hier mee verder
-		}
-		else
-		{
-			//zodra in game UI klaar is kan ik hier mee verder
-		}
-
 		//CUTSCENES RELATED
 		if(cutscenes)
 		{
