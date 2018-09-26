@@ -1,0 +1,86 @@
+fileFormatVersion: 2
+guid: 4c0854629b959c443b857257497e8f55
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Eye_Procedural_Generator_Cartoon/Eye_Procedural_Generator_Cartoon
+    400000: Eye_Procedural_Generator_Cartoon/Eye_Procedural_Generator_Cartoon/Transform
+    2100000: mat.Eye_Procedural_Generator
+    2300000: Eye_Procedural_Generator_Cartoon/Eye_Procedural_Generator_Cartoon/MeshRenderer
+    2800000: Eye_Procedural_Generator_Base Color
+    2800002: Eye_Procedural_Generator_Normal
+    2800004: Eye_Procedural_Generator_Metallic
+    2800006: Eye_Procedural_Generator_Ambient Occlusion
+    2800008: Eye_Procedural_Generator_Height
+    3300000: Eye_Procedural_Generator_Cartoon/Eye_Procedural_Generator_Cartoon/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    13500000: Eye_Procedural_Generator_Cartoon/Eye_Procedural_Generator_Cartoon/SphereCollider
+    100100000: Eye_Procedural_Generator_Cartoon
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  mGraphInstanceData:
+  - graphLabel: Eye_Procedural_Generator
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Eye_Procedural_Generator\" label=\"\" >\n
+      \ <presetinput identifier=\"$outputsize\" uid=\"2613470585\" type=\"8\" value=\"10,10\"
+      />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: Base Color,Normal,Metallic,Ambient Occlusion,Height
+    texturePackingList:
+    - outputName: Base Color
+      alphaSource: Base Color
+    - outputName: Normal
+      alphaSource: Normal
+    - outputName: Roughness
+      alphaSource: Roughness
+    - outputName: Metallic
+      alphaSource: Smoothness
+    - outputName: Ambient Occlusion
+      alphaSource: Ambient Occlusion
+    - outputName: Height
+      alphaSource: Height
+    colorSpaceList:
+    - outputName: Base Color
+      bLinear: 0
+    - outputName: Normal
+      bLinear: 1
+    - outputName: Roughness
+      bLinear: 1
+    - outputName: Metallic
+      bLinear: 1
+    - outputName: Ambient Occlusion
+      bLinear: 1
+    - outputName: Height
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 1024
+      textureHeight: 1024
+      textureFormat: 0
+      loadBehavior: 0
+    - label: Standalone
+      bOverride: 0
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      loadBehavior: 0
+    - label: iPhone
+      bOverride: 0
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      loadBehavior: 0
+    material: {fileID: 2100000, guid: 4c0854629b959c443b857257497e8f55, type: 3}
