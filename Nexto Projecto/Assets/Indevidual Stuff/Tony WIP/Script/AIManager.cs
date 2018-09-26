@@ -10,7 +10,8 @@ public class AIManager : MonoBehaviour
     public NavMeshPath path;
     public float tick = 1f;
     public Vector3 destination;
-    public Vector2 walkSize;
+    public Vector2 walkSizeX;
+    public Vector2 walkSizeY;
 
     public List<NavMeshAgent> agents = new List<NavMeshAgent>();
 
@@ -22,7 +23,7 @@ public class AIManager : MonoBehaviour
     private void AssignPath(NavMeshAgent agent)
     {
 
-        destination = new Vector3(Random.Range(-walkSize.x, walkSize.x), 0, Random.Range(-walkSize.y, walkSize.y));
+        destination = new Vector3(Random.Range(walkSizeX.x, walkSizeX.y), 0, Random.Range(walkSizeY.x, walkSizeY.y));
         if (CalculatePath(agent) == true)
         {
             print("path available");
@@ -62,7 +63,7 @@ public class AIManager : MonoBehaviour
                 {
                     AssignPath(agents[i]);
                 }
-                tick = Random.Range(3f, 8f);
+                tick = Random.Range(1f, 2f);
             }
         }
     }

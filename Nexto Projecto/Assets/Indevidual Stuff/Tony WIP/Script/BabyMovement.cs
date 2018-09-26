@@ -33,7 +33,7 @@ public class BabyMovement : MonoBehaviour
 
             fartUp.Play();
             //rigidbody.AddForce(up * 0.3f, ForceMode.Impulse);
-            rigidbody.velocity += new Vector3(0, up.y * 0.3f, 0);
+            rigidbody.velocity += new Vector3(0, up.y * 1f, 0);
     } 
 
     void Dash()
