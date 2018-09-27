@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pausing : MonoBehaviour {
 
-    public bool inGame = false;
     public GameObject pauseScreen;
 
     void Start () {
@@ -19,11 +18,11 @@ public class Pausing : MonoBehaviour {
 
 	public void Starting()
 	{
-        inGame = true;
+       // GetComponent<OptionManager>().inGame = true;
     }
 	void ToPause()
 	{
-		if(Input.GetButtonDown("Cancel") && inGame)
+		if(Input.GetButtonDown("Cancel") && GetComponent<OptionManager>().inGame)
 		{
 			if(pauseScreen.activeInHierarchy == true)
 			{

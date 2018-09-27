@@ -5,31 +5,44 @@ using UnityEngine.UI;
 
 public class OptionManager : MonoBehaviour {
 
-[Header("Lists")]
+	[Header("Lists")]
 	public List <AudioSource> music;
 	public List<AudioSource> effects;
 	public List<AudioSource> environmental;
 	
-[Header("Sliders")]
+	[Header("Sliders")]
 	public Slider musicSlider;
 	public Slider effectSlider;
 	public Slider environmentSlider;
 	List<Slider> allSliders = new List<Slider>();
 
-[Header("Booleans")]
+	[Header("Booleans")]
 	public bool subtitles = true;
 	public bool cutscenes = true;
 	bool masterOn = true;
 	bool musicOn = true;
 	bool effectsOn = true;
 	bool envirOn = true;
+    public bool inGame = false;
 
-	void Start () 
+    [Header("Map")]
+    public GameObject map;
+
+	[Header("Pausing")]
+	public GameObject pauseScreen;
+
+    void Start () 
 	{
 		allSliders.Add(musicSlider);
 		allSliders.Add(effectSlider);
 		allSliders.Add(environmentSlider);
 	}
+
+	void Update()
+	{
+        Map();
+        Pausing();
+    }
 
 	public void MasterClick()
 	{
@@ -55,6 +68,55 @@ public class OptionManager : MonoBehaviour {
 	public void CutsceneClick()
 	{
 		cutscenes = !cutscenes;
+	}
+
+	void Map()
+	{
+		if(Input.GetButtonDown("Space") && inGame) //Moet nog worden aangemaakt
+		{
+            if(map.activeInHierarchy == false)
+			{
+                map.SetActive(true);
+            }
+			else
+			{
+                map.SetActive(false);
+            }
+        }
+	}
+	public void InGame()
+	{
+        inGame = true;
+        TimeScale();
+    }
+
+	public void Pausing()
+	{
+		if(Input.GetButtonDown("Cancel"))
+		{ 
+            if(pauseScreen.activeInHierarchy == false && inGame)
+			{
+                pauseScreen.SetActive(true);
+                inGame = false;
+            }
+			else
+			{
+                pauseScreen.SetActive(false);
+                inGame = true;
+            }
+			TimeScale();
+        }
+	}
+	void TimeScale()
+	{
+		if(inGame)
+		{
+            Time.timeScale = 1;
+        }
+		else
+		{
+            Time.timeScale = 0;
+        }
 	}
 
 	public void MasterVolume(Slider masterSlider)
@@ -116,4 +178,8 @@ public class OptionManager : MonoBehaviour {
 			//Weet nog niet hoe de cutscenes gedaan worden, als ik dat weet kan ik hier mee verder
 		}
 	}
+	public void Quit()
+	{
+        Application.Quit();
+    }
 }
