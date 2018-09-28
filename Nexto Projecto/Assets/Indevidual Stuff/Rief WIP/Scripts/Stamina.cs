@@ -9,14 +9,15 @@ public class Stamina : MonoBehaviour {
     public bool inCombat;
     public float loadTime;
     public int currentLoad;
-    public int maxStamina;
+    public int fartStamina;
     public List<Image> beginFarts = new List<Image>();
     public List<Image> obtainableFarts = new List<Image>();
     float combatTimer = 3;
 
-    [Header("Stamina Bar")]
-    public Image staminaBar;
-    public float staValue;
+    [Header("Run Stamina")]
+    public List<Image> staminaOrb = new List<Image>();
+    public int staCurrLoad;
+    public int runStamina;
 
 
     void Start () 
@@ -27,15 +28,17 @@ public class Stamina : MonoBehaviour {
 
 	void FartCount()
 	{
-		maxStamina = beginFarts.Count;
-	}
+		fartStamina = beginFarts.Count;
+        runStamina = staminaOrb.Count;
+    }
 	
 	void Update ()
 	{
         AddFart();
         FartUpdate();
-        IncreaseBar();
-        DecreaseBar();
+        StaminaUpdate();
+        //IncreaseBar();
+        //DecreaseBar();
         TestAbility(1);
     }
 
@@ -43,7 +46,7 @@ public class Stamina : MonoBehaviour {
 	{
         if (!inCombat)
         {
-            if (currentLoad < maxStamina)
+            if (currentLoad < fartStamina)
             {
                 beginFarts[currentLoad].fillAmount += loadTime * Time.deltaTime;
                 if (beginFarts[currentLoad].fillAmount >= 1)
@@ -61,9 +64,24 @@ public class Stamina : MonoBehaviour {
         }
     }
 
+    void StaminaUpdate()
+    {
+        if (Input.GetButton("Space"))
+        {
+            if (staCurrLoad < runStamina)
+            {
+                staminaOrb[staCurrLoad].fillAmount -= loadTime * Time.deltaTime;
+                if (staminaOrb[staCurrLoad].fillAmount <= 0)
+                {
+                    staCurrLoad++;
+                }
+            }
+        }
+    }
+
     void TestAbility(int _AbilityCost)
     {
-        if(Input.GetButtonDown("SwitchKey") && currentLoad>=1 && _AbilityCost <= currentLoad)
+        if(Input.GetButtonDown("SwitchKey") && currentLoad>=1 && _AbilityCost <= currentLoad && OptionManager.inGame)
         {
             inCombat = true;
             Start();
@@ -96,7 +114,7 @@ public class Stamina : MonoBehaviour {
         }
 	}
 
-	public void DecreaseBar()
+	/*public void DecreaseBar()
 	{
         if (Input.GetButton("Space"))
         {
@@ -109,10 +127,10 @@ public class Stamina : MonoBehaviour {
                 staminaBar.fillAmount -= staValue * Time.deltaTime;
             }
         }
-    }
+    }*/
 
     public void IncreaseBar()
     {
-        staminaBar.fillAmount += (staValue/2) * Time.deltaTime;
+        
     }
 }
