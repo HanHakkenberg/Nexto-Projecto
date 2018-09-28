@@ -23,7 +23,7 @@ public class OptionManager : MonoBehaviour {
 	bool musicOn = true;
 	bool effectsOn = true;
 	bool envirOn = true;
-    public bool inGame = false;
+    public static bool inGame = false;
 
     [Header("Map")]
     public GameObject map;
@@ -41,7 +41,7 @@ public class OptionManager : MonoBehaviour {
 	void Update()
 	{
         Map();
-        Pausing();
+        //Pausing();
     }
 
 	public void MasterClick()
@@ -92,21 +92,18 @@ public class OptionManager : MonoBehaviour {
 
 	public void Pausing()
 	{
-		if(Input.GetButtonDown("Cancel"))
-		{ 
-            if(pauseScreen.activeInHierarchy == false && inGame)
-			{
-                pauseScreen.SetActive(true);
-                inGame = false;
-            }
-			else
-			{
-                pauseScreen.SetActive(false);
-                inGame = true;
-            }
-			TimeScale();
+        if (pauseScreen.activeInHierarchy == true)
+        {
+            Time.timeScale = 0;
+            inGame = false;
         }
-	}
+		else
+		{
+            Time.timeScale = 1;
+            inGame = true;
+        }
+    }
+
 	void TimeScale()
 	{
 		if(inGame)
