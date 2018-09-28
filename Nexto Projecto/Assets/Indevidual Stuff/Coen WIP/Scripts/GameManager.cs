@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 
 	[Header("Death:")]
 	public Animator deathScreen;
+	public Animator deathscreenTwo;
 	public Animator collectables;
 	public Text collectableText;
 	public float timeTillUpdateCollectableUI = 1;
@@ -45,10 +46,12 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator DeathLoading() {
 		deathScreen.SetTrigger("Load");
+		deathscreenTwo.SetBool("Death Screen Enabled", true);
 		gameTimeout = true;
 		yield return new WaitForSeconds(loadTime);
 		gameTimeout = false;
 		player.transform.position = respawnPoint.position;
 		deathScreen.SetTrigger("Unload");
+		deathscreenTwo.SetBool("Death Screen Enabled", false);
 	}
 }
