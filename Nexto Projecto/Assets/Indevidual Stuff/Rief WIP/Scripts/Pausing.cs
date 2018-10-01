@@ -22,7 +22,7 @@ public class Pausing : MonoBehaviour {
     }
 	void ToPause()
 	{
-		if(Input.GetButtonDown("Cancel") && GetComponent<OptionManager>().inGame)
+		if(Input.GetButtonDown("Cancel") && OptionManager.inGame)
 		{
 			if(pauseScreen.activeInHierarchy == true)
 			{

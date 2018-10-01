@@ -11,4 +11,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: Sammie
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - name: Big Ounce
+    currDialogueBox: MY
+  - name: Big Ounce
+    currDialogueBox: THROBBING
+  - name: Big Ounce
+    currDialogueBox: COCK
+  - name: Big Ounce
+    currDialogueBox: NEEDS
+  - name: Big Ounce
+    currDialogueBox: SOME
+  - name: Big Ounce
+    currDialogueBox: STIMULANT

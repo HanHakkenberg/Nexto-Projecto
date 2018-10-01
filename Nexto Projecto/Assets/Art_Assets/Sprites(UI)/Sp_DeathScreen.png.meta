@@ -71,12 +71,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
@@ -84,7 +84,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< HEAD
     spriteID: 497ad0183501a4342bad213c809e2cec
+=======
+    spriteID: 181f9602466c79644938e65f6a84015d
+>>>>>>> 039e521571a8ed43532e453b9b5641520d5260bb
     vertices: []
     indices: 
     edges: []
