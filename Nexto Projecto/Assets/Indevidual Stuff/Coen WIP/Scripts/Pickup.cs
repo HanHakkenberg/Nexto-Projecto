@@ -16,6 +16,7 @@ public class Pickup : MonoBehaviour {
 			hasBeenPickedUp = true;
 			if(shouldUnlockAbility == true) {
 				CutsceneManager.cutsceneManager.LoadCutscene(unlockIndex);
+				StartCoroutine(GameManager.gameManager.AddAbility());
 			} else {
 			StartCoroutine(GameManager.gameManager.AddDiaper());
 			}

@@ -8,10 +8,12 @@ public class DialogueManager : MonoBehaviour {
 	public static DialogueManager dialogueManager;
 
 	[Header("Dialogue UI References:")]
+	public Animator dialogueBox;
 	public GameObject uiCompleteDialogueBox; 
 	public Text uiName;
 	public Text uiDialogue;
 	public GameObject progressIndicator;
+	public GameObject continuationHint;
 	public GameObject tooltip;
 
 	[Header("Visual Effects:")]
@@ -55,6 +57,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void LoadInNewDialogue(Dialogue _Dialogue) {
+		GameManager.gameManager.statisticsParent.SetActive(false);
 		GameManager.gameManager.gameTimeout = true;
 		currentlyUsedDialogue = _Dialogue;
 		charIndex = 0;
@@ -63,7 +66,9 @@ public class DialogueManager : MonoBehaviour {
 		uiName.text = currentlyUsedDialogue.dialogue[dialogueBoxIndex].name;
 		uiDialogue.text = "";
 		progressIndicator.SetActive(false);
-		uiCompleteDialogueBox.SetActive(true);
+		continuationHint.SetActive(false);
+		tooltip.SetActive(false);
+		dialogueBox.SetBool("Load", true);
 	}
 
 	void LoadNextDialogueBox() { //Next page with text;
@@ -76,10 +81,13 @@ public class DialogueManager : MonoBehaviour {
 					uiName.text = currentlyUsedDialogue.dialogue[dialogueBoxIndex].name;
 					uiDialogue.text = "";
 					canGoNextPage = false;
+					continuationHint.SetActive(false);
 					progressIndicator.SetActive(false);
 				} else {
-				uiCompleteDialogueBox.SetActive(false);
+				continuationHint.SetActive(false);
+				dialogueBox.SetBool("Load", false);
 				currentlyUsedDialogue = null;
+				GameManager.gameManager.statisticsParent.SetActive(true);
 				GameManager.gameManager.gameTimeout = false;
 				}
 			} 
@@ -102,6 +110,7 @@ public class DialogueManager : MonoBehaviour {
 					} else {
 						canGoNextPage = true;
 						progressIndicator.SetActive(true);
+						continuationHint.SetActive(true);
 					}
 				}
 			}

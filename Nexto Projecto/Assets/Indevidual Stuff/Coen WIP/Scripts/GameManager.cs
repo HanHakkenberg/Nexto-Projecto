@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour {
 
 	public Transform player;
 
+	[Header("Currency:")]
+	public GameObject statisticsParent;
+	public Animator currencyOrb;
+	public Text abilityCollectableText;
+
 	[Header("Death:")]
 	public Animator deathScreen;
 	public Animator deathscreenTwo;
@@ -16,11 +21,13 @@ public class GameManager : MonoBehaviour {
 	public Text collectableText;
 	public float timeTillUpdateCollectableUI = 1;
 	public float loadTime;
-	public Transform respawnPoint;
 
 	[Header("Game Statistics:")]
 	public int diapers;
+	public int unlockedAbilitys;
 	public bool gameTimeout = false;
+
+	bool died = false;
 
 	void Awake() {
 		Cursor.visible = false;
@@ -34,24 +41,36 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator AddDiaper() {
 		collectables.SetTrigger("In");
-		collectables.SetTrigger("Out");
 		yield return new WaitForSeconds(timeTillUpdateCollectableUI);
+		collectables.SetTrigger("Out");
 		diapers++;
 		collectableText.text = diapers.ToString();
 	}
+	
+	public IEnumerator AddAbility() {
+		currencyOrb.SetTrigger("Get");
+		yield return new WaitForSeconds(timeTillUpdateCollectableUI);
+		unlockedAbilitys++;
+		abilityCollectableText.text = unlockedAbilitys.ToString();
+	}
+
 
 	public void OnDeath() {
 		StartCoroutine(DeathLoading());
 	}
 
 	public IEnumerator DeathLoading() {
+		if(died == false) {
+		died = true;
 		deathScreen.SetTrigger("Load");
 		deathscreenTwo.SetTrigger("Load");
 		gameTimeout = true;
 		yield return new WaitForSeconds(loadTime);
 		gameTimeout = false;
-		player.transform.position = respawnPoint.position;
+		player.transform.position = CheckpointManager.checkpointManager.checkpoint.transform.position;
 		deathScreen.SetTrigger("Unload");
 		deathscreenTwo.SetTrigger("Unload");
+		died = false;
+		}
 	}
 }
