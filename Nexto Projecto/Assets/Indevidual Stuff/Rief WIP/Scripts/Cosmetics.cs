@@ -2,31 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Cosmetics : MonoBehaviour {
 
 	[Header ("In Game")]
 	public int currency;
-	public Text currencyText;
+	public TextMeshProUGUI currencyText;
 
 
 	[Header ("Shop")]
 	public GameObject playerSkin;
 	public List<Material> skinTone;
-	public Text currSkinText;
+	public TextMeshProUGUI currSkinText;
 	int currSkin;
 
 	public List<Mesh> hairType;
 	//public GameObject playerHair;
-	public Text currHairText;
+	public TextMeshProUGUI currHairText;
 	int currHair;
 
-	public List<Material> diaperType;
+    public GameObject diaperColour;
+    public List<Material> diaperType;
 	//public GameObject playerDiaper;
-	public Text currDiaperText;
+	public TextMeshProUGUI currDiaperText;
 	int currDiaper;
 
-	public GameObject cosmeticPanel_temp;
+    public GameObject eyeLeft;
+    public GameObject eyeRight;
+    public List<Material> eyeType;
+    public TextMeshProUGUI currEyesText;
+    int currEyes;
+
+    public GameObject cosmeticPanel_temp;
 	
 
 	void Update () 
@@ -36,7 +44,7 @@ public class Cosmetics : MonoBehaviour {
 
 	void AddCurrency()
 	{
-		if(Input.GetButtonDown("SwitchKey"))
+		if(Input.GetKeyDown("="))
 		{
 			currency++;
 			CurrencyUpdate();
@@ -58,14 +66,22 @@ public class Cosmetics : MonoBehaviour {
 	{
 		playerSkin.GetComponent<Renderer>().material = skinTone[currSkin];
 		currSkinText.text = skinTone[currSkin].name;
-	}
+
+        diaperColour.GetComponent<Renderer>().material = diaperType[currDiaper];
+        currDiaperText.text = diaperType[currDiaper].name;
+
+        eyeLeft.GetComponent<Renderer>().material = eyeType[currEyes];
+		eyeRight.GetComponent<Renderer>().material = eyeType[currEyes];
+        currEyesText.text = eyeType[currEyes].name;
+    }
 
 	public void OpenCosmetics()
 	{
 		if(OptionManager.inGame)
 		{
 			cosmeticPanel_temp.SetActive(true);
-			OptionManager.inGame = false;
+            CosmeticUpdate();
+            OptionManager.inGame = false;
 		}
 	}
 
@@ -117,6 +133,24 @@ public class Cosmetics : MonoBehaviour {
 			currDiaper--;
 			CosmeticUpdate();
 		}
+	}
+
+	public void EyesUp()
+	{
+		if(currEyes > eyeType.Count-1)
+		{
+            currEyes++;
+            CosmeticUpdate();
+        }
+	}
+
+	public void EyesDown()
+	{
+		if(currEyes > 0)
+		{
+            currEyes--;
+			CosmeticUpdate();
+        }
 	}
 	#endregion
 	
