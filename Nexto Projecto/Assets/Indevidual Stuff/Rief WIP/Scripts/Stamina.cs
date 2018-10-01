@@ -9,41 +9,45 @@ public class Stamina : MonoBehaviour {
     public bool inCombat;
     public float loadTime;
     public int currentLoad;
-    public int maxStamina;
+    public int fartStamina;
     public List<Image> beginFarts = new List<Image>();
     public List<Image> obtainableFarts = new List<Image>();
     float combatTimer = 3;
 
-    [Header("Stamina Bar")]
-    public Image staminaBar;
-    public float staValue;
+    [Header("Run Stamina")]
+    public List<Image> staminaOrb = new List<Image>();
+    public int staCurrLoad;
+    public int runStamina;
+    public int maxStamina;
+    public static bool isRunning;
+    bool waitToRegen;
+    float regenTimer = 3;
 
 
     void Start () 
 	{
         FartCount();
-        combatTimer = 3;
     }
 
 	void FartCount()
 	{
-		maxStamina = beginFarts.Count;
-	}
+		fartStamina = beginFarts.Count;
+    }
 	
 	void Update ()
 	{
         AddFart();
         FartUpdate();
-        IncreaseBar();
-        DecreaseBar();
-        TestAbility(1);
+        StaminaUpdate();
+        AbilityUse(1);
+        StaminaTest();
     }
 
 	void FartUpdate()
 	{
-        if (!inCombat)
+        if (!inCombat && OptionManager.inGame)
         {
-            if (currentLoad < maxStamina)
+            if (currentLoad < fartStamina)
             {
                 beginFarts[currentLoad].fillAmount += loadTime * Time.deltaTime;
                 if (beginFarts[currentLoad].fillAmount >= 1)
@@ -61,16 +65,75 @@ public class Stamina : MonoBehaviour {
         }
     }
 
-    void TestAbility(int _AbilityCost)
+    void StaminaTest()
     {
-        if(Input.GetButtonDown("SwitchKey") && currentLoad>=1 && _AbilityCost <= currentLoad)
+        if (Input.GetButton("Space"))
+        {
+            isRunning = true;
+        }
+        else
+        {
+            isRunning = false;
+        }
+    }
+    void StaminaUpdate()
+    {
+        if(staCurrLoad < 0)
+        {
+            staCurrLoad = 0;
+        }
+
+        if(isRunning){
+            if (staCurrLoad >= runStamina)
+            {
+                staminaOrb[staCurrLoad].fillAmount -= loadTime * Time.deltaTime;
+                if (staminaOrb[staCurrLoad].fillAmount <= 0)
+                {
+                    staCurrLoad--;
+                }
+            }
+        }
+        else
+        {
+            if(staCurrLoad <= maxStamina && waitToRegen == false)
+            {
+                staminaOrb[staCurrLoad].fillAmount += loadTime * Time.deltaTime;
+
+                if(staminaOrb[staCurrLoad].fillAmount >= 1 && staCurrLoad <4)
+                {
+                    staCurrLoad++;
+                }
+            }
+        }
+
+        if(staCurrLoad <= -1)
+        {
+            waitToRegen = true;
+            regenTimer = 3;
+        }
+
+        regenTimer -= Time.deltaTime;
+        if(regenTimer <= 0)
+        {
+            regenTimer = 0;
+            waitToRegen = false;
+        }
+    }
+
+    void AbilityUse(int _AbilityCost)
+    {
+        if(Input.GetButtonDown("SwitchKey") && currentLoad>=1 && _AbilityCost <= currentLoad && OptionManager.inGame) //remove input once implemented
         {
             inCombat = true;
-            Start();
+            Combat();
             currentLoad -= _AbilityCost;
             FartRefresh();
             
         }
+    }
+    void Combat()
+    {
+        combatTimer = 3;
     }
 
     void FartRefresh()
@@ -86,33 +149,17 @@ public class Stamina : MonoBehaviour {
         }
     }
 
-	void AddFart()
+	public void AddFart()
 	{
-		if(Input.GetButtonDown("Shift"))
+		if(Input.GetButtonDown("Shift")) //remove input once implemented
 		{
             beginFarts.Add(obtainableFarts[0]);
             obtainableFarts.Remove(obtainableFarts[0]);
             FartCount();
         }
 	}
-
-	public void DecreaseBar()
-	{
-        if (Input.GetButton("Space"))
-        {
-            if(staminaBar.fillAmount <=0)
-            {
-                //laat de baby kruipen tot een threshold, dan kan de baby weer lopen / rennen
-            }
-            else
-            {
-                staminaBar.fillAmount -= staValue * Time.deltaTime;
-            }
-        }
-    }
-
-    public void IncreaseBar()
+    public void ResetFarts()
     {
-        staminaBar.fillAmount += (staValue/2) * Time.deltaTime;
+        currentLoad = 0;
     }
 }
