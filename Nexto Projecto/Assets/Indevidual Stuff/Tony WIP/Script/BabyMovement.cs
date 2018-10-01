@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BabyAbilities : MonoBehaviour
+public class BabyMovement : MonoBehaviour
 {
     private WaitForSeconds doubleClickTreshHold = new WaitForSeconds(0.3f);
     private float dashReset = 0.4f;
@@ -33,16 +33,9 @@ public class BabyAbilities : MonoBehaviour
 
     public void Jump(float _Power)
     {
-<<<<<<< HEAD:Nexto Projecto/Assets/Indevidual Stuff/Tony WIP/Script/BabyMovement.cs
         rigidbody.velocity = Vector3.zero;
 		rigidbody.AddForce(new Vector3(0, _Power, 0), ForceMode.Impulse);
         fartUp.Play();
-=======
-        var up = GameManager.gameManager.player.transform.TransformDirection(Vector3.up * 5);
-
-            fartUp.Play();
-            rigidbody.velocity += new Vector3(0, up.y * 1f, 0);
->>>>>>> 48c25ad50849cda52fc971073deb8895cfde8722:Nexto Projecto/Assets/Indevidual Stuff/Tony WIP/Script/BabyAbilities.cs
     } 
 
     void Dash()
