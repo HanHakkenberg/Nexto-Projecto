@@ -5,59 +5,56 @@ using UnityEngine;
 public class BabyMovement : MonoBehaviour
 {
     private WaitForSeconds doubleClickTreshHold = new WaitForSeconds(0.3f);
-    public float speed;
-    private int tapCount;
     private float dashReset = 0.4f;
     private Rigidbody rigidbody;
     public ParticleSystem fartUp;
     public ParticleSystem fartForward;
+
+    Animator animator;
+    float timer = 0;
 
     private void Awake()
     {
         rigidbody = transform.GetComponent<Rigidbody>();
         fartUp.Stop();
         fartForward.Stop();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        ResetTimer();
+
         if(GameManager.gameManager.gameTimeout == false) {
         Dash();
-        }
 
-    }
+     }
+ }
 
-    public void Jump()
+    public void Jump(float _Power)
     {
-        var up = GameManager.gameManager.player.transform.TransformDirection(Vector3.up * 5);
-
-            fartUp.Play();
-            //rigidbody.AddForce(up * 0.3f, ForceMode.Impulse);
-            rigidbody.velocity += new Vector3(0, up.y * 1f, 0);
+        rigidbody.velocity = Vector3.zero;
+		rigidbody.AddForce(new Vector3(0, _Power, 0), ForceMode.Impulse);
+        fartUp.Play();
     } 
 
     void Dash()
     {
-        var forward = GameManager.gameManager.player.transform.TransformDirection(Vector3.forward * 5);
-
-        dashReset -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            tapCount++;
-            dashReset = 0.4f;
+        if(Input.GetButtonDown("Fire3")) {
+            animator.SetTrigger("Dash");
+            timer = 0;
         }
+    }
 
-        if(tapCount == 2)
-        {
-            rigidbody.AddForce(forward * 300, ForceMode.Acceleration);
-            fartForward.Play();
-            tapCount = 0;
+    void ResetTimer() {
+        timer += Time.deltaTime;
+        if(timer > dashReset) {
+            timer = 0;
+            animator.ResetTrigger("Dash");
         }
-        if (dashReset <= 0f)
-        {
-            tapCount = 0;
-            dashReset = 0.4f;
-        }
+    }
+
+    void Fart() {
+        fartForward.Play();
     }
 }

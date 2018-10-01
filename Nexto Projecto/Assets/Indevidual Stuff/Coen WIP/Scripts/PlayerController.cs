@@ -66,7 +66,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void Update() {
-		anim.SetBool("Grounded", CheckGrounded());
 
 		if(GameManager.gameManager.gameTimeout == false && canControl == true) {
 		Jump();
@@ -80,11 +79,14 @@ public class PlayerController : MonoBehaviour {
 		anim.SetInteger("WalkingState", 0);
 	}
 
+	void OnCollisionEnter(Collision _C) {
+		anim.SetBool("Grounded", CheckGrounded());
+	}
+
 	private bool CheckGrounded() {
 		RaycastHit hit;  
 			if(Physics.Raycast(col.transform.position, Vector3.down, out hit,  distanceTillGrounded, ignoreMask)) {
 				if(hit.transform.gameObject.tag != "Player") {
-					if(!Input.GetKey(KeyCode.Space))
 					ResetJumpCount();
 
 					if(stompCollider == true) {
@@ -113,7 +115,8 @@ public class PlayerController : MonoBehaviour {
 			if(currentObjectInRange != null) {
 			objectCarried = currentObjectInRange;
 			objectCarried.transform.SetParent(pickupLocation);
-			pickupLocation.GetComponent<BoxCollider>().enabled = true;
+			objectCarried.transform.localEulerAngles = Vector3.zero;
+			pickupLocation.GetComponent<Collider>().enabled = true;
 			objectCarried.transform.position = pickupLocation.position;
 			objectCarried.isKinematic = true;
 
@@ -133,7 +136,7 @@ public class PlayerController : MonoBehaviour {
 		objectCarried = null;
 		if(currentObjectInRange != null)
 		currentObjectInRange = null;
-		pickupLocation.GetComponent<BoxCollider>().enabled = false;
+		pickupLocation.GetComponent<Collider>().enabled = false;
 	}
 
 	private void Move() {
@@ -175,10 +178,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private	void Jump() {
-		anim.SetInteger("JumpState", jumpCount);
 		if(jumpCount < maxJumpAmount) {
 			if(Input.GetKeyDown(KeyCode.Space)) {
 				 jumpCount++;
+				 anim.SetInteger("JumpState", jumpCount);
 			}
 		}
 	}
@@ -199,24 +202,28 @@ public class PlayerController : MonoBehaviour {
 #region Animation Events
 	private void ResetJumpCount() {
 		jumpCount = 0;
+		anim.SetInteger("JumpState", jumpCount);
+	}
+
+	private void ResetGrounding() {
+		anim.SetBool("Grounded", false);
 	}
 
 	private void AddJumpForce() {
 		thisBody.velocity = Vector3.zero;
-		thisBody.AddForce(new Vector3(0, 1.2f, 0), ForceMode.Impulse);
+		thisBody.AddForce(new Vector3(0, 1.5f, 0), ForceMode.Impulse);
+		jumpCount++;
 	}
 
 	private void SwitchMovement(int _MoveID) {
 		movementType = _MoveID;
-		
-		if(_MoveID == 1) { 
-		 thisBody.useGravity = false;
-		 if(walkingState == 2)
+
+	if(walkingState == 2)
 			definitveSpeed = sprintSpeed;
 			else
 			definitveSpeed = walkSpeed;
-		}
-		 else if(_MoveID == 0) {
+
+	if(_MoveID == 0) {
 		ResetJumpCount();
 		walkingState = _MoveID;
 		thisBody.useGravity = true;

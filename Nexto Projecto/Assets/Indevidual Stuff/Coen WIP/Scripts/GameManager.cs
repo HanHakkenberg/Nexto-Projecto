@@ -46,12 +46,12 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator DeathLoading() {
 		deathScreen.SetTrigger("Load");
-		deathscreenTwo.SetBool("Death Screen Enabled", true);
+		deathscreenTwo.SetTrigger("Load");
 		gameTimeout = true;
 		yield return new WaitForSeconds(loadTime);
 		gameTimeout = false;
 		player.transform.position = respawnPoint.position;
 		deathScreen.SetTrigger("Unload");
-		deathscreenTwo.SetBool("Death Screen Enabled", false);
+		deathscreenTwo.SetTrigger("Unload");
 	}
 }
