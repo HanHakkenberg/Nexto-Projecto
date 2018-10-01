@@ -19,7 +19,7 @@ public class CutsceneManager : MonoBehaviour {
 
 	[Header("test")]
 	public Cinemachine.CinemachineFreeLook mainCam;
-	public Cinemachine.CinemachineVirtualCamera abilityCam;
+	public GameObject abilityCam;
 
 	void Awake() {
 		if(cutsceneManager != null)
@@ -36,7 +36,7 @@ public class CutsceneManager : MonoBehaviour {
 		GameManager.gameManager.gameTimeout = true;
 		blackscreen.SetBool("IsFading", true);
 		mainCam.enabled = false;
-		abilityCam.enabled = true;
+		abilityCam.SetActive(true);
 		yield return new WaitForSeconds(2);
 		blackscreen.SetBool("IsFading", false);
 		DialogueManager.dialogueManager.LoadInNewDialogue(cutSceneDialogue[0]);
@@ -48,7 +48,7 @@ public class CutsceneManager : MonoBehaviour {
 		}
 
 		mainCam.enabled = true;
-		abilityCam.enabled = false;
+		abilityCam.SetActive(false);
 		blackscreen.SetBool("IsFading", true);
 		yield return new WaitForSeconds(timeAfterDialogue);
 		blackscreen.SetBool("IsFading", false);

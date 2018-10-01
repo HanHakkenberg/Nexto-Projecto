@@ -390,7 +390,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 30b754517af11c54b9cb1d9de2691728, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5498e0396e3cfa945b048d25a0dfc7f2, type: 2}
   m_Tag: 
   m_SpeedParameter: JumpHeight
   m_MirrorParameter: 
@@ -1273,7 +1273,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Sprint
-  m_Speed: 6.5
+  m_Speed: 24
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101561606853696650}
