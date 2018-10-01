@@ -72,7 +72,7 @@ public class OptionManager : MonoBehaviour {
 
 	void Map()
 	{
-		if(Input.GetButtonDown("Space") && inGame) //Moet nog worden aangemaakt
+		if(Input.GetButtonDown("Map") && inGame) //Moet nog worden aangemaakt
 		{
             if(map.activeInHierarchy == false)
 			{
