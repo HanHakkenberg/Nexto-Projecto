@@ -84,6 +84,7 @@ public class OptionManager : MonoBehaviour {
             }
         }
 	}
+	
 	public void InGame()
 	{
         inGame = true;
