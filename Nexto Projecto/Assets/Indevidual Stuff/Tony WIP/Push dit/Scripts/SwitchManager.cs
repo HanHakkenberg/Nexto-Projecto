@@ -50,12 +50,12 @@ public class SwitchManager : MonoBehaviour
         }
         if (!FollowsCompanion)
         {
-            camTarget.position = Vector3.Lerp(camTarget.transform.position, baby.transform.position + new Vector3(0, 0.7f, 0), 2f*Time.deltaTime);
+            camTarget.position = Vector3.Lerp(camTarget.transform.position, baby.transform.position + new Vector3(0, 0.7f, 0), 4f*Time.deltaTime);
 
         }
         else if (FollowsCompanion)
         {
-            camTarget.position = Vector3.Lerp(camTarget.transform.position, companion.transform.position, 2f*Time.deltaTime);
+            camTarget.position = Vector3.Lerp(camTarget.transform.position, companion.transform.position, 1f*Time.deltaTime);
 
         }
     }

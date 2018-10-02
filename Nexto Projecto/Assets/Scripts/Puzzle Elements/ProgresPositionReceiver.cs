@@ -9,25 +9,25 @@ public class ProgresPositionReceiver : MonoBehaviour {
 
     void Start() {
         if(posX) {
-            transform.position = new Vector3(minX + Mathf.Abs(minX - maxX) * progres.Value, transform.position.y, transform.position.z);
+            transform.localPosition = new Vector3(minX + Mathf.Abs(minX - maxX) * progres.Value, transform.localPosition.y, transform.localPosition.z);
         }
         if(posY) {
-            transform.position = new Vector3(transform.position.x, minY + Mathf.Abs(minY - maxY) * progres.Value, transform.position.z);
+            transform.localPosition = new Vector3(transform.localPosition.x, minY + Mathf.Abs(minY - maxY) * progres.Value, transform.localPosition.z);
         }
         if(posZ) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, minZ + Mathf.Abs(minZ - maxZ) * progres.Value);
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, minZ + Mathf.Abs(minZ - maxZ) * progres.Value);
         }
     }
 
     public void UpdateProgres() {
         if(posX) {
-            transform.position = new Vector3(minX + Mathf.Abs(minX - maxX) * progres.Value, transform.position.y, transform.position.z);
+            transform.localPosition = new Vector3(minX + Mathf.Abs(minX - maxX) * progres.Value, transform.localPosition.y, transform.localPosition.z);
         }
         if(posY) {
-            transform.position = new Vector3(transform.position.x, minY + Mathf.Abs(minY - maxY) * progres.Value, transform.position.z);
+            transform.localPosition = new Vector3(transform.localPosition.x, minY + Mathf.Abs(minY - maxY) * progres.Value, transform.localPosition.z);
         }
         if(posZ) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, minZ + Mathf.Abs(minZ - maxZ) * progres.Value);
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, minZ + Mathf.Abs(minZ - maxZ) * progres.Value);
         }
     }
 }

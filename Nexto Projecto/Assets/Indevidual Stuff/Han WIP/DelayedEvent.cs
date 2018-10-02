@@ -11,6 +11,10 @@ public class DelayedEvent : MonoBehaviour {
         StartCoroutine(Timer());
     }
 
+    public void StopDelay() {
+        StopCoroutine(Timer());
+    }
+
     IEnumerator Timer() {
         StopCoroutine(Timer());
         yield return new WaitForSeconds(Delay);
