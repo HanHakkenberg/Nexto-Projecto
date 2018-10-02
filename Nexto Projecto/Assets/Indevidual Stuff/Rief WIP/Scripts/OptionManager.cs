@@ -24,6 +24,7 @@ public class OptionManager : MonoBehaviour {
 	bool effectsOn = true;
 	bool envirOn = true;
     public static bool inGame = false;
+	public static bool started = false;
 
     [Header("Map")]
     public GameObject map;
@@ -87,9 +88,14 @@ public class OptionManager : MonoBehaviour {
 	
 	public void InGame()
 	{
+		started = true;
         inGame = true;
         TimeScale();
     }
+	public void ResetStarted()
+	{
+		started = false;
+	}
 
 	public void Pausing()
 	{
