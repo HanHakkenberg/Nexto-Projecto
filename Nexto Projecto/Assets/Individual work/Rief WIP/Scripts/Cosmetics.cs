@@ -81,7 +81,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			cosmeticPanel_temp.SetActive(true);
             CosmeticUpdate();
-            OptionManager.inGame = false;
+			OptionManager.inGame = false;
 		}
 	}
 

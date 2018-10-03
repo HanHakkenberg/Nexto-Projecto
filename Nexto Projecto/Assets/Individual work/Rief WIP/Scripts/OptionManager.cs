@@ -111,15 +111,19 @@ public class OptionManager : MonoBehaviour {
         }
     }
 
-	void TimeScale()
+	public void TimeScale()
 	{
 		if(inGame)
 		{
             Time.timeScale = 1;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 		else
 		{
             Time.timeScale = 0;
+            Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
         }
 	}
 
