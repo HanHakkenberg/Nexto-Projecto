@@ -2,7 +2,8 @@
 {
 	Properties
 	{
-		_Tint("Tint", Color) = (1, 1, 1, .5)
+		_Tint("Tint", Color) = (1, 1, 1, 1)
+		_FoamTint("FoamTint", Color) = (1, 1, 1, 1)
 		_MainTex("Main Texture", 2D) = "white" {}
 		_NoiseTex("Extra Wave Noise", 2D) = "white" {}
 		_Speed("Wave Speed", Range(0,1)) = 0.5
@@ -15,9 +16,9 @@
 	}
 		SubShader
 		{
-			Tags { "RenderType" = "Opaque"  "Queue" = "Transparent" }
+			Tags {"Queue" = "Geometry" }
 			LOD 100
-			Blend SrcAlpha OneMinusSrcAlpha
+			//Blend SrcAlpha OneMinusSrcAlpha
 
 			Pass
 			{
@@ -44,6 +45,7 @@
 				};
 
 				float4 _Tint;
+				float4 _FoamTint;
 				uniform sampler2D _CameraDepthTexture; //Depth Texture
 				sampler2D _MainTex, _NoiseTex;//
 				float4 _MainTex_ST;
@@ -71,9 +73,6 @@
 					fixed yScrollValue = _ScrollY * _Time;
 					scrollUV += fixed2(xScrollValue, yScrollValue);
 					half4 col = tex2D(_MainTex, scrollUV) * _Tint;// texture times tint;
-					half depth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.scrPos))); // depth
-					half4 foamLine = 1 - saturate(_Foam * (depth - i.scrPos.w));// foam line by comparing depth and screenposition
-					col += foamLine * _Tint; // add the foam line and tint to the texture
 					return col;
 				}
 				ENDCG
