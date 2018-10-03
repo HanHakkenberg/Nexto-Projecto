@@ -66,7 +66,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void Update() {
-
 		if(GameManager.gameManager.gameTimeout == false && canControl == true) {
 		Jump();
 		Move();
