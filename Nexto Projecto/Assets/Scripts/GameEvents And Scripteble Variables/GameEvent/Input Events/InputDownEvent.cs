@@ -8,7 +8,7 @@ public class InputDownEvent : MonoBehaviour {
     [SerializeField] bool canUse;
 
 	void Update() {
-		if (Input.GetButtonDown(myInput) && canUse == OptionManager.started) {
+		if (Input.GetButtonDown(myInput) && canUse == OptionManager.started){
             if(myEvent != null) {
                 myEvent.Raise();
             }

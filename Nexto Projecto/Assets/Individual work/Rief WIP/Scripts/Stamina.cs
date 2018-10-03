@@ -151,7 +151,7 @@ public class Stamina : MonoBehaviour {
 
 	public void AddFart()
 	{
-		if(Input.GetButtonDown("Shift")) //remove input once implemented
+		if(Input.GetButtonDown("Shift") && obtainableFarts.Count > 0) //remove input once implemented
 		{
             beginFarts.Add(obtainableFarts[0]);
             obtainableFarts.Remove(obtainableFarts[0]);
