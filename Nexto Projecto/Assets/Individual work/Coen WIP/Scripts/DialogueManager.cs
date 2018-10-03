@@ -89,6 +89,8 @@ public class DialogueManager : MonoBehaviour {
 				currentlyUsedDialogue = null;
 				GameManager.gameManager.statisticsParent.SetActive(true);
 				GameManager.gameManager.gameTimeout = false;
+				CutsceneManager.cutsceneManager.mainCam.enabled = true;
+				CutsceneManager.cutsceneManager.dialogueCamera.enabled = false;
 				}
 			} 
 		}

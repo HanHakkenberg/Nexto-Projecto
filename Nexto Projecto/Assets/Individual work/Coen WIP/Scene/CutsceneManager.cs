@@ -17,9 +17,11 @@ public class CutsceneManager : MonoBehaviour {
 	[Header("Ability Cutscene Timers:")]
 	public float timeAfterDialogue = 7;
 
-	[Header("test")]
+	[Header("Cams:")]
 	public Cinemachine.CinemachineFreeLook mainCam;
 	public Cinemachine.CinemachineVirtualCamera abilityCam;
+	public Cinemachine.CinemachineVirtualCamera dialogueCamera;
+	public Cinemachine.CinemachineTargetGroup dialogueTarget;
 
 	void Awake() {
 		if(cutsceneManager != null)

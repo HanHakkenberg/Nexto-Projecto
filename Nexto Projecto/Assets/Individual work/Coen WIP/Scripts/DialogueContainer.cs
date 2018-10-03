@@ -31,6 +31,11 @@ public class DialogueContainer : MonoBehaviour {
 		if(Input.GetButtonDown("Fire1")) {
 			if(canLoadUpDialogue == true) {
 				if(GameManager.gameManager.gameTimeout == false) {
+					CutsceneManager.cutsceneManager.dialogueTarget.m_Targets[1].target = transform;
+					CutsceneManager.cutsceneManager.dialogueCamera.enabled = true;
+					CutsceneManager.cutsceneManager.abilityCam.enabled = false;
+					CutsceneManager.cutsceneManager.mainCam.enabled = false;
+
 					DialogueManager.dialogueManager.LoadInNewDialogue(dialogue);
 					DialogueManager.dialogueManager.tooltip.SetActive(false);
 					}
