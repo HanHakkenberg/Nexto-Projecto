@@ -57,4 +57,13 @@ public class CutsceneManager : MonoBehaviour {
 		blackscreen.SetBool("IsFading", false);
 		GameManager.gameManager.gameTimeout = false;
 	}
+
+    public void SetupDialogue(Transform _TalkingTo)
+    {
+        CutsceneManager.cutsceneManager.dialogueTarget.m_Targets[1].target = _TalkingTo;
+        CutsceneManager.cutsceneManager.dialogueCamera.enabled = true;
+        CutsceneManager.cutsceneManager.abilityCam.enabled = false;
+        CutsceneManager.cutsceneManager.mainCam.enabled = false;
+        DialogueManager.dialogueManager.tooltip.SetActive(false);
+    }
 }

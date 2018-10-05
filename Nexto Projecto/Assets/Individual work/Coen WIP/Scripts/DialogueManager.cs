@@ -57,6 +57,9 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void LoadInNewDialogue(Dialogue _Dialogue) {
+        if (GameManager.gameManager.gameTimeout == true)
+            return;
+
 		GameManager.gameManager.statisticsParent.SetActive(false);
 		GameManager.gameManager.gameTimeout = true;
 		currentlyUsedDialogue = _Dialogue;

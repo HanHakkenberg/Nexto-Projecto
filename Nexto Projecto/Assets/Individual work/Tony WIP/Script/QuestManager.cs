@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour {
 
-	public List<Quest> inactive = new List<Quest>();
-	public List<Quest> active = new List<Quest>();
-	public List<Quest> finished = new List<Quest>();
+	public List<QuestTemplate> inactive = new List<QuestTemplate>();
+	public List<QuestTemplate> finished = new List<QuestTemplate>();
+
+    public QuestTemplate currentActiveQuest;
+    public Dialogue alreadyHasQuestDialogue;
 
 	public static QuestManager questManager;
 
@@ -15,9 +17,5 @@ public class QuestManager : MonoBehaviour {
 		questManager = this;
 		else
 		Destroy(this);
-	}
-
-	public void QuestHandler() {
-
 	}
 }
