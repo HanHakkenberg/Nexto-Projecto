@@ -70,6 +70,8 @@ GameObject:
   - component: {fileID: 65744021898835722}
   - component: {fileID: 195447426439361548}
   - component: {fileID: 114840004679539362}
+  - component: {fileID: 135166184066096464}
+  - component: {fileID: 114732160589455586}
   m_Layer: 12
   m_Name: MD_Baby_AI
   m_TagString: Player
@@ -951,21 +953,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1683816356328934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4030320382023668}
-  m_Layer: 0
-  m_Name: CameraLookTarget
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1736974115844686
 GameObject:
   m_ObjectHideFlags: 1
@@ -1216,19 +1203,6 @@ Transform:
   - {fileID: 4313977894027514}
   m_Father: {fileID: 4532383326574666}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4030320382023668
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1683816356328934}
-  m_LocalRotation: {x: -0.000000037997868, y: 0.49718553, z: 0.000000018235097, w: 0.8676442}
-  m_LocalPosition: {x: 0, y: 0.613, z: 0}
-  m_LocalScale: {x: 0.50001174, y: 0.5000001, z: 0.5100119}
-  m_Children: []
-  m_Father: {fileID: 4419271985714518}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4070237620504598
 Transform:
@@ -1621,7 +1595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4419271985714518}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4371923717275772
 Transform:
@@ -1670,19 +1644,18 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114530800551212}
-  m_LocalRotation: {x: -0, y: 0.33156428, z: -0, w: 0.9434327}
-  m_LocalPosition: {x: -21.653152, y: 0.5015564, z: -28.608368}
+  m_LocalRotation: {x: -0, y: -0.8807333, z: -0, w: 0.47361258}
+  m_LocalPosition: {x: -54.430054, y: 0.5015565, z: -3.993576}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4390301755865958}
   - {fileID: 4539435760671406}
   - {fileID: 4226371512001364}
   - {fileID: 4910922697607618}
-  - {fileID: 4030320382023668}
   - {fileID: 4363441600070688}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 38.727, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -123.462006, z: 0}
 --- !u!4 &4422475902399002
 Transform:
   m_ObjectHideFlags: 1
@@ -2270,7 +2243,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!65 &65744021898835722
 BoxCollider:
@@ -2278,7 +2251,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114530800551212}
-  m_Material: {fileID: 13400000, guid: 55c92bea56c7ee147ad51c970475b56d, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2314,6 +2287,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114732160589455586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1114530800551212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f9d478876a3de40b75d8f8a7908546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDialogue: {fileID: 11400000, guid: d6620b1dc0cf0d643914d2cb59409f08, type: 2}
+  activeDialogue: {fileID: 11400000, guid: 66ff5381a5d1d524ca17bb36db6672be, type: 2}
+  completedDialogue: {fileID: 11400000, guid: 8c95e523c8056f84fa2396b09de4aa89, type: 2}
+  collectableIcon: {fileID: 0}
+  rewardAmount: 10
+  completed: 0
 --- !u!114 &114840004679539362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2326,7 +2316,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: d750fc52264adb84c86dc0594a2ed406, type: 2}
+  quest: {fileID: 0}
   canLoadUpDialogue: 0
+--- !u!135 &135166184066096464
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1114530800551212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!137 &137503619013202886
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

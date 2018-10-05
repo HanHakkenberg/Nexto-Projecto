@@ -39,11 +39,11 @@ public class GameManager : MonoBehaviour {
 		gameManager = this;
 	}
 
-	public IEnumerator AddDiaper() {
+	public IEnumerator AddDiaper(int _Add) {
 		collectables.SetTrigger("In");
 		yield return new WaitForSeconds(timeTillUpdateCollectableUI);
 		collectables.SetTrigger("Out");
-		diapers++;
+		diapers += _Add;
 		collectableText.text = diapers.ToString();
 	}
 	
