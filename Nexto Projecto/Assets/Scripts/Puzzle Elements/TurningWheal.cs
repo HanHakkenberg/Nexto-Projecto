@@ -7,6 +7,7 @@ public class TurningWheal : MonoBehaviour {
     [SerializeField] int maxRot;
     [SerializeField] float speed;
     [SerializeField] UnityEvent myUnityEvent;
+    [SerializeField] AudioSource myAudio;
 
     float newSpeed;
 
@@ -17,11 +18,16 @@ public class TurningWheal : MonoBehaviour {
             transform.localEulerAngles += new Vector3(0, newSpeed);
             currentProgression += newSpeed;
             UpdateProgression();
+            myAudio.Play();
         }
         else if(Input.GetButton("Fire2") && currentProgression - newSpeed > 0) {
             transform.localEulerAngles -= new Vector3(0, newSpeed);
             currentProgression -= newSpeed;
             UpdateProgression();
+            myAudio.Play();
+        }
+        else {
+            myAudio.Pause();
         }
     }
 
