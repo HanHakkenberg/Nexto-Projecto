@@ -1347,7 +1347,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Sprint
-  m_Speed: 300
+  m_Speed: 15
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101561606853696650}
