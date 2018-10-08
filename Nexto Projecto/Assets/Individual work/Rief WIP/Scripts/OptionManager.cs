@@ -9,12 +9,14 @@ public class OptionManager : MonoBehaviour {
 	public List <AudioSource> music;
 	public List<AudioSource> effects;
 	public List<AudioSource> environmental;
-	
-	[Header("Sliders")]
+    public AudioSource uiAudio;
+
+    [Header("Sliders")]
 	public Slider musicSlider;
 	public Slider effectSlider;
 	public Slider environmentSlider;
-	List<Slider> allSliders = new List<Slider>();
+    public Slider uiSlider;
+    List<Slider> allSliders = new List<Slider>();
 
 	[Header("Booleans")]
 	public bool subtitles = true;
@@ -23,6 +25,7 @@ public class OptionManager : MonoBehaviour {
 	bool musicOn = true;
 	bool effectsOn = true;
 	bool envirOn = true;
+    bool uiOn = true;
     public static bool inGame = false;
 	public static bool started = false;
 
@@ -37,7 +40,8 @@ public class OptionManager : MonoBehaviour {
 		allSliders.Add(musicSlider);
 		allSliders.Add(effectSlider);
 		allSliders.Add(environmentSlider);
-	}
+        allSliders.Add(uiSlider);
+    }
 
 	void Update()
 	{
@@ -62,6 +66,10 @@ public class OptionManager : MonoBehaviour {
 	{
 		envirOn = !envirOn;
 	}
+	public void UIClick()
+	{
+        uiOn = !uiOn;
+    }
 	public void SubtitleClick()
 	{
 		subtitles = !subtitles;
@@ -178,6 +186,17 @@ public class OptionManager : MonoBehaviour {
 			{
 				environmental[j].GetComponent<AudioSource>().mute = true;
 			}
+		}
+		if(masterOn && uiOn)
+		{
+            uiAudio.mute = false;
+        }
+		else
+		{
+			if(!masterOn || !uiOn)
+			{
+                uiAudio.mute = true;
+            }
 		}
 
 		//CUTSCENES RELATED
