@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CosmeticCost : MonoBehaviour {
+[System.Serializable]
+public class CosmeticCost {
 
-
-	public bool locked;
-	public int cost;
+        public string name;
+        public Material colour;
+        public bool locked;
+        public int cost;
 }
