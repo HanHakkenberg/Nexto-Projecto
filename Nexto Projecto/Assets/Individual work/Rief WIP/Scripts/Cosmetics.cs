@@ -11,35 +11,42 @@ public class Cosmetics : MonoBehaviour {
 	public TextMeshProUGUI currencyText;
 
 
-	[Header ("Shop")]
+	[Header ("Skin")]
 	public GameObject playerSkin;
-	public List<Material> skinTone;
+	public List<GameObject> skinTone;
 	public TextMeshProUGUI currSkinText;
+	public GameObject skinBuyButton;
 	int currSkin;
 
+	[Header ("Hair")]
 	public List<Mesh> hairType;
 	//public GameObject playerHair;
 	public TextMeshProUGUI currHairText;
+	public GameObject hairBuyButton;
 	int currHair;
 
+	[Header ("Diaper")]
     public GameObject diaperColour;
-    public List<Material> diaperType;
+    public List<GameObject> diaperType;
 	//public GameObject playerDiaper;
 	public TextMeshProUGUI currDiaperText;
+	public GameObject diaperBuyButton;
 	int currDiaper;
 
+	[Header ("Eyes")]
     public GameObject eyeLeft;
     public GameObject eyeRight;
-    public List<Material> eyeType;
+    public List<GameObject> eyeType;
     public TextMeshProUGUI currEyesText;
+	public GameObject eyesBuyButton;
     int currEyes;
 
     public GameObject cosmeticPanel_temp;
-	
 
 	void Update () 
 	{
 		AddCurrency();
+		LockedCheck();
 	}
 
 	void AddCurrency()
@@ -50,9 +57,76 @@ public class Cosmetics : MonoBehaviour {
 			CurrencyUpdate();
 		}
 	}
+
+	public void LockedCheck()
+	{
+		if(skinTone[currSkin].GetComponent<CosmeticCost>().locked == false)
+		{
+			playerSkin.GetComponent<Renderer>().material = skinTone[currSkin].GetComponent<Renderer>().sharedMaterial;
+			skinBuyButton.SetActive(false);
+		}
+		else
+		{
+			skinBuyButton.SetActive(true);
+		}
+
+		if(diaperType[currDiaper].GetComponent<CosmeticCost>().locked == false)
+		{
+			diaperColour.GetComponent<Renderer>().material = diaperType[currDiaper].GetComponent<Renderer>().sharedMaterial;
+			diaperBuyButton.SetActive(false);
+		}
+		else
+		{
+			diaperBuyButton.SetActive(true);
+		}
+
+		if(eyeType[currEyes].GetComponent<CosmeticCost>().locked == false)
+		{
+			eyeLeft.GetComponent<Renderer>().material = eyeType[currEyes].GetComponent<Renderer>().sharedMaterial;
+			eyeRight.GetComponent<Renderer>().material = eyeType[currEyes].GetComponent<Renderer>().sharedMaterial;
+			eyesBuyButton.SetActive(false);
+		}
+		else
+		{
+			eyesBuyButton.SetActive(true);
+		}
+	}
+
+	public void SkinBuy()
+	{
+		if(skinTone[currSkin].GetComponent<CosmeticCost>().cost <= currency)
+		{
+			skinTone[currSkin].GetComponent<CosmeticCost>().locked = false;
+		}
+	}
+
+	/*public void HairBuy()
+	{
+		if(hairType[currHair].GetComponent<CosmeticCost>().cost <= currency)
+		{
+			skinTone[currSkin].GetComponent<CosmeticCost>().locked = false;
+		}
+	}*/
+
+	public void DiaperBuy()
+	{
+		if(diaperType[currDiaper].GetComponent<CosmeticCost>().cost <= currency)
+		{
+			diaperType[currDiaper].GetComponent<CosmeticCost>().locked = false;
+		}
+	}
+	public void EyesBuy()
+	{
+		if(eyeType[currEyes].GetComponent<CosmeticCost>().cost <= currency)
+		{
+			eyeType[currEyes].GetComponent<CosmeticCost>().locked = false;
+		}
+	}
+
 	public void SpendCurrency(int _Cost)
 	{
-		if(_Cost >= currency){
+		
+		if(_Cost <= currency){
 			currency -= _Cost;
 			CurrencyUpdate();
 		}
@@ -64,14 +138,8 @@ public class Cosmetics : MonoBehaviour {
 
 	void CosmeticUpdate()
 	{
-		playerSkin.GetComponent<Renderer>().material = skinTone[currSkin];
 		currSkinText.text = skinTone[currSkin].name;
-
-        diaperColour.GetComponent<Renderer>().material = diaperType[currDiaper];
         currDiaperText.text = diaperType[currDiaper].name;
-
-        eyeLeft.GetComponent<Renderer>().material = eyeType[currEyes];
-		eyeRight.GetComponent<Renderer>().material = eyeType[currEyes];
         currEyesText.text = eyeType[currEyes].name;
     }
 
