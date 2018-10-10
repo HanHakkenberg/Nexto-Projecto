@@ -22,6 +22,7 @@ public class Stamina : MonoBehaviour {
     public static bool isRunning;
     bool waitToRegen;
     float regenTimer = 3;
+    public Animator playerAnim;
 
 
     void Start () 
@@ -67,7 +68,7 @@ public class Stamina : MonoBehaviour {
 
     void StaminaTest()
     {
-        if (Input.GetButton("Space"))
+        if (playerAnim.GetInteger("WalkingState") == 2)
         {
             isRunning = true;
         }
@@ -97,7 +98,7 @@ public class Stamina : MonoBehaviour {
         {
             if(staCurrLoad <= maxStamina && waitToRegen == false)
             {
-                staminaOrb[staCurrLoad].fillAmount += loadTime * Time.deltaTime;
+                staminaOrb[staCurrLoad].fillAmount += (loadTime/2) * Time.deltaTime;
 
                 if(staminaOrb[staCurrLoad].fillAmount >= 1 && staCurrLoad <4)
                 {
