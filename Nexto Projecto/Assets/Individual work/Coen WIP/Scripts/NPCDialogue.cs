@@ -5,6 +5,8 @@ using UnityEngine;
 public class NPCDialogue : MonoBehaviour
 {
 
+    public static float overallSensitivity = 10;
+
     [Header("Dialogue Info;")]
     public Dialogue dialogue;
 
@@ -13,9 +15,32 @@ public class NPCDialogue : MonoBehaviour
 
     public bool canLoadUpDialogue = false;
 
+    Vector3 startRot;
+
     void Update()
     {
         LoadDialogue();
+        Rotate();
+    }
+
+    void Rotate()
+    {
+        if (GameManager.gameManager.gameTimeout == true)
+            if (DialogueManager.dialogueManager.target != null)
+            {
+                if (DialogueManager.dialogueManager.target == gameObject.transform)
+                {
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(GameManager.gameManager.player.transform.position - transform.position), overallSensitivity * Time.deltaTime);
+                    return;
+                }
+            }
+           
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startRot), overallSensitivity * Time.deltaTime);
+    }
+
+    void Awake()
+    {
+        startRot = transform.eulerAngles;
     }
 
     void OnTriggerEnter(Collider _C)
@@ -38,11 +63,11 @@ public class NPCDialogue : MonoBehaviour
 
     public void LoadDialogue()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (!GameManager.gameManager.gameTimeout)
         {
             if (canLoadUpDialogue)
             {
-                if (!GameManager.gameManager.gameTimeout)
+                if (Input.GetButtonDown("Fire1"))
                 {
                     if (quest != null)
                     {
@@ -52,12 +77,11 @@ public class NPCDialogue : MonoBehaviour
                             return;
                         }
                     }
-                }
 
-                CutsceneManager.cutsceneManager.SetupDialogue(transform);
-                DialogueManager.dialogueManager.LoadInNewDialogue(dialogue);
+                    DialogueManager.dialogueManager.LoadInNewDialogue(dialogue, transform);
                 }
             }
         }
     }
+}
 

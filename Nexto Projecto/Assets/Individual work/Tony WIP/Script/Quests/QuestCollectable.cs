@@ -48,7 +48,6 @@ public class QuestCollectable : QuestTemplate {
             toCollect[i].SetActive(true);
         }
 
-        GameManager.gameManager.questCollectables = 0;
         GameManager.gameManager.questCollectablesText.text = GameManager.gameManager.questCollectables.ToString() + "/" + collectablesNeeded;
         GameManager.gameManager.questCollectableImage.sprite = collectableSprite;
         GameManager.gameManager.questCollectablesAnim.SetTrigger("In");
