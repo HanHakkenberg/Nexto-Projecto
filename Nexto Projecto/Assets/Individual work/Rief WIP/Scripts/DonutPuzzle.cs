@@ -8,7 +8,8 @@ public class DonutPuzzle : MonoBehaviour {
     public TextMeshProUGUI timeText;
     public int time;
     public bool finished;
-    bool failed;
+    public bool failed;
+    bool busy;
     public bool puzzleActive = true;
     public GameObject manager;
 
@@ -25,25 +26,40 @@ public class DonutPuzzle : MonoBehaviour {
 	void Update () 
     {
         Finish();
-        StartTimer();
+        Inputs();
+        Failed();
     }
 
     public IEnumerator Countdown()
     {
-        time -= 1;
         timeText.text = time.ToString();
         timeText.GetComponent<Animator>().SetTrigger("TimeDown");
         yield return new WaitForSeconds(1);
-        if (!finished)
+        time -= 1;
+        if (!finished && time >=0)
         {
             ToStart();
         }
     }
-    void StartTimer()
+    void Inputs()
     {
-        if(Input.GetButtonDown("SwitchKey") && puzzleActive)
+        if(Input.GetButtonDown("SwitchKey"))
         {
-            ToStart();
+            if (puzzleActive)
+            {
+                ToStart();
+                puzzleActive = false;
+                busy = true;
+            }
+            if(failed)
+            {
+                timeText.text = "";
+            }
+            if(busy)
+            {
+                busy = false;
+                time = 10;
+            }
         }
     }
 
@@ -61,11 +77,13 @@ public class DonutPuzzle : MonoBehaviour {
             puzzleActive = false;
         }
     }
+
     public void Failed()
     {
-        if(time <= 0)
+        if(time < 0)
         {
             failed = true;
+            puzzleActive = false;
         }
     }
 }
