@@ -5,8 +5,12 @@ public class Gumball : MonoBehaviour {
     [SerializeField] float gumballSpeed;
     [SerializeField] float lifeSpenInSec;
     [SerializeField] UnityEvent onDestroy;
+    [SerializeField] UnityEvent onStart;
     float currentLifeSpen;
 
+    private void Start() {
+        onStart.Invoke();
+    }
 
     void OnEnable() {
         currentLifeSpen = lifeSpenInSec;
@@ -27,7 +31,7 @@ public class Gumball : MonoBehaviour {
             float newYRot = 90 - Mathf.Atan2(v.z, v.x) * Mathf.Rad2Deg;
             transform.eulerAngles = new Vector3(0, newYRot, 0);
         }
-        else {
+        else if(!collision.gameObject.CompareTag("Projectile")) {
             onDestroy.Invoke();
         }
     }
