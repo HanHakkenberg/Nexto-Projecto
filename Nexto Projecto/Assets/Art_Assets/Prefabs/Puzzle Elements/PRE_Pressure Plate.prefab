@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23161015986142570}
   - component: {fileID: 95710686488942668}
   - component: {fileID: 65408541073368198}
+  - component: {fileID: 65273471106590774}
+  - component: {fileID: 65094398656514586}
   m_Layer: 0
   m_Name: Presure Plate
   m_TagString: Untagged
@@ -91,6 +93,7 @@ GameObject:
   - component: {fileID: 33412648572923182}
   - component: {fileID: 23870393329153740}
   - component: {fileID: 65384645343339826}
+  - component: {fileID: 65741034321503946}
   m_Layer: 0
   m_Name: PF_Presure Plate (PlaceHolder)
   m_TagString: Untagged
@@ -105,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1335703519113060}
   m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071069}
-  m_LocalPosition: {x: 0, y: 0.184, z: 0}
+  m_LocalPosition: {x: 0, y: 0.13, z: 0}
   m_LocalScale: {x: 0.7, y: -0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 4794235851107196}
@@ -145,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690709046421914}
   m_LocalRotation: {x: -0, y: -0.13052596, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: 10.157, y: 1.48, z: -78.838}
+  m_LocalPosition: {x: 7.8670864, y: 1.552, z: -79.84995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4308762744944934}
@@ -251,6 +254,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1335703519113060}
   m_Mesh: {fileID: 4300000, guid: e36f302bf1f2ee4469918264b467bf24, type: 3}
+--- !u!65 &65094398656514586
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335703519113060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 0.27}
+  m_Center: {x: 0, y: 0, z: 0.19999991}
+--- !u!65 &65273471106590774
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1335703519113060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1.0000001, z: 0.40000007}
+  m_Center: {x: 0, y: 0, z: 0.19999991}
 --- !u!65 &65282264629138910
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -285,8 +312,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1.0000001, z: 0.40000007}
+  m_Size: {x: 1.2, y: 1.2, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0.19999991}
+--- !u!65 &65741034321503946
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880556542333668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0.20000005}
 --- !u!82 &82057215682944420
 AudioSource:
   m_ObjectHideFlags: 1
@@ -296,10 +335,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fa34583409735154d8dbe7f6c075862f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 50b420f85d315e449bf70877b3d3f1cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.29
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -392,7 +431,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 95ffc121ad3596a478d0e59907445b2a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -532,17 +571,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 82423446221764376}
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114174340861219936
@@ -572,17 +600,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 82057215682944420}
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 82423446221764376}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:

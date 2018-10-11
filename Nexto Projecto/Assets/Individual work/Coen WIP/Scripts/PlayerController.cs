@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour {
 		anim.SetInteger("WalkingState", 0);
 	}
 
-	void OnCollisionEnter(Collision _C) {
+	void OnCollisionStay(Collision _C) {
 		anim.SetBool("Grounded", CheckGrounded());
 	}
 
@@ -163,18 +163,24 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Rotate() {
-		if(inputs != Vector2.zero && targetDirection.magnitude > 0.1f) {
-			Vector3 _LookRotation = targetDirection.normalized;
-			freeRotation = Quaternion.LookRotation(_LookRotation, transform.forward);
-        	float diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
-            float eulerY = transform.eulerAngles.y;
+        if (GameManager.gameManager.gameTimeout == false && DialogueManager.dialogueManager.target == null)
+        {
+            if (inputs != Vector2.zero && targetDirection.magnitude > 0.1f)
+            {
+                Vector3 _LookRotation = targetDirection.normalized;
+                freeRotation = Quaternion.LookRotation(_LookRotation, transform.forward);
+                float diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
+                float eulerY = transform.eulerAngles.y;
 
-            if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
-            Vector3 euler = new Vector3(0, eulerY, 0);
+                if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
+                Vector3 euler = new Vector3(0, eulerY, 0);
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), sensitivity * Time.deltaTime);
-		}
-	}
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), sensitivity * Time.deltaTime);
+            }
+        }
+        else
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transform.position - DialogueManager.dialogueManager.target.transform.position), sensitivity * Time.deltaTime);
+    }
 
 	private	void Jump() {
 		if(jumpCount < maxJumpAmount) {

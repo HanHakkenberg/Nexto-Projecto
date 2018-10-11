@@ -23,8 +23,7 @@ public class QuestTemplate : MonoBehaviour
 
     public virtual IEnumerator StartQuestTimer()
     {
-        CutsceneManager.cutsceneManager.SetupDialogue(transform);
-        DialogueManager.dialogueManager.LoadInNewDialogue(startDialogue);
+        DialogueManager.dialogueManager.LoadInNewDialogue(startDialogue, transform);
 
         for (int i = 0; i < Mathf.Infinity; i++)
         {
@@ -50,7 +49,7 @@ public class QuestTemplate : MonoBehaviour
         {
             if (QuestManager.questManager.currentActiveQuest != this)
             {
-                DialogueManager.dialogueManager.LoadInNewDialogue(QuestManager.questManager.alreadyHasQuestDialogue);
+                DialogueManager.dialogueManager.LoadInNewDialogue(QuestManager.questManager.alreadyHasQuestDialogue, transform);
                 return;
             }
         }
@@ -61,7 +60,7 @@ public class QuestTemplate : MonoBehaviour
             return;
         }
 
-        DialogueManager.dialogueManager.LoadInNewDialogue(activeDialogue);
+        DialogueManager.dialogueManager.LoadInNewDialogue(activeDialogue, transform);
 
     }
 
@@ -74,8 +73,9 @@ public class QuestTemplate : MonoBehaviour
 
     public virtual IEnumerator GiveReward()
     {
+        GameManager.gameManager.questCollectables = 0;
         CutsceneManager.cutsceneManager.SetupDialogue(transform);
-        DialogueManager.dialogueManager.LoadInNewDialogue(completedDialogue);
+        DialogueManager.dialogueManager.LoadInNewDialogue(completedDialogue, transform);
         questStatusDisplay.enabled = false;
         completed = true;
 

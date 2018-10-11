@@ -35,13 +35,12 @@ public class CutsceneManager : MonoBehaviour {
 	}
 
 	public IEnumerator StartCutScene(int _Index) {
-		GameManager.gameManager.gameTimeout = true;
 		blackscreen.SetBool("IsFading", true);
 		mainCam.enabled = false;
 		abilityCam.enabled = true;
 		yield return new WaitForSeconds(2);
 		blackscreen.SetBool("IsFading", false);
-		DialogueManager.dialogueManager.LoadInNewDialogue(cutSceneDialogue[0]);
+		DialogueManager.dialogueManager.LoadInAbilityDialogue(cutSceneDialogue[0]);
 	
 		for(int i = 0; i < Mathf.Infinity; i++) {
 			yield return new WaitForSeconds(2);
