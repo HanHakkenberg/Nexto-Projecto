@@ -1347,11 +1347,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Sprint
-<<<<<<< HEAD
-  m_Speed: 5.5
-=======
   m_Speed: 6
->>>>>>> 74f91790e406f8659ed6d6cb097749c6434f3ff1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101561606853696650}
@@ -1368,11 +1364,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-<<<<<<< HEAD
-  m_Motion: {fileID: 7400000, guid: 93a06c091d8838f489faf78003dddb21, type: 3}
-=======
   m_Motion: {fileID: 7400000, guid: f95b802617d420b4eb075430d6bc12b8, type: 2}
->>>>>>> 74f91790e406f8659ed6d6cb097749c6434f3ff1
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
