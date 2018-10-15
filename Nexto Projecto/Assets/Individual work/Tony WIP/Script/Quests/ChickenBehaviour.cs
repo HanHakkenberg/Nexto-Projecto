@@ -13,6 +13,7 @@ public class ChickenBehaviour : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        egg.SetActive(false);
     }
 
     private void OnTriggerStay(Collider _C)
@@ -20,8 +21,8 @@ public class ChickenBehaviour : MonoBehaviour
         if (_C.transform.tag == "PlayerTriggerField")
             if (Input.GetKeyDown(KeyCode.E) &&egg !=null)
             {
-                transform.GetComponent<Rigidbody>().AddForce(Vector3.up * 15000f);
-                anim.SetBool("Falling", true);
+                anim.SetBool("Jumping", true);
+                anim.SetBool("Idle",false);
                 egg.SetActive(true);
             }
     }
@@ -31,7 +32,8 @@ public class ChickenBehaviour : MonoBehaviour
         if (canHideEgg &&egg !=null)
         {
             egg.SetActive(false);
-            anim.SetBool("Falling", false);
+            anim.SetBool("Jumping", false);
+            anim.SetBool("Idle", true);
             canHideEgg = false;
         }
 
