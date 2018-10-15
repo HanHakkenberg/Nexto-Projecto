@@ -19,7 +19,7 @@ public class NPCDialogue : MonoBehaviour
 
     void Update()
     {
-        LoadDialogue();
+        StartCoroutine(LoadDialogue());
         Rotate();
     }
 
@@ -61,20 +61,21 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
-    public void LoadDialogue()
+    public IEnumerator LoadDialogue()
     {
         if (!GameManager.gameManager.gameTimeout)
         {
             if (canLoadUpDialogue)
             {
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
+                    yield return new WaitForEndOfFrame();
                     if (quest != null)
                     {
                         if (!quest.completed)
                         {
                             quest.UpdateQuestStatus();
-                            return;
+                            yield break;
                         }
                     }
 

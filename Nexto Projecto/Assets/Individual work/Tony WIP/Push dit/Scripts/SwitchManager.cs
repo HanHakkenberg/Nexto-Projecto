@@ -48,9 +48,9 @@ public class SwitchManager : MonoBehaviour
                 camTarget.SetParent(baby.transform);
                 Destroy(companion.transform.parent.gameObject);
 
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 4f;
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 6f;
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 4f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 3f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 4f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 3f;
             }
         }
         if (!followsCompanion)
