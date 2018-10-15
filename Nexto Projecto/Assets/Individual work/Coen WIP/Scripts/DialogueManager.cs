@@ -133,7 +133,7 @@ public class DialogueManager : MonoBehaviour {
 					continuationHint.SetActive(false);
 					progressIndicator.SetActive(false);
 				} else {
-				StartCoroutine(ActivateFunctions());
+				StartCoroutine(ActivateFunctions(currentlyUsedDialogue));
 				continuationHint.SetActive(false);
 				dialogueBox.SetBool("Load", false);
                 target = null;
@@ -147,10 +147,10 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
-	IEnumerator ActivateFunctions() {
+	IEnumerator ActivateFunctions(Dialogue _Cur) {
 		if(currentlyUsedDialogue.shouldActivateFunctions)
 		yield return new WaitForSeconds(currentlyUsedDialogue.timeTillActivation);
-		currentlyUsedDialogue.functionsToBeActivated.Raise();
+		_Cur.functionsToBeActivated.Raise();
 	}
 
 	void LoadInNewChar() {
