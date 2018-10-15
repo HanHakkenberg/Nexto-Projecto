@@ -60,7 +60,7 @@ public class Cosmetics : MonoBehaviour {
 	void Update () 
 	{
 		AddCurrency();
-		LockedCheck();
+		//LockedCheck();
 	}
 
 	void AddCurrency()
@@ -152,7 +152,8 @@ public class Cosmetics : MonoBehaviour {
 
 	void CosmeticUpdate()
 	{
-		currSkinText.text = skinTone[currSkin].name;
+        LockedCheck();
+        currSkinText.text = skinTone[currSkin].name;
         currDiaperText.text = myDiapers[currDiaper].name;
         currEyesText.text = eyeType[currEyes].name;
     }
