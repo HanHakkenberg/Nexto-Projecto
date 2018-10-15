@@ -15,7 +15,7 @@ public class DonutPuzzle : MonoBehaviour {
 
     void Start () 
     {
-        StartPuzzle();
+        //StartPuzzle();
         //ToStart();
     }
     void ToStart()

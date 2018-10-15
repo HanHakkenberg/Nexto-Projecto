@@ -150,8 +150,9 @@ public class DialogueManager : MonoBehaviour {
 	IEnumerator ActivateFunctions(Dialogue _Cur) {
 		if(currentlyUsedDialogue.shouldActivateFunctions)
 		yield return new WaitForSeconds(currentlyUsedDialogue.timeTillActivation);
-		_Cur.functionsToBeActivated.Raise();
-	}
+        if (_Cur.functionsToBeActivated != null)
+            _Cur.functionsToBeActivated.Raise();
+    }
 
 	void LoadInNewChar() {
 		if(currentlyUsedDialogue != null) {
