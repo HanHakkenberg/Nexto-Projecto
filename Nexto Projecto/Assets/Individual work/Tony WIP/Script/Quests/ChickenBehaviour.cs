@@ -20,7 +20,7 @@ public class ChickenBehaviour : MonoBehaviour
         if (_C.transform.tag == "PlayerTriggerField")
             if (Input.GetKeyDown(KeyCode.E) &&egg !=null)
             {
-                transform.GetComponent<Rigidbody>().AddForce(Vector3.up * 150f);
+                transform.GetComponent<Rigidbody>().AddForce(Vector3.up * 15000f);
                 anim.SetBool("Falling", true);
                 egg.SetActive(true);
             }
