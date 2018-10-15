@@ -5,8 +5,13 @@ public class Gumball : MonoBehaviour {
     [SerializeField] float gumballSpeed;
     [SerializeField] float lifeSpenInSec;
     [SerializeField] UnityEvent onDestroy;
+    [SerializeField] UnityEvent onStart;
+    [SerializeField] AudioSource myAudio;
     float currentLifeSpen;
 
+    private void Start() {
+        onStart.Invoke();
+    }
 
     void OnEnable() {
         currentLifeSpen = lifeSpenInSec;
@@ -26,8 +31,9 @@ public class Gumball : MonoBehaviour {
             Vector3 v = Vector3.Reflect(transform.forward, collision.contacts[0].normal);
             float newYRot = 90 - Mathf.Atan2(v.z, v.x) * Mathf.Rad2Deg;
             transform.eulerAngles = new Vector3(0, newYRot, 0);
+            myAudio.Play();
         }
-        else {
+        else if(!collision.gameObject.CompareTag("Projectile")) {
             onDestroy.Invoke();
         }
     }

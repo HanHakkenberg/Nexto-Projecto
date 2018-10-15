@@ -11,6 +11,24 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1439252308651988}
   m_IsPrefabParent: 1
+--- !u!1 &1038995886638730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4654312330680322}
+  - component: {fileID: 33292094089048570}
+  - component: {fileID: 23021779255515930}
+  - component: {fileID: 65120294289876868}
+  m_Layer: 0
+  m_Name: PRE_Lollipop_Bouncer
+  m_TagString: GumballInteraction
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1439252308651988
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,12 +37,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4303240669217872}
-  - component: {fileID: 33128990141954374}
-  - component: {fileID: 23874474187477238}
-  - component: {fileID: 64892965711105992}
   - component: {fileID: 95226191162005872}
   - component: {fileID: 114127201596653698}
   - component: {fileID: 82129830380251542}
+  - component: {fileID: 65238825011757728}
   m_Layer: 0
   m_Name: PRE_Turning Plate
   m_TagString: GumballInteraction
@@ -38,19 +54,33 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439252308651988}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.0505269}
-  m_Children: []
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.462929, y: 1.6895444, z: -81.07239}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4654312330680322}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23874474187477238
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+--- !u!4 &4654312330680322
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038995886638730}
+  m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1.754, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4303240669217872}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+--- !u!23 &23021779255515930
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439252308651988}
+  m_GameObject: {fileID: 1038995886638730}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +90,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: bd119fe075dbe0d46aa531e3fd859563, type: 2}
+  - {fileID: 2100000, guid: f6fa1b88889dada479fe3f0df1d2f090, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,15 +110,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33128990141954374
+--- !u!33 &33292094089048570
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439252308651988}
-  m_Mesh: {fileID: 4300000, guid: 3d319b829e8495443b4ec282e26119ca, type: 3}
---- !u!64 &64892965711105992
-MeshCollider:
+  m_GameObject: {fileID: 1038995886638730}
+  m_Mesh: {fileID: 4300000, guid: bbadb0208be9cbe49866a2d7b6ff194b, type: 3}
+--- !u!65 &65120294289876868
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038995886638730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.15}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65238825011757728
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -96,11 +138,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3d319b829e8495443b4ec282e26119ca, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 1.5, z: 0.1}
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!82 &82129830380251542
 AudioSource:
   m_ObjectHideFlags: 1

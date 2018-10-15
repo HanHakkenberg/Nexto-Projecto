@@ -18,12 +18,16 @@ public class GameManager : MonoBehaviour {
 	public Animator deathScreen;
 	public Animator deathscreenTwo;
 	public Animator collectables;
+    public Animator questCollectablesAnim;
+    public Image questCollectableImage;
 	public Text collectableText;
+    public Text questCollectablesText;
 	public float timeTillUpdateCollectableUI = 1;
 	public float loadTime;
 
 	[Header("Game Statistics:")]
 	public int diapers;
+    public int questCollectables;
 	public int unlockedAbilitys;
 	public bool gameTimeout = false;
 
@@ -39,13 +43,20 @@ public class GameManager : MonoBehaviour {
 		gameManager = this;
 	}
 
-	public IEnumerator AddDiaper(int _Add) {
+	public void AddDiaper(int _Add) {
 		collectables.SetTrigger("In");
-		yield return new WaitForSeconds(timeTillUpdateCollectableUI);
-		collectables.SetTrigger("Out");
 		diapers += _Add;
 		collectableText.text = diapers.ToString();
 	}
+
+    public void AddQuestCollectable(int _Add)
+    {
+        QuestCollectable _ColQuest = (QuestCollectable)QuestManager.questManager.currentActiveQuest;
+        questCollectablesAnim.ResetTrigger("In");
+        questCollectablesAnim.SetTrigger("In");
+        questCollectables += _Add;
+        questCollectablesText.text = questCollectables.ToString() + "/" +_ColQuest.collectablesNeeded;
+    }
 	
 	public IEnumerator AddAbility() {
 		currencyOrb.SetTrigger("Get");

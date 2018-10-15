@@ -5,6 +5,7 @@ public class GumBallCanon : MonoBehaviour {
     [SerializeField] Transform gumBallSpawnPos;
     [SerializeField] float gumballSpawnRate;
     [SerializeField] AudioSource myAudio;
+    [SerializeField] Animator myAnimation;
 
     void Update() {
         GumballCheck();
@@ -19,6 +20,7 @@ public class GumBallCanon : MonoBehaviour {
             currentSpawnTime = gumballSpawnRate;
             ObjectPooler.instance.GetFromPool(gumBallPool, gumBallSpawnPos.position, gumBallSpawnPos.rotation);
             myAudio.Play();
+            myAnimation.SetTrigger("Shoot");
         }
     }
 }

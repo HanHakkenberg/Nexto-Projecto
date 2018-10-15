@@ -7,6 +7,9 @@ public class DialogueManager : MonoBehaviour {
 
 	public static DialogueManager dialogueManager;
 
+    [Header("Target:")]
+    public Transform target;
+
 	[Header("Dialogue UI References:")]
 	public Animator dialogueBox;
 	public GameObject uiCompleteDialogueBox; 
@@ -56,12 +59,12 @@ public class DialogueManager : MonoBehaviour {
 		return false;
 	}
 
-	public void LoadInNewDialogue(Dialogue _Dialogue) {
-        if (GameManager.gameManager.gameTimeout == true)
-            return;
-
-		GameManager.gameManager.statisticsParent.SetActive(false);
-		GameManager.gameManager.gameTimeout = true;
+	public void LoadInNewDialogue(Dialogue _Dialogue, Transform _Target)
+    {
+        GameManager.gameManager.gameTimeout = true;
+        target = _Target;
+        CutsceneManager.cutsceneManager.SetupDialogue(_Target);
+        GameManager.gameManager.statisticsParent.SetActive(false);
 		currentlyUsedDialogue = _Dialogue;
 		charIndex = 0;
 		dialogueBoxIndex = 0;
@@ -73,6 +76,25 @@ public class DialogueManager : MonoBehaviour {
 		tooltip.SetActive(false);
 		dialogueBox.SetBool("Load", true);
 	}
+
+    public void LoadInAbilityDialogue(Dialogue _Dialogue)
+    {
+        GameManager.gameManager.gameTimeout = true;
+        GameManager.gameManager.statisticsParent.SetActive(false);
+        CutsceneManager.cutsceneManager.mainCam.enabled = false;
+        CutsceneManager.cutsceneManager.dialogueCamera.enabled = false;
+        CutsceneManager.cutsceneManager.abilityCam.enabled = true;
+        currentlyUsedDialogue = _Dialogue;
+        charIndex = 0;
+        dialogueBoxIndex = 0;
+        canGoNextPage = false;
+        uiName.text = currentlyUsedDialogue.dialogue[dialogueBoxIndex].name;
+        uiDialogue.text = "";
+        progressIndicator.SetActive(false);
+        continuationHint.SetActive(false);
+        tooltip.SetActive(false);
+        dialogueBox.SetBool("Load", true);
+    }
 
 	void LoadNextDialogueBox() { //Next page with text;
 		if(Input.GetKeyDown(KeyCode.E)) {
@@ -89,6 +111,7 @@ public class DialogueManager : MonoBehaviour {
 				} else {
 				continuationHint.SetActive(false);
 				dialogueBox.SetBool("Load", false);
+                target = null;
 				currentlyUsedDialogue = null;
 				GameManager.gameManager.statisticsParent.SetActive(true);
 				GameManager.gameManager.gameTimeout = false;
