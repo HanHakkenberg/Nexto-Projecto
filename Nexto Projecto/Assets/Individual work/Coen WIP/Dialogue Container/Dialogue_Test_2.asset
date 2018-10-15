@@ -11,10 +11,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: Dialogue_Test_2
   m_EditorClassIdentifier: 
+  timeTillNewChar: 0.15
   dialogue:
   - name: James
     currDialogueBox: They call me James, the big boi.
+    options:
+      shouldWaitAtSpace: 1
+      waitTime: 1.4
   - name: James
     currDialogueBox: You wanna know why?
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: James
     currDialogueBox: Cuz' i be dressin.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 0.88

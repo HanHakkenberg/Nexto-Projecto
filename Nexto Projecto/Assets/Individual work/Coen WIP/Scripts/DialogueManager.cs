@@ -33,12 +33,15 @@ public class DialogueManager : MonoBehaviour {
 	int dialogueBoxIndex = 0; //Current index representing the part of the script we are at now;
 	int charIndex = 0; //Used to add a char one at a time;
 
+	bool spottedWhitespace = false;
+
 	void Update() {
 		if(currentlyUsedDialogue != null) {
 		LoadInNewChar();
 		LoadNextDialogueBox();
-		RefreshDialogueTimer();
 		}
+
+		RefreshDialogueTimer();
 	}
 
 	void Awake() {
@@ -51,7 +54,16 @@ public class DialogueManager : MonoBehaviour {
 	bool TimeCheck() {
 		timer += Time.deltaTime;
 
-		if(timer >= timeTillNewChar) {
+		if(spottedWhitespace == true) {
+			if(timer >= currentlyUsedDialogue.dialogue[dialogueBoxIndex].options.waitTime) {
+				spottedWhitespace = false;
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		if(timer >= currentlyUsedDialogue.timeTillNewChar) {
 			timer = 0;
 			return true;
 		}
@@ -59,8 +71,21 @@ public class DialogueManager : MonoBehaviour {
 		return false;
 	}
 
+	void SetUI(bool _Current) {
+		if(_Current) {
+			progressIndicator.SetActive(true);
+			continuationHint.SetActive(true);
+			tooltip.SetActive(true);
+		} else {
+			progressIndicator.SetActive(false);
+			continuationHint.SetActive(false);
+			tooltip.SetActive(false);
+		}
+	}
+
 	public void LoadInNewDialogue(Dialogue _Dialogue, Transform _Target)
     {
+		canTalk = false;
         GameManager.gameManager.gameTimeout = true;
         target = _Target;
         CutsceneManager.cutsceneManager.SetupDialogue(_Target);
@@ -71,14 +96,14 @@ public class DialogueManager : MonoBehaviour {
 		canGoNextPage = false;
 		uiName.text = currentlyUsedDialogue.dialogue[dialogueBoxIndex].name;
 		uiDialogue.text = "";
-		progressIndicator.SetActive(false);
-		continuationHint.SetActive(false);
+		SetUI(false);
 		tooltip.SetActive(false);
 		dialogueBox.SetBool("Load", true);
 	}
 
     public void LoadInAbilityDialogue(Dialogue _Dialogue)
     {
+		canTalk = false;
         GameManager.gameManager.gameTimeout = true;
         GameManager.gameManager.statisticsParent.SetActive(false);
         CutsceneManager.cutsceneManager.mainCam.enabled = false;
@@ -90,9 +115,8 @@ public class DialogueManager : MonoBehaviour {
         canGoNextPage = false;
         uiName.text = currentlyUsedDialogue.dialogue[dialogueBoxIndex].name;
         uiDialogue.text = "";
-        progressIndicator.SetActive(false);
-        continuationHint.SetActive(false);
-        tooltip.SetActive(false);
+		SetUI(false);
+		tooltip.SetActive(false);
         dialogueBox.SetBool("Load", true);
     }
 
@@ -109,6 +133,7 @@ public class DialogueManager : MonoBehaviour {
 					continuationHint.SetActive(false);
 					progressIndicator.SetActive(false);
 				} else {
+				StartCoroutine(ActivateFunctions());
 				continuationHint.SetActive(false);
 				dialogueBox.SetBool("Load", false);
                 target = null;
@@ -122,23 +147,33 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
+	IEnumerator ActivateFunctions() {
+		if(currentlyUsedDialogue.shouldActivateFunctions)
+		yield return new WaitForSeconds(currentlyUsedDialogue.timeTillActivation);
+		currentlyUsedDialogue.functionsToBeActivated.Raise();
+	}
+
 	void LoadInNewChar() {
 		if(currentlyUsedDialogue != null) {
 			if(canGoNextPage == false) {
 				if(TimeCheck()) {
-					if(currentlyUsedDialogue.dialogue[dialogueBoxIndex].currDialogueBox[charIndex] != '/') {
+					if(currentlyUsedDialogue.dialogue[dialogueBoxIndex].options.shouldWaitAtSpace)
+						if(currentlyUsedDialogue.dialogue[dialogueBoxIndex].currDialogueBox[charIndex] == ' ') {
+						spottedWhitespace = true;
+						timer = 0;
+						}
+
+					if(currentlyUsedDialogue.dialogue[dialogueBoxIndex].currDialogueBox[charIndex] != '/')
 					uiDialogue.text += currentlyUsedDialogue.dialogue[dialogueBoxIndex].currDialogueBox[charIndex];
-					} else {
-						uiDialogue.text += "\n";
-					}
+					else 
+					uiDialogue.text += "\n";
 
 					if(charIndex < currentlyUsedDialogue.dialogue[dialogueBoxIndex].currDialogueBox.Length - 1) {
 						charIndex++;
 						LoadInNewChar();
 					} else {
 						canGoNextPage = true;
-						progressIndicator.SetActive(true);
-						continuationHint.SetActive(true);
+						SetUI(true);
 					}
 				}
 			}
@@ -146,7 +181,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	void RefreshDialogueTimer() {
-		if(canTalk == false) {
+		if(canTalk == false && currentlyUsedDialogue == null) {
 			if(sessionTimer < timeBetweenSessions) {
 			sessionTimer += Time.deltaTime;
 			} else {

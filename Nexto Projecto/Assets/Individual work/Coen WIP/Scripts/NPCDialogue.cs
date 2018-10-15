@@ -74,12 +74,14 @@ public class NPCDialogue : MonoBehaviour
                     {
                         if (!quest.completed)
                         {
+                            if(DialogueManager.dialogueManager.canTalk == true)
                             quest.UpdateQuestStatus();
                             yield break;
                         }
                     }
 
-                    DialogueManager.dialogueManager.LoadInNewDialogue(dialogue, transform);
+                    if(DialogueManager.dialogueManager.canTalk == true)
+                        DialogueManager.dialogueManager.LoadInNewDialogue(dialogue, transform);
                 }
             }
         }
