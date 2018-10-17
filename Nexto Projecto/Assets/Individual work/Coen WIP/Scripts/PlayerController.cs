@@ -5,10 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    [Header("References:")]
     public Collider col;
-
-    private RaycastHit hit;
-
 
     [Header("Pickup Settings:")]
     public Transform pickupLocation;
@@ -27,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [Header("Abilities:")]
     public int maxJumpAmount = 2;
     public float stompForce = 2;
-    public bool canStomp;
+    public bool stomping;
     public Collider stompCollider;
 
     [Header("Collider Settings:")]
@@ -39,6 +37,7 @@ public class PlayerController : MonoBehaviour
     Camera mainCamera;
     Animator anim;
     FixedJoint joint;
+    RaycastHit hit;
     int jumpCount;
     int movementType;
     #endregion
@@ -94,27 +93,9 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", CheckGrounded());
     }
 
-    //Draw the BoxCast as a gizmo to show where it currently is testing. Click the Gizmos button to see this
-    void OnDrawGizmos()
+    void OnCollisionExit(Collision _C)
     {
-        Gizmos.color = Color.red;
-
-        //Check if there has been a hit yet
-        if (CheckGrounded())
-        {
-            //Draw a Ray forward from GameObject toward the hit
-            Gizmos.DrawRay(transform.position, Vector3.down * hit.distance);
-            //Draw a cube that extends to where the hit exists
-            Gizmos.DrawWireSphere(transform.position + Vector3.down * hit.distance,  0.2f);
-        }
-        //If there hasn't been a hit yet, draw the ray at the maximum distance
-        else
-        {
-            //Draw a Ray forward from GameObject toward the maximum distance
-            Gizmos.DrawRay(transform.position, Vector3.down * distanceTillGrounded);
-            //Draw a cube at the maximum distance
-            Gizmos.DrawWireSphere(transform.position + Vector3.down * hit.distance, 0.2f);
-        }
+        anim.SetBool("Grounded", false);
     }
 
     private bool CheckGrounded()
@@ -125,8 +106,11 @@ public class PlayerController : MonoBehaviour
             {
                 ResetJumpCount();
 
-                if (stompCollider == true)
+                if (stomping == true)
                 {
+                    stomping = false;
+                    Camshake.camshake.Shake();
+                    anim.SetBool("GroundPound", stomping);
                     stompCollider.enabled = false;
                 }
 
@@ -254,19 +238,18 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            if (canStomp == true)
+            if (stomping == false)
             {
-                if (stompCollider.enabled == false)
-                {
                     if (!CheckGrounded())
                     {
+                        stomping = true;
+                        anim.SetBool("GroundPound", stomping);
                         stompCollider.enabled = true;
-                        thisBody.AddForce(Vector3.down * stompForce);
                     }
                 }
             }
         }
-    }
+
     #region Animation Events
     private void ResetJumpCount()
     {
@@ -279,10 +262,10 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", false);
     }
 
-    private void AddJumpForce()
+    private void AddJumpForce(float _Force)
     {
         thisBody.velocity = Vector3.zero;
-        thisBody.AddForce(new Vector3(0, 1.5f, 0), ForceMode.Impulse);
+        thisBody.AddForce(new Vector3(0, _Force, 0), ForceMode.Impulse);
         jumpCount++;
     }
 
