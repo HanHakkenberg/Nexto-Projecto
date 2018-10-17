@@ -19,21 +19,19 @@ public class ChickenBehaviour : MonoBehaviour
     private void OnTriggerStay(Collider _C)
     {
         if (_C.transform.tag == "PlayerTriggerField")
-            if (Input.GetKeyDown(KeyCode.E) &&egg !=null)
+            if (Input.GetKeyDown(KeyCode.E) && egg != null)
             {
                 anim.SetBool("Jumping", true);
-                anim.SetBool("Idle",false);
                 egg.SetActive(true);
             }
     }
 
     private void OnTriggerEnter(Collider _C)
     {
-        if (canHideEgg &&egg !=null)
+        if (canHideEgg && egg != null)
         {
             egg.SetActive(false);
             anim.SetBool("Jumping", false);
-            anim.SetBool("Idle", true);
             canHideEgg = false;
         }
 
