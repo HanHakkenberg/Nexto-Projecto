@@ -10,20 +10,24 @@ public class Pickup : MonoBehaviour
     public bool isQuestCollectable;
     public int unlockIndex = 0;
     public float animDuration = 1.5f;
+    public GameObject effect;
 
     bool hasBeenPickedUp = false;
 
     void OnTriggerStay(Collider _C)
     {
-        if (_C.transform.tag == "Player")       
-            Collect();
+        print ("Called");
 
         if (_C.transform.tag == "PlayerTriggerField")
+        {
+            print("trigger");
             if (Input.GetKeyDown(KeyCode.E))
             {
+                print("key pressed");
                 DialogueManager.dialogueManager.tooltip.SetActive(false);
                 Collect();
             }
+        }
         }
 
     private void OnTriggerEnter(Collider _C)
@@ -40,10 +44,13 @@ public class Pickup : MonoBehaviour
     }
 
     public void Collect() {
-        if (hasBeenPickedUp == false)
+        if (!hasBeenPickedUp)
         {
+            if (effect != null)
+                Instantiate(effect, transform.position, transform.rotation);
+
             hasBeenPickedUp = true;
-            if (shouldUnlockAbility == true)
+            if (shouldUnlockAbility)
             {
                 CutsceneManager.cutsceneManager.LoadCutscene(unlockIndex);
                 StartCoroutine(GameManager.gameManager.AddAbility());
