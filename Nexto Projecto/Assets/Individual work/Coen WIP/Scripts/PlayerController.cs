@@ -94,32 +94,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", CheckGrounded());
     }
 
-    //Draw the BoxCast as a gizmo to show where it currently is testing. Click the Gizmos button to see this
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
-        //Check if there has been a hit yet
-        if (CheckGrounded())
-        {
-            //Draw a Ray forward from GameObject toward the hit
-            Gizmos.DrawRay(transform.position, Vector3.down * hit.distance);
-            //Draw a cube that extends to where the hit exists
-            Gizmos.DrawWireSphere(transform.position + Vector3.down * hit.distance,  0.2f);
-        }
-        //If there hasn't been a hit yet, draw the ray at the maximum distance
-        else
-        {
-            //Draw a Ray forward from GameObject toward the maximum distance
-            Gizmos.DrawRay(transform.position, Vector3.down * distanceTillGrounded);
-            //Draw a cube at the maximum distance
-            Gizmos.DrawWireSphere(transform.position + Vector3.down * hit.distance, 0.2f);
-        }
-    }
-
     private bool CheckGrounded()
     {
-        print('y');
         if (Physics.SphereCast(col.bounds.center, 0.2f, Vector3.down, out hit, distanceTillGrounded, ignoreMask))
         {
             if (hit.transform.gameObject.tag != "Player")
