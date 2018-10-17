@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4346866504273174}
   - component: {fileID: 33470216922077394}
   - component: {fileID: 23925488824717556}
-  - component: {fileID: 65131845086987568}
+  - component: {fileID: 64565916022775874}
   m_Layer: 0
   m_Name: PRE_Marshmallow_Large_Yellow (8)
   m_TagString: Untagged
@@ -52,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1941081023561940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4707491246536194}
   m_RootOrder: 0
@@ -63,14 +63,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209616669506890}
-  m_LocalRotation: {x: -0.36743653, y: 0.49188873, z: 0.7165745, w: 0.330994}
-  m_LocalPosition: {x: 57.12, y: 20.41, z: 4.22}
+  m_LocalRotation: {x: -0.6697747, y: 0.13854176, z: 0.22671962, w: 0.693402}
+  m_LocalPosition: {x: 90.81803, y: 64.29696, z: 174.43268}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4346866504273174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -71.476006, y: -39.239002, z: 159.18701}
+  m_LocalEulerAnglesHint: {x: -82.59801, y: -60.000004, z: 90.00001}
 --- !u!23 &23925488824717556
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -112,9 +112,9 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1941081023561940}
-  m_Mesh: {fileID: 4300000, guid: 1c7da724cf17f65429b3e56f0dc6a2ee, type: 3}
---- !u!65 &65131845086987568
-BoxCollider:
+  m_Mesh: {fileID: 4300000, guid: a8759c83360ee21419734e1e33f349b7, type: 3}
+--- !u!64 &64565916022775874
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -122,6 +122,8 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.4000001, z: 0.60000014}
-  m_Center: {x: 0, y: 0, z: 0.30000007}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: a8759c83360ee21419734e1e33f349b7, type: 3}
