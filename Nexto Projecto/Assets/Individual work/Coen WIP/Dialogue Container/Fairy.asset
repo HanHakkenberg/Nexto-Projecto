@@ -11,16 +11,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: Fairy
   m_EditorClassIdentifier: 
+  timeTillNewChar: 0.1
   dialogue:
   - name: Navi
     currDialogueBox: Hey listen!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: You
     currDialogueBox: Uhm, is this a reference.
+    options:
+      shouldWaitAtSpace: 1
+      waitTime: 1
   - name: Navi
     currDialogueBox: '...'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: You
     currDialogueBox: I knew it.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: Navi
     currDialogueBox: Copyright strike?
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: You
     currDialogueBox: ./././*sigh*
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

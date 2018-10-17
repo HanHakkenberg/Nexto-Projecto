@@ -11,11 +11,11 @@ public class DonutPuzzle : MonoBehaviour {
     public bool failed;
     bool busy;
     public bool puzzleActive = true;
-    public GameObject manager;
+    //public GameObject manager;
 
     void Start () 
     {
-        StartPuzzle();
+        //StartPuzzle();
         //ToStart();
     }
     void ToStart()

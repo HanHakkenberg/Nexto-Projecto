@@ -9,25 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
-  m_Name: Dialogue_Test_2
+  m_Name: DonutPuzzleDialogue
   m_EditorClassIdentifier: 
   timeTillNewChar: 0.15
   dialogue:
-  - name: James
-    currDialogueBox: They call me James, the big boi.
-    options:
-      shouldWaitAtSpace: 1
-      waitTime: 1.4
-  - name: James
-    currDialogueBox: You wanna know why?
+  - name: Cunt
+    currDialogueBox: Imma need you do fly through these goshdarn donuts ok faG?
     options:
       shouldWaitAtSpace: 0
-      waitTime: 1.4
-  - name: James
-    currDialogueBox: Cuz' i be dressin.
+      waitTime: 0
+  - name: You
+    currDialogueBox: uh ok.
     options:
       shouldWaitAtSpace: 0
-      waitTime: 1.4
+      waitTime: 0
   shouldActivateFunctions: 1
-  functionsToBeActivated: {fileID: 0}
-  timeTillActivation: 0.88
+  functionsToBeActivated: {fileID: 11400000, guid: beb90e14b8267d947948f22ccff9324c,
+    type: 2}
+  timeTillActivation: 1
