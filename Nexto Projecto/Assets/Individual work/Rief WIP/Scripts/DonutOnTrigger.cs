@@ -7,9 +7,10 @@ public class DonutOnTrigger : MonoBehaviour {
     public GameObject puzzleInfo;
     public int timeAdd;
 
+
     public void OnTriggerEnter(Collider hit)
 	{
-        if (hit.tag == "TimeExtend")
+        if (hit.tag == "Companion")
         {
             puzzleInfo.GetComponent<DonutPuzzle>().time += timeAdd;
         }
