@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 33147944665093408}
   - component: {fileID: 23548131733369112}
   - component: {fileID: 64912459543567920}
+  - component: {fileID: 64803422364347934}
   m_Layer: 0
   m_Name: PRE_Marshmallow_Large_Yellow (8)
   m_TagString: Untagged
@@ -112,7 +113,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884234523173180}
-  m_Mesh: {fileID: 4300000, guid: a8759c83360ee21419734e1e33f349b7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 9fb52aa10cd52a04d9b6222c6c976e48, type: 3}
+--- !u!64 &64803422364347934
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884234523173180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 9fb52aa10cd52a04d9b6222c6c976e48, type: 3}
 --- !u!64 &64912459543567920
 MeshCollider:
   m_ObjectHideFlags: 1
