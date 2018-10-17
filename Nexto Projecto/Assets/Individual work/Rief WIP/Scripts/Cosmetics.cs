@@ -60,7 +60,7 @@ public class Cosmetics : MonoBehaviour {
 	void Update () 
 	{
 		AddCurrency();
-		//LockedCheck();
+		LockedCheck();
 	}
 
 	void AddCurrency()
