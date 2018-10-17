@@ -28,6 +28,11 @@ public class PlayerController : MonoBehaviour
     public bool stomping;
     public Collider stompCollider;
 
+    [Header("Stamina:")]
+    public float stamina;
+    public float staminaRegainRate = 1;
+    float IncrementStamina { get { return staminaRegainRate * Time.deltaTime; } }
+
     [Header("Collider Settings:")]
     public LayerMask ignoreMask;
 
@@ -75,6 +80,7 @@ public class PlayerController : MonoBehaviour
     public void Update()
     {
         Rotate();
+        IncrementStam();
 
         if (GameManager.gameManager.gameTimeout == false && canControl == true)
         {
@@ -126,6 +132,17 @@ public class PlayerController : MonoBehaviour
     int walkingState = 0;
     float definitveSpeed;
 
+    public void IncrementStam() {
+        anim.SetFloat("Stamina", stamina);
+
+        if(walkingState == 2)
+            stamina -= IncrementStamina;
+        else
+            stamina += IncrementStamina;
+
+        stamina = Mathf.Clamp(stamina, 0, 100);
+    }
+
     private void Pickup()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -175,9 +192,9 @@ public class PlayerController : MonoBehaviour
 
         if (inputs != Vector2.zero)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && stamina >= 0) {
                 walkingState = 2;
-            else
+            } else
                 walkingState = 1;
         }
         else
