@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 4092281460360390}
   m_Layer: 9
   m_Name: Companion
-  m_TagString: Untagged
+  m_TagString: Companion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 5728f022ea9b7b140909b718937b731f, type: 2}
+  quest: {fileID: 0}
   canLoadUpDialogue: 0
 --- !u!114 &114363054799067344
 MonoBehaviour:

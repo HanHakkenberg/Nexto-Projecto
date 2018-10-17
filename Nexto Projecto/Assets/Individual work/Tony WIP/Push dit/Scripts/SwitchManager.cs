@@ -17,6 +17,9 @@ public class SwitchManager : MonoBehaviour
 
     public Transform camTarget;
 
+    [Header("Groundpound Checks:")]
+    public bool canFollowAgain = true;
+
     private Vector3 velocity = Vector3.zero;
 
     void Update()
@@ -63,5 +66,12 @@ public class SwitchManager : MonoBehaviour
             camTarget.position = Vector3.Lerp(camTarget.transform.position, companion.transform.position, 1f*Time.deltaTime);
 
         }
+    }
+
+    public void SetFollowMode(int _ID) {
+        if(_ID == 0)
+            canFollowAgain = true;
+        else if(_ID == 1)
+            canFollowAgain = false;
     }
 }
