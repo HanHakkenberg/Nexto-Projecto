@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("References:")]
     public Collider col;
+    public Animator hat;
 
     [Header("Pickup Settings:")]
     public Transform pickupLocation;
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        hat.SetBool("Flying", !CheckGrounded());
         Rotate();
         IncrementStam();
 
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
 
                 if (stomping == true)
                 {
+                    print(hit.transform.gameObject);
                     stomping = false;
                     Camshake.camshake.Shake();
                     anim.SetBool("GroundPound", stomping);
