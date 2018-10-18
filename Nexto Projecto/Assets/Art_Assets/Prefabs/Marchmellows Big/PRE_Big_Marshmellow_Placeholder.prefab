@@ -36,14 +36,14 @@ GameObject:
   - component: {fileID: 4535858788817494}
   - component: {fileID: 33147944665093408}
   - component: {fileID: 23548131733369112}
-  - component: {fileID: 64912459543567920}
   - component: {fileID: 64803422364347934}
+  - component: {fileID: 64297859276525788}
   m_Layer: 0
   m_Name: PRE_Marshmallow_Large_Yellow (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4260409184781918
 Transform:
@@ -114,7 +114,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884234523173180}
   m_Mesh: {fileID: 4300000, guid: 16a1b4b176eb54f4b807e2c7800fa2a5, type: 3}
---- !u!64 &64803422364347934
+--- !u!64 &64297859276525788
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -127,8 +127,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 9fb52aa10cd52a04d9b6222c6c976e48, type: 3}
---- !u!64 &64912459543567920
+  m_Mesh: {fileID: 4300000, guid: 16a1b4b176eb54f4b807e2c7800fa2a5, type: 3}
+--- !u!64 &64803422364347934
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,4 +141,4 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: a8759c83360ee21419734e1e33f349b7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 9fb52aa10cd52a04d9b6222c6c976e48, type: 3}

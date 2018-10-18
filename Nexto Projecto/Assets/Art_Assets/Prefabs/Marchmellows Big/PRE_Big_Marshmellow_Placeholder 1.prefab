@@ -24,7 +24,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1884234523173180
 GameObject:
@@ -36,14 +36,14 @@ GameObject:
   - component: {fileID: 4535858788817494}
   - component: {fileID: 33147944665093408}
   - component: {fileID: 23548131733369112}
-  - component: {fileID: 64213993985368926}
   - component: {fileID: 64574575762028506}
+  - component: {fileID: 64610450316331872}
   m_Layer: 0
   m_Name: PRE_Marshmallow_Large_Yellow (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4260409184781918
 Transform:
@@ -51,8 +51,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780717848518176}
-  m_LocalRotation: {x: -0.29112357, y: -0.3262996, z: -0.12913387, w: 0.89000005}
-  m_LocalPosition: {x: 84.51381, y: 61.026955, z: 169.45616}
+  m_LocalRotation: {x: -0.79875046, y: -0.01702559, z: 0.017564468, w: 0.60116506}
+  m_LocalPosition: {x: 60.14707, y: 61.666954, z: 166.40268}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 4535858788817494}
@@ -114,7 +114,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884234523173180}
   m_Mesh: {fileID: 4300000, guid: 16a1b4b176eb54f4b807e2c7800fa2a5, type: 3}
---- !u!64 &64213993985368926
+--- !u!64 &64574575762028506
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -127,8 +127,8 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: a8759c83360ee21419734e1e33f349b7, type: 3}
---- !u!64 &64574575762028506
+  m_Mesh: {fileID: 4300000, guid: 9fb52aa10cd52a04d9b6222c6c976e48, type: 3}
+--- !u!64 &64610450316331872
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,4 +141,4 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 9fb52aa10cd52a04d9b6222c6c976e48, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 16a1b4b176eb54f4b807e2c7800fa2a5, type: 3}
