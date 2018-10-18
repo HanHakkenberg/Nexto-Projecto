@@ -60,6 +60,11 @@ public class Cosmetics : MonoBehaviour {
     Material startEyes;
     Mesh startHair;
 
+    int skinNumb;
+    int diaperNumb;
+    int eyeNumb;
+    int hairNumb;
+
     public Material skinColour;
     public Material diaperColour;
     public Material eyeColour;
@@ -75,18 +80,20 @@ public class Cosmetics : MonoBehaviour {
     public void SaveCurrent()
 	{
         startSkin = skinColour;
+        skinNumb = currSkin;
         startDiaper = diaperColour;
         startEyes = eyeColour;
-		print("saved");
+		UpdateColours();
         //startHair = playerHair.GetComponent<Mesh>();
     }
 
 	public void ApplyStartCosmetics()
 	{
         skinColour = startSkin;
+        currSkin = skinNumb;
         diaperColour = startDiaper;
 		eyeColour = startEyes;
-		print("loaded");
+		UpdateColours();
 		//starthair
     }
 
@@ -95,7 +102,7 @@ public class Cosmetics : MonoBehaviour {
 	{
 		AddCurrency();
         LockedCheck();
-        UpdateColours();
+        
     }
 
 	void AddCurrency()
@@ -209,6 +216,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currSkin++;
 			CosmeticUpdate();
+			UpdateColours();
 		}
 	}
 	public void SkinDown()
@@ -217,6 +225,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currSkin--;
 			CosmeticUpdate();
+			UpdateColours();
 		}
 	}
 		public void HairUp()
