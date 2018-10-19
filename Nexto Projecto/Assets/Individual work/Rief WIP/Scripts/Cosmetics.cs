@@ -30,16 +30,15 @@ public class Cosmetics : MonoBehaviour {
 	int currSkin;
 
 	[Header ("Hair")]
-	public List<Mesh> hairType;
+	public List<CosmeticInfo> hairType;
 	//public GameObject playerHair;
 	public TextMeshProUGUI currHairText;
 	public GameObject hairBuyButton;
 	int currHair;
 
 	[Header("Diaper")]
+	public GameObject diaperModel;
 	public List<CosmeticInfo> myDiapers = new List<CosmeticInfo>();
-    
-    public GameObject diaperModel;
 	//public GameObject playerDiaper;
 	public TextMeshProUGUI currDiaperText;
 	public GameObject diaperBuyButton;
@@ -69,6 +68,13 @@ public class Cosmetics : MonoBehaviour {
     public Material diaperColour;
     public Material eyeColour;
 
+
+	void Awake()
+	{
+        skinNumb = currSkin;
+        diaperNumb = currDiaper;
+        eyeNumb = currEyes;
+    }
 	void UpdateColours()
 	{
         playerSkin.GetComponent<Renderer>().material = skinColour;
@@ -79,8 +85,10 @@ public class Cosmetics : MonoBehaviour {
 
     public void SaveCurrent()
 	{
+		skinNumb = currSkin;
+        diaperNumb = currDiaper;
+        eyeNumb = currEyes;
         startSkin = skinColour;
-        skinNumb = currSkin;
         startDiaper = diaperColour;
         startEyes = eyeColour;
 		UpdateColours();
@@ -89,8 +97,10 @@ public class Cosmetics : MonoBehaviour {
 
 	public void ApplyStartCosmetics()
 	{
-        skinColour = startSkin;
         currSkin = skinNumb;
+        diaperNumb = currDiaper;
+        eyeNumb = currEyes;
+        skinColour = startSkin;
         diaperColour = startDiaper;
 		eyeColour = startEyes;
 		UpdateColours();
@@ -234,7 +244,8 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currHair++;
 			CosmeticUpdate();
-		}
+            UpdateColours();
+        }
 	}
 	public void HairDown()
 	{
@@ -242,7 +253,8 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currHair--;
 			CosmeticUpdate();
-		}
+			UpdateColours();
+        }
 	}
 	public void DiaperUp()
 	{
@@ -250,6 +262,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currDiaper++;
 			CosmeticUpdate();
+			UpdateColours();
 		}
 	}
 	public void DiaperDown()
@@ -258,6 +271,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currDiaper--;
 			CosmeticUpdate();
+			UpdateColours();
 		}
 	}
 
@@ -267,6 +281,7 @@ public class Cosmetics : MonoBehaviour {
 		{
             currEyes++;
             CosmeticUpdate();
+			UpdateColours();
         }
 	}
 
@@ -276,6 +291,7 @@ public class Cosmetics : MonoBehaviour {
 		{
             currEyes--;
 			CosmeticUpdate();
+			UpdateColours();
         }
 	}
 	#endregion
