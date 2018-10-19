@@ -55,13 +55,55 @@ public class Cosmetics : MonoBehaviour {
 
     public GameObject cosmeticPanel_temp;
 
+    Material startSkin;
+    Material startDiaper;
+    Material startEyes;
+    Mesh startHair;
+
+    int skinNumb;
+    int diaperNumb;
+    int eyeNumb;
+    int hairNumb;
+
+    public Material skinColour;
+    public Material diaperColour;
+    public Material eyeColour;
+
+	void UpdateColours()
+	{
+        playerSkin.GetComponent<Renderer>().material = skinColour;
+        diaperModel.GetComponent<Renderer>().material = diaperColour;
+        eyeRight.GetComponent<Renderer>().material = eyeColour;
+		eyeLeft.GetComponent<Renderer>().material = eyeColour;
+    }
+
+    public void SaveCurrent()
+	{
+        startSkin = skinColour;
+        skinNumb = currSkin;
+        startDiaper = diaperColour;
+        startEyes = eyeColour;
+		UpdateColours();
+        //startHair = playerHair.GetComponent<Mesh>();
+    }
+
+	public void ApplyStartCosmetics()
+	{
+        skinColour = startSkin;
+        currSkin = skinNumb;
+        diaperColour = startDiaper;
+		eyeColour = startEyes;
+		UpdateColours();
+		//starthair
+    }
 
 
 	void Update () 
 	{
 		AddCurrency();
-		//LockedCheck();
-	}
+        LockedCheck();
+        
+    }
 
 	void AddCurrency()
 	{
@@ -76,7 +118,7 @@ public class Cosmetics : MonoBehaviour {
 	{
 		if(skinTone[currSkin].locked == false)
 		{
-			playerSkin.GetComponent<Renderer>().material = skinTone[currSkin].colour;
+			skinColour = skinTone[currSkin].colour;
 			skinBuyButton.SetActive(false);
 		}
 		else
@@ -86,7 +128,7 @@ public class Cosmetics : MonoBehaviour {
 
 		if(myDiapers[currDiaper].locked == false)
 		{
-			diaperModel.GetComponent<Renderer>().material = myDiapers[currDiaper].colour;
+			diaperColour = myDiapers[currDiaper].colour;
 			diaperBuyButton.SetActive(false);
 		}
 		else
@@ -96,8 +138,7 @@ public class Cosmetics : MonoBehaviour {
 
 		if(eyeType[currEyes].locked == false)
 		{
-			eyeLeft.GetComponent<Renderer>().material = eyeType[currEyes].colour;
-			eyeRight.GetComponent<Renderer>().material = eyeType[currEyes].colour;
+			eyeColour = eyeType[currEyes].colour;
 			eyesBuyButton.SetActive(false);
 		}
 		else
@@ -175,6 +216,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currSkin++;
 			CosmeticUpdate();
+			UpdateColours();
 		}
 	}
 	public void SkinDown()
@@ -183,6 +225,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			currSkin--;
 			CosmeticUpdate();
+			UpdateColours();
 		}
 	}
 		public void HairUp()

@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4154086822686382}
   m_Layer: 0
-  m_Name: PF_GumBall (PlaceHolder)
+  m_Name: PF_GumBall10
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   myAudio: {fileID: 82735616829370442}
+  objPool: Gumball10
 --- !u!135 &135217184144386974
 SphereCollider:
   m_ObjectHideFlags: 1

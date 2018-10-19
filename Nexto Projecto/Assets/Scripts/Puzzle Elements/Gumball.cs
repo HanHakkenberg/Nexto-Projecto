@@ -7,6 +7,7 @@ public class Gumball : MonoBehaviour {
     [SerializeField] UnityEvent onDestroy;
     [SerializeField] UnityEvent onStart;
     [SerializeField] AudioSource myAudio;
+    [SerializeField] string objPool;
     float currentLifeSpen;
 
     private void Start() {
@@ -39,6 +40,6 @@ public class Gumball : MonoBehaviour {
     }
 
     public void AddToPool() {
-        ObjectPooler.instance.AddToPool("Gumball", gameObject);
+        ObjectPooler.instance.AddToPool(objPool, gameObject);
     }
 }

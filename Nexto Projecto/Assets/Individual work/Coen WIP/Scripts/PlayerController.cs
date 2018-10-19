@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    [Header("References:")]
     public Collider col;
-
-    private RaycastHit hit;
-
+    public Animator hat;
 
     [Header("Pickup Settings:")]
     public Transform pickupLocation;
@@ -27,8 +26,13 @@ public class PlayerController : MonoBehaviour
     [Header("Abilities:")]
     public int maxJumpAmount = 2;
     public float stompForce = 2;
-    public bool canStomp;
+    public bool stomping;
     public Collider stompCollider;
+
+    [Header("Stamina:")]
+    public float stamina;
+    public float staminaRegainRate = 1;
+    float IncrementStamina { get { return staminaRegainRate * Time.deltaTime; } }
 
     [Header("Collider Settings:")]
     public LayerMask ignoreMask;
@@ -39,6 +43,7 @@ public class PlayerController : MonoBehaviour
     Camera mainCamera;
     Animator anim;
     FixedJoint joint;
+    RaycastHit hit;
     int jumpCount;
     int movementType;
     #endregion
@@ -75,7 +80,9 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        hat.SetBool("Flying", !CheckGrounded());
         Rotate();
+        IncrementStam();
 
         if (GameManager.gameManager.gameTimeout == false && canControl == true)
         {
@@ -96,6 +103,11 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", CheckGrounded());
     }
 
+    void OnCollisionExit(Collision _C)
+    {
+        anim.SetBool("Grounded", false);
+    }
+
     private bool CheckGrounded()
     {
         if (Physics.SphereCast(col.bounds.center, 0.2f, Vector3.down, out hit, distanceTillGrounded, ignoreMask))
@@ -104,8 +116,12 @@ public class PlayerController : MonoBehaviour
             {
                 ResetJumpCount();
 
-                if (stompCollider == true)
+                if (stomping == true)
                 {
+                    print(hit.transform.gameObject);
+                    stomping = false;
+                    Camshake.camshake.Shake();
+                    anim.SetBool("GroundPound", stomping);
                     stompCollider.enabled = false;
                 }
 
@@ -120,6 +136,17 @@ public class PlayerController : MonoBehaviour
     Quaternion freeRotation;
     int walkingState = 0;
     float definitveSpeed;
+
+    public void IncrementStam() {
+        anim.SetFloat("Stamina", stamina);
+
+        if(walkingState == 2)
+            stamina -= IncrementStamina;
+        else
+            stamina += IncrementStamina;
+
+        stamina = Mathf.Clamp(stamina, 0, 100);
+    }
 
     private void Pickup()
     {
@@ -170,9 +197,9 @@ public class PlayerController : MonoBehaviour
 
         if (inputs != Vector2.zero)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && stamina >= 0) {
                 walkingState = 2;
-            else
+            } else
                 walkingState = 1;
         }
         else
@@ -233,19 +260,18 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            if (canStomp == true)
+            if (stomping == false)
             {
-                if (stompCollider.enabled == false)
-                {
                     if (!CheckGrounded())
                     {
+                        stomping = true;
+                        anim.SetBool("GroundPound", stomping);
                         stompCollider.enabled = true;
-                        thisBody.AddForce(Vector3.down * stompForce);
                     }
                 }
             }
         }
-    }
+
     #region Animation Events
     private void ResetJumpCount()
     {
@@ -258,10 +284,10 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", false);
     }
 
-    private void AddJumpForce()
+    private void AddJumpForce(float _Force)
     {
         thisBody.velocity = Vector3.zero;
-        thisBody.AddForce(new Vector3(0, 1.5f, 0), ForceMode.Impulse);
+        thisBody.AddForce(new Vector3(0, _Force, 0), ForceMode.Impulse);
         jumpCount++;
     }
 
