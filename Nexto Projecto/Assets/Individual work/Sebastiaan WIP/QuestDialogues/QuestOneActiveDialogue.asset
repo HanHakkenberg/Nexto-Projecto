@@ -11,12 +11,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: QuestOneActiveDialogue
   m_EditorClassIdentifier: 
+  timeTillNewChar: 0.01
   dialogue:
   - name: Nigger Baby
     currDialogueBox: "Suhhhhh Nigga got me some memes yet?\t"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: You xDDDD
     currDialogueBox: Nahhh dawg xDDDDDDDD
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: Nigger Baby
     currDialogueBox: 'nigga wtf xD go get me some
 
 '
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

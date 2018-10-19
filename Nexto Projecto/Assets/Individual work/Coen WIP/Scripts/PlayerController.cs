@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+
+
         anim.SetInteger("WalkingState", 0);
     }
 
