@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
             Move();
             Stomp();
             Pickup();
+            
             return;
         }
 
