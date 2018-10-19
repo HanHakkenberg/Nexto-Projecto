@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Collision Detection:")]
     public float distanceTillGrounded = 0.51f;
+    public float spherecastRadius = 0.2f;
 
     [Header("Movement:")]
     public bool canControl = true;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        groundSlamParticles.Stop();
         thisBody = GetComponent<Rigidbody>();
         currentPosition = transform.position;
         mainCamera = Camera.main;
@@ -108,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
     private bool CheckGrounded()
     {
-        if (Physics.SphereCast(col.bounds.center, 0.2f, Vector3.down, out hit, distanceTillGrounded, ignoreMask))
+        if (Physics.SphereCast(col.bounds.center, spherecastRadius, Vector3.down, out hit, distanceTillGrounded, ignoreMask))
         {
             if (hit.transform.gameObject.tag != "Player")
             {
@@ -241,6 +243,37 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void FootStepLeft()
+    {
+        Instantiate(leftFootObject, leftFootPos.position, leftFootPos.rotation);
+    }
+    public void FootStepRight()
+    {
+        Instantiate(rightFootObject, rightFootPos.position, rightFootPos.rotation);
+    }
+    public void CheckSlamColor()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out hit))
+        {
+            textureMap = hit.transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
+            Vector2 pixelUV = hit.textureCoord;
+
+
+            groundSlamParticles.startColor = textureMap.GetPixel(Mathf.FloorToInt(pixelUV.x), Mathf.FloorToInt(pixelUV.y));
+        }
+
+        groundSlamParticles.Play();
+    }
+[Header("Footprint references. Don't touch")]
+    public Transform leftFootPos;
+    public Transform rightFootPos;
+    public GameObject leftFootObject;
+    public GameObject rightFootObject;
+
+    [Header("Ground Slam particles")]
+    public ParticleSystem groundSlamParticles;
+    public Texture2D textureMap;
 
     private void Jump()
     {
