@@ -8,9 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
-  m_Name: Static Quest Dialogue
+  m_Script: {fileID: 11500000, guid: d6bdbb6988d7f55458dbfe88280bee38, type: 3}
+  m_Name: Door
   m_EditorClassIdentifier: 
-  dialogue:
-  - name: Nigger
-    currDialogueBox: Whomst've
+  listeners:
+  - {fileID: 0}

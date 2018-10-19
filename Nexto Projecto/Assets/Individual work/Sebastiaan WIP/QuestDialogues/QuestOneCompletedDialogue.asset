@@ -11,10 +11,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: QuestOneCompletedDialogue
   m_EditorClassIdentifier: 
+  timeTillNewChar: 0.01
   dialogue:
   - name: Nigger Baby
     currDialogueBox: "Cheers nigga imma get real high with those memes\t"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: You xDDDD
     currDialogueBox: "No problem lollll give me some heroine candy\t"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
   - name: Nigger Baby
     currDialogueBox: Here nigga, 10 heroine candies
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

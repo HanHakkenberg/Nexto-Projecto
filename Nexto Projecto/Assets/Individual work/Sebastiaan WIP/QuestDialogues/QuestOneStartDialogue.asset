@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: QuestOneStartDialogue
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.01
+  dialogue:
+  - name: Farmvillian
+    currDialogueBox: "Hey you there! Can you help me out?\t"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  - name: You
+    currDialogueBox: "What's the matter?\t"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  - name: Nigger Baby
+    currDialogueBox: I require 10 chocolate eggs but I'm not fast enough to get the
+      eggs from the chickens. Could you try to get them for me?
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  - name: You xDDDD
+    currDialogueBox: "Sure, but the door seems locked. How do I get in?\t"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  - name: Nigger Baby
+    currDialogueBox: Don't worry about that, I'll open the door for you. Be careful!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: be2cc1b98e61f4845a1f3aa2966e4932,
+    type: 2}
+  timeTillActivation: 1
