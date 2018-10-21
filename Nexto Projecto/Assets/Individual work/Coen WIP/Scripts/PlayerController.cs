@@ -204,7 +204,6 @@ public class PlayerController : MonoBehaviour
     private void ChargeJump() {
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") || anim.GetCurrentAnimatorStateInfo(0).IsName("Fart_Charge"))
         if(chargeJump == true) {
-            print(chargeForce);
             if(Input.GetButton("Charging")) {
                 anim.SetBool("Charging", true);
                 if(chargeForce < maxChargeForce)

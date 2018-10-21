@@ -20884,7 +20884,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.13333334
-    functionName: 'CheckSlamColor '
+    functionName: CheckSlamColor
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 50d36c8f7539604429107d767dba3336,
       type: 3}
