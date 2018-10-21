@@ -24,11 +24,20 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed = 5;
     public float walkSpeed = 2.5f;
 
-    [Header("Abilities:")]
+    [Header("Unlocked Abilities:")]
+    public bool jump;
+    public bool doubleJump;
+    public bool dash;
+    public bool smash;
+    public bool chargeJump;
+
+    [Header("Ability Settings:")]
     public int maxJumpAmount = 2;
     public float stompForce = 2;
     public bool stomping;
     public Collider stompCollider;
+    public float maxChargeForce;
+    public float chargeSpeed;
 
     [Header("Stamina:")]
     public float stamina;
@@ -47,6 +56,7 @@ public class PlayerController : MonoBehaviour
     RaycastHit hit;
     int jumpCount;
     int movementType;
+    float chargeForce = 0;
     #endregion
 
     private void OnTriggerEnter(Collider _C)
@@ -85,6 +95,7 @@ public class PlayerController : MonoBehaviour
         hat.SetBool("Flying", !CheckGrounded());
         Rotate();
         IncrementStam();
+        ChargeJump();
 
         if (GameManager.gameManager.gameTimeout == false && canControl == true)
         {
@@ -190,6 +201,24 @@ public class PlayerController : MonoBehaviour
         pickupLocation.GetComponent<Collider>().enabled = false;
     }
 
+    private void ChargeJump() {
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") || anim.GetCurrentAnimatorStateInfo(0).IsName("Fart_Charge"))
+        if(chargeJump == true) {
+            print(chargeForce);
+            if(Input.GetButton("Charging")) {
+                anim.SetBool("Charging", true);
+                if(chargeForce < maxChargeForce)
+                chargeForce += chargeSpeed * Time.deltaTime;
+            }
+
+            if(Input.GetButtonUp("Charging")) {
+            anim.SetBool("Charging", false);
+            GetComponent<BabyMovement>().Jump(chargeForce);
+            chargeForce = 0;
+            }
+        }
+    }
+
     private void Move()
     {
         var forward = mainCamera.transform.TransformDirection(Vector3.forward);
@@ -280,18 +309,24 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (jumpCount < maxJumpAmount)
-        {
+        if(doubleJump == true)
+            maxJumpAmount = 2;
+
+    if(jump == true) {
+         if (jumpCount < maxJumpAmount)
+         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 jumpCount++;
                 anim.SetInteger("JumpState", jumpCount);
+               }
             }
         }
     }
 
     private void Stomp()
     {
+        if(smash == true) {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             if (stomping == false)
@@ -305,6 +340,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
 
     #region Animation Events
     private void ResetJumpCount()

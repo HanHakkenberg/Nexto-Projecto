@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,7 +13,6 @@ public class GameManager : MonoBehaviour {
 	[Header("Currency:")]
 	public GameObject statisticsParent;
 	public Animator currencyOrb;
-	public Text abilityCollectableText;
 
 	[Header("Death:")]
 	public Animator deathScreen;
@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour {
 	public Animator collectables;
     public Animator questCollectablesAnim;
     public Image questCollectableImage;
-	public Text collectableText;
-    public Text questCollectablesText;
+	public TextMeshProUGUI collectableText;
+    public TextMeshProUGUI questCollectablesText;
 	public float timeTillUpdateCollectableUI = 1;
 	public float loadTime;
 
@@ -59,10 +59,8 @@ public class GameManager : MonoBehaviour {
     }
 	
 	public IEnumerator AddAbility() {
+		yield return new WaitForSeconds(0);
 		currencyOrb.SetTrigger("Get");
-		yield return new WaitForSeconds(timeTillUpdateCollectableUI);
-		unlockedAbilitys++;
-		abilityCollectableText.text = unlockedAbilitys.ToString();
 	}
 
 

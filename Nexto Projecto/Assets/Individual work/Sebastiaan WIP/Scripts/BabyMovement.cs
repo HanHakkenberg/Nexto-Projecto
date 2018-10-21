@@ -40,9 +40,11 @@ public class BabyMovement : MonoBehaviour
 
     void Dash()
     {
+    if(GameManager.gameManager.player.GetComponent<PlayerController>().dash == true) {
         if(Input.GetButtonDown("Fire3")) {
             animator.SetTrigger("Dash");
             timer = 0;
+            }
         }
     }
 

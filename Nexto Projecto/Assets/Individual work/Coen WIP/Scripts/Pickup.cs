@@ -8,6 +8,7 @@ public class Pickup : MonoBehaviour
     [Header("Ability Unlock Settings:")]
     public bool shouldUnlockAbility;
     public bool isQuestCollectable;
+    public bool interactable;
     public int unlockIndex = 0;
     public float animDuration = 1.5f;
     public GameObject effect;
@@ -16,7 +17,12 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerStay(Collider _C)
     {
-        print ("Called");
+        if(interactable == true) {
+            if(_C.transform.tag == "Player") {
+                Collect();
+                return;
+            }
+        }
 
         if (_C.transform.tag == "PlayerTriggerField")
         {
@@ -32,6 +38,13 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider _C)
     {
+        if(interactable == true) {
+            if(_C.transform.tag == "Player") {
+                Collect();
+                return;
+            }
+        }
+
         if (_C.transform.tag == "PlayerTriggerField")
             DialogueManager.dialogueManager.tooltip.SetActive(true);
 
@@ -39,6 +52,9 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerExit(Collider _C)
     {
+        if(interactable == true)
+        return;
+        
         if (_C.transform.tag == "PlayerTriggerField")
             DialogueManager.dialogueManager.tooltip.SetActive(false);
     }
