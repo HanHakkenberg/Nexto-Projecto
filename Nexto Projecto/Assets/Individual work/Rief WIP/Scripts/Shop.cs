@@ -13,7 +13,7 @@ public class Shop : MonoBehaviour {
 	}
 	
 	void Update () {
-
+		ShoptInteract();
     }
 	void OnTriggerEnter(Collider _C)
 	{
