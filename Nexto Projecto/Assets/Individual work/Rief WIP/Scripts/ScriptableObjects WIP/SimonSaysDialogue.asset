@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: SimonSaysDialogue
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.15
+  dialogue:
+  - name: Dude
+    currDialogueBox: Simon Says! Complete all 4 rounds and receive a nice reward!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: b043dfbe97bc65349b207a79be1d88ba,
+    type: 2}
+  timeTillActivation: 1

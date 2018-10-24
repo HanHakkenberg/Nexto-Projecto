@@ -1,23 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SimonSays : MonoBehaviour {
 
 	public List<GameObject> candies;
 	public List<GameObject> used;
 	public int currRound;
+	public int roundToFinish;
+	public TextMeshProUGUI statusText;
 
 	bool wrong;
 
-	void Start () {
-	}
 	
 	void Update () {
 		if(Input.GetButtonDown("Map"))
 		{
 			Erase();
 		}
+	}
+
+	public void StartSimonSays()
+	{
+		Erase();
 	}
 
 	void Erase()
@@ -31,7 +37,12 @@ public class SimonSays : MonoBehaviour {
 		{
 			used.Remove(used[i]);
 		}
-		Round();
+		if(currRound <= roundToFinish)
+		{
+			Round();
+		}
+		TextUpdate();
+
 	}
 	public void Round()
 	{
@@ -71,6 +82,17 @@ public class SimonSays : MonoBehaviour {
 		{
 			wrong = true;
 			Erase();
+		}
+	}
+	void TextUpdate()
+	{
+		if(currRound <= roundToFinish)
+		{
+			statusText.text = "Round " + currRound;
+		}
+		else
+		{
+			statusText.text = "You did it!";
 		}
 	}
 }
