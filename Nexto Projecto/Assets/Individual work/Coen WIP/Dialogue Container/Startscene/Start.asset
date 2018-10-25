@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: ???
+    currDialogueBox: So this is where it starts.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: In a wonderful land every baby dreams of.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: Ah, such a colorful world, full of peace and quiet.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: '...                  /
+
+      Well... not so quiet.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'But certainly a place where an adventure/
+
+      can take place, and a legendary one at that.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

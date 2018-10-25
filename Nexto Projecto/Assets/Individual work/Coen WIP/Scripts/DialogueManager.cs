@@ -101,6 +101,21 @@ public class DialogueManager : MonoBehaviour {
 		dialogueBox.SetBool("Load", true);
 	}
 
+		public void LoadCutsceneDialogue(Dialogue _Dialogue)
+    {
+		canTalk = false;
+        GameManager.gameManager.statisticsParent.SetActive(false);
+		currentlyUsedDialogue = _Dialogue;
+		charIndex = 0;
+		dialogueBoxIndex = 0;
+		canGoNextPage = false;
+		uiName.text = currentlyUsedDialogue.dialogue[dialogueBoxIndex].name;
+		uiDialogue.text = "";
+		SetUI(false);
+		tooltip.SetActive(false);
+		dialogueBox.SetBool("Load", true);
+	}
+
     public void LoadInAbilityDialogue(Dialogue _Dialogue)
     {
 		canTalk = false;
@@ -138,10 +153,13 @@ public class DialogueManager : MonoBehaviour {
 				dialogueBox.SetBool("Load", false);
                 target = null;
 				currentlyUsedDialogue = null;
-				GameManager.gameManager.statisticsParent.SetActive(true);
-				GameManager.gameManager.gameTimeout = false;
-				CutsceneManager.cutsceneManager.mainCam.enabled = true;
-				CutsceneManager.cutsceneManager.dialogueCamera.enabled = false;
+
+					if(CutsceneManager.cutsceneManager.cutscenePlaying == false) {
+						GameManager.gameManager.statisticsParent.SetActive(true);
+						GameManager.gameManager.gameTimeout = false;
+						CutsceneManager.cutsceneManager.mainCam.enabled = true;
+						CutsceneManager.cutsceneManager.dialogueCamera.enabled = false;
+					}
 				}
 			} 
 		}
