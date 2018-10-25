@@ -41,7 +41,13 @@ public class OptionManager : MonoBehaviour {
 		allSliders.Add(effectSlider);
 		allSliders.Add(environmentSlider);
         allSliders.Add(uiSlider);
+		StartCoroutine(StatingScreen()); //testing, not sure what we wanna do with this.
     }
+	IEnumerator StatingScreen()
+	{
+		yield return new WaitForSeconds(1.5f);
+		Time.timeScale = 0;
+	}
 
 	void Update()
 	{
@@ -190,6 +196,7 @@ public class OptionManager : MonoBehaviour {
 		if(masterOn && uiOn)
 		{
             uiAudio.mute = false;
+			uiAudio.volume = uiSlider.GetComponent<Slider>().value;
         }
 		else
 		{
