@@ -13,6 +13,7 @@ public class CutsceneManager : MonoBehaviour {
 	[Header("Dialogue Settings:")]
 	public Dialogue[] cutSceneDialogue;
 	public Transform[] cutsceneLocations;
+	public GameObject pauseMenu;
 
 	[Header("Static Ability Cutscene Related:")]
 	public Animator blackscreen;
@@ -34,6 +35,7 @@ public class CutsceneManager : MonoBehaviour {
 
 		[Header("Cameras:")]
 		public List<Cinemachine.CinemachineVirtualCamera> cameras = new List<Cinemachine.CinemachineVirtualCamera>();
+		public List<Animator> animatedObjects = new List<Animator>();
 
 		[Header("Dialogue:")]
 		public List<Dialogue> dialogues = new List<Dialogue>();
@@ -63,19 +65,24 @@ public class CutsceneManager : MonoBehaviour {
 		StartCoroutine(StartCutscene(0));
 	}
 
-	internal void StartLoadCamera(int _ID) {
-		blackscreen.SetBool("IsFading", false);
+	public void StartLoadCamera(int _ID) {
+		blackscreen.SetBool("IsFading", true);
 		StartCoroutine(LoadCamera(_ID));
 	}
 
 	IEnumerator LoadCamera(int _ID) {
-		yield return new WaitForSeconds(currentScene.cameraSwitchDuration);
 		foreach(Cinemachine.CinemachineVirtualCamera _Cam in currentScene.cameras) 
 		_Cam.enabled = false;
+
 		currentScene.cameras[_ID].enabled = true;
+		yield return new WaitForSeconds(currentScene.cameraSwitchDuration);
+
+		if(currentScene.animatedObjects[_ID] != null)
+		currentScene.animatedObjects[_ID].enabled = true;
+		blackscreen.SetBool("IsFading", false);
 	}
 
-	internal void StartLoadCutsceneDialogue(int _ID) {
+	public void StartLoadCutsceneDialogue(int _ID) {
 		StartCoroutine(LoadCutsceneDialogue(_ID));
 	}
 
@@ -90,21 +97,23 @@ public class CutsceneManager : MonoBehaviour {
 	
 
 	IEnumerator LoadEndCutscene() {
-		blackscreen.SetBool("IsFading", false);
-		yield return new WaitForSeconds(currentScene.endingDuration);
-		mainCam.enabled = true;
+		cutscenePlaying = false;
 		blackscreen.SetBool("IsFading", true);
+		mainCam.enabled = true;
 		yield return new WaitForSeconds(currentScene.endingDuration);
+		blackscreen.SetBool("IsFading", false);
 		if(currentScene.npc != null && currentScene.endDialogue != null) {
 			DialogueManager.dialogueManager.LoadInNewDialogue(currentScene.endDialogue, currentScene.npc.transform);
+			currentScene = null;
 		} else {
 			currentScene = null;
 			GameManager.gameManager.gameTimeout = false;
-			cutscenePlaying = false;
+			
 		}
 	}
 
 	public IEnumerator StartCutscene(int _I) {
+		pauseMenu.SetActive(false);
 		cutscenePlaying = true;
 		GameManager.gameManager.statisticsParent.SetActive(false);
 		blackscreen.SetBool("IsFading", true);

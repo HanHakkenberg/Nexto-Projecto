@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Standard_Dialogue_TutorialNPC
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: Micheal
+    currDialogueBox: 'Welcome back!
+
+'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: Do you understand what your goal is yet?
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'Remember./
+
+      Pick up those yellow shiny candy to unlock new abilities.
+
+'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: And pickup the regular ones for cosmetics for the shops.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: You can find a shop in every biome.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

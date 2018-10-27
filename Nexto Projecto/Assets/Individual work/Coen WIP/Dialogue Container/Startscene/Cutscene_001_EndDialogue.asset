@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Cutscene_001_EndDialogue
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: ???
+    currDialogueBox: 'Oh yeah! I haven''t told you my name yet,/
+
+      haven''t i?'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'My name is Micheal!
+
+      I am here to instruct you how things go around here.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'We children here have been drooling about the thoughts/
+
+      of getting that Rattle ourselves, but as we are now/'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: We don't have the moves to do so ourselves!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'And a fairy named "Ivan", has told us that you are the one/
+
+      that may be one of our race that gets born every 100 years or so.
+
+'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'So we decided that we as our people, would teach you the/
+
+      ways of everything we have learned so far!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'Around this world there has been scattered several/
+
+      legendary candies that give the person who eats it/
+
+      immense powers!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'These powers give you the ability to overcome obstacles.
+
+      And reach further into our world that we have come to be.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'To go to the other island, every cake slice has several/
+
+      quests and puzzles to complete.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'The babys that need help all have a picture drawn/
+
+      above their heads!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'To talk to them, simply walk up to them and press "E"./
+
+      It''s not bad to socialize every so often y''know!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'After you completed a task that''s been given by them,/
+
+      they''ll be sure to reward you or to make your life/
+
+      a bit easier!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: If you need any help be sure to pass by anytime!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

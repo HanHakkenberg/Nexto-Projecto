@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Cutscene_002_Dialogue
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: ???
+    currDialogueBox: In this world filled with sweets.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'There are alot of citizens that need help,/
+
+      and really are NOT older then the age of... 1 and a half...'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'But that doesn''t matter!/
+
+'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'But you <Insert name here>,/
+
+      your goal is to achieve what the other.
+
+      baby''s could not accomplish in the past 1.5 years...'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: Its the...
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: The Golden Rattle.
+    options:
+      shouldWaitAtSpace: 1
+      waitTime: 1
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: 87b19002b110cb24390f5f79b8be5471,
+    type: 2}
+  timeTillActivation: 1

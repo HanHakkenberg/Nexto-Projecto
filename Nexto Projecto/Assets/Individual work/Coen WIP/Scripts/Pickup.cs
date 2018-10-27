@@ -70,6 +70,7 @@ public class Pickup : MonoBehaviour
             {
                 CutsceneManager.cutsceneManager.LoadAbilityCutscene(unlockIndex);
                 StartCoroutine(GameManager.gameManager.AddAbility());
+                UnlockAbility(unlockIndex);
             }
             else
                if (isQuestCollectable)
@@ -87,5 +88,27 @@ public class Pickup : MonoBehaviour
 
         yield return new WaitForSeconds(animDuration);
         Destroy(transform.parent.gameObject);
+    }
+
+    void UnlockAbility(int i) {
+        var _PlayerRef = GameManager.gameManager.player.GetComponent<PlayerController>();
+
+        switch(i) {
+            case 0:
+            _PlayerRef.jump = true;
+            break;
+            case 1:
+            _PlayerRef.doubleJump = true;
+            break;
+            case 2:
+            _PlayerRef.dash = true;
+            break;
+            case 3:
+            _PlayerRef.smash = true;
+            break;
+            case 4:
+            _PlayerRef.chargeJump = true;
+            break;
+        }
     }
 }

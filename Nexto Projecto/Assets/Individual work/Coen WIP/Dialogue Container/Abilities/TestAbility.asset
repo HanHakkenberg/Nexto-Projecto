@@ -11,15 +11,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: TestAbility
   m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
   dialogue:
-  - name: Super-Jump
+  - name: Jump
     currDialogueBox: You have unlocked the "Super-Jump" ability.
-  - name: Super-Jump
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  - name: Jump
     currDialogueBox: 'To use this ability, simply press spacebar/ once, and watch
       your character/
 
       FART into the air!'
-  - name: Super-Jump
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  - name: Jump
     currDialogueBox: 'There are many more abilites to explore for.
 
       I''d say go find em!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1.4
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 0}
+  timeTillActivation: 1

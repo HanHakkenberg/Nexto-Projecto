@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Cutscene_003_Dialogue
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: ???
+    currDialogueBox: This is a "Ability-Candy"
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'When you pick up one of these sweet legendary,
+
+      sweets you''ll unlock an ability!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'They are pretty rare though,/
+
+      there are only a several spread around this land.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: Though these things are definitely worth picking up!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'So when you see one you know what to do!
+
+'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 0
+  functionsToBeActivated: {fileID: 11400000, guid: 7aa95ab67f060f5408128aa420315d96,
+    type: 2}
+  timeTillActivation: 1

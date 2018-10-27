@@ -156,6 +156,7 @@ public class DialogueManager : MonoBehaviour {
 
 					if(CutsceneManager.cutsceneManager.cutscenePlaying == false) {
 						GameManager.gameManager.statisticsParent.SetActive(true);
+						CutsceneManager.cutsceneManager.pauseMenu.SetActive(true);
 						GameManager.gameManager.gameTimeout = false;
 						CutsceneManager.cutsceneManager.mainCam.enabled = true;
 						CutsceneManager.cutsceneManager.dialogueCamera.enabled = false;
