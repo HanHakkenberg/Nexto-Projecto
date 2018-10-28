@@ -41,11 +41,11 @@ public class OptionManager : MonoBehaviour {
 		allSliders.Add(effectSlider);
 		allSliders.Add(environmentSlider);
         allSliders.Add(uiSlider);
-		StartCoroutine(StatingScreen()); //testing, not sure what we wanna do with this.
+		StartCoroutine(StatingScreen());
     }
 	IEnumerator StatingScreen()
 	{
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(0.1f);
 		Time.timeScale = 0;
 	}
 
