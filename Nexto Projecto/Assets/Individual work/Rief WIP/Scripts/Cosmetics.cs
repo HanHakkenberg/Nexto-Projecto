@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Cinemachine;
 
 [System.Serializable]
 public class CosmeticInfo
@@ -20,9 +21,15 @@ public class Cosmetics : MonoBehaviour {
 	[Header ("In Game")]
 	public int currency;
 	public TextMeshProUGUI currencyText;
+    public Transform playerTrans;
+    Vector3 oldPos;
+    public Transform cosmeticPos;
+    public CinemachineFreeLook mainCam;
+    public CinemachineVirtualCamera cosmeticCam;
+    
 
 
-	[Header ("Skin")]
+    [Header ("Skin")]
 	public GameObject playerSkin;
 	public List<CosmeticInfo> skinTone = new List<CosmeticInfo>();
 	public TextMeshProUGUI currSkinText;
@@ -217,6 +224,21 @@ public class Cosmetics : MonoBehaviour {
             CosmeticUpdate();
 			OptionManager.inGame = false;
 		}
+	}
+
+	public void SetPosition()
+	{
+        oldPos = playerTrans.position;
+        playerTrans.position = cosmeticPos.position;
+        cosmeticCam.enabled = true;
+        mainCam.enabled = false;
+
+    }
+	public void ResetPosition()
+	{
+        playerTrans.position = oldPos;
+        cosmeticCam.enabled = false;
+        mainCam.enabled = true;
 	}
 
 #region ButtonClicks

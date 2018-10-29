@@ -16,6 +16,7 @@ public class SimonSays : MonoBehaviour {
     bool doneTalking = false;
 
     public CinemachineFreeLook mainCam;
+    public CinemachineVirtualCamera simonSaysCam;
 
     public void StartSimonSays()
 	{
@@ -46,7 +47,8 @@ public class SimonSays : MonoBehaviour {
 	}
 	public void Round()
 	{
-        mainCam.gameObject.SetActive(false);
+        mainCam.enabled = false;
+        simonSaysCam.enabled = true;
         int amount = 2 + currRound;
 
 		for(int i = 0; i < amount; i++)
@@ -65,7 +67,8 @@ public class SimonSays : MonoBehaviour {
 			used[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(1,1,1,1));
 			yield return new WaitForSeconds(0.5f);
 		}
-        mainCam.gameObject.SetActive(true);
+        simonSaysCam.enabled = false;
+        mainCam.enabled = true;
     }
 
 	public void Check(string currCandy)
