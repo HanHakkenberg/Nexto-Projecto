@@ -291,7 +291,7 @@ public class PlayerController : MonoBehaviour
             Vector2 pixelUV = hit.textureCoord;
 
 
-            groundSlamParticles.startColor = textureMap.GetPixel(Mathf.FloorToInt(pixelUV.x), Mathf.FloorToInt(pixelUV.y));
+            groundSlamParticles.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = textureMap.GetPixel(Mathf.FloorToInt(pixelUV.x), Mathf.FloorToInt(pixelUV.y));
         }
 
         groundSlamParticles.Play();

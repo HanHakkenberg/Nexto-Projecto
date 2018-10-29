@@ -37,11 +37,11 @@ public class SwitchManager : MonoBehaviour
                 followsCompanion = true;
                 baby.GetComponent<PlayerController>().ToggleController(false);
                 companion = Instantiate(companionInstance, baby.transform.position, Quaternion.identity);
-                companion = companion.transform.GetChild(0).gameObject;
+                companion = companion.transform.GetChild(0).GetChild(2).gameObject;
                 camTarget.SetParent(companion.transform);
 
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 2f;
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 3f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 1f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 4f;
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 2f;
             }
             else
@@ -51,14 +51,14 @@ public class SwitchManager : MonoBehaviour
                 camTarget.SetParent(baby.transform);
                 Destroy(companion.transform.parent.gameObject);
 
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 3f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 2f;
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 4f;
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 3f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 2f;
             }
         }
         if (!followsCompanion)
         {
-            camTarget.position = Vector3.Lerp(camTarget.transform.position, baby.transform.position + new Vector3(0, 0.7f, 0), 4f*Time.deltaTime);
+            camTarget.position = Vector3.Lerp(camTarget.transform.position, baby.transform.position, 4f*Time.deltaTime);
 
         }
         else if (followsCompanion)

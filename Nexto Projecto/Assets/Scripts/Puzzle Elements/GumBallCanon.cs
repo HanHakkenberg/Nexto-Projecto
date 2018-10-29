@@ -7,6 +7,8 @@ public class GumBallCanon : MonoBehaviour {
     [SerializeField] AudioSource myAudio;
     [SerializeField] Animator myAnimation;
 
+    public ParticleSystem cannonSmoke;
+
     void Update() {
         GumballCheck();
     }
@@ -21,6 +23,7 @@ public class GumBallCanon : MonoBehaviour {
             ObjectPooler.instance.GetFromPool(gumBallPool, gumBallSpawnPos.position, gumBallSpawnPos.rotation);
             myAudio.Play();
             myAnimation.SetTrigger("Shoot");
+            cannonSmoke.Play();
         }
     }
 }
