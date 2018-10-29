@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4711138444239008}
   - component: {fileID: 33574231381158726}
   - component: {fileID: 23371349437965620}
+  - component: {fileID: 64923713266195446}
   m_Layer: 0
   m_Name: MD_WhippedCream
   m_TagString: Untagged
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283543282169652}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -56.80352, y: 20.999996, z: -59.86089}
+  m_LocalRotation: {x: -0.045332152, y: -0.7056522, z: -0.7056522, w: 0.045332152}
+  m_LocalPosition: {x: 19.7, y: 30, z: -25.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -172.649}
 --- !u!23 &23371349437965620
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283543282169652}
+  m_Mesh: {fileID: 4300000, guid: 3a090e13cb832c840a11637f40955e11, type: 3}
+--- !u!64 &64923713266195446
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283543282169652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 3a090e13cb832c840a11637f40955e11, type: 3}

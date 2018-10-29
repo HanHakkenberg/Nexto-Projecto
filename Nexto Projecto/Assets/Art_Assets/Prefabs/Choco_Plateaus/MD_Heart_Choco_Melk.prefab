@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4597896048947938}
   - component: {fileID: 33914655833322170}
   - component: {fileID: 23107962280983248}
+  - component: {fileID: 64618837034366770}
   m_Layer: 0
   m_Name: MD_Heart_Choco_Melk
   m_TagString: Untagged
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001249541828854}
-  m_LocalRotation: {x: -0.7071068, y: 0.0000001685874, z: -0.0000001685874, w: 0.7071068}
-  m_LocalPosition: {x: 8, y: 21.000006, z: -15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.68829274, y: -0.16202722, z: -0.16202739, w: 0.6882932}
+  m_LocalPosition: {x: 52.603004, y: 21, z: -51.462658}
+  m_LocalScale: {x: 3, y: 3, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -26.493002}
 --- !u!23 &23107962280983248
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001249541828854}
+  m_Mesh: {fileID: 4300000, guid: 621ed1bc7bdd42f42ac9e9e740a8a009, type: 3}
+--- !u!64 &64618837034366770
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001249541828854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 621ed1bc7bdd42f42ac9e9e740a8a009, type: 3}
