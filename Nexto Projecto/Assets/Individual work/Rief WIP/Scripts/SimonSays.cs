@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
 
 public class SimonSays : MonoBehaviour {
 
@@ -12,19 +13,18 @@ public class SimonSays : MonoBehaviour {
 	public TextMeshProUGUI statusText;
 
 	bool wrong;
+    bool doneTalking = false;
 
-	
-	void Update () {
-		if(Input.GetButtonDown("Map"))
+    public CinemachineFreeLook mainCam;
+
+    public void StartSimonSays()
+	{
+		if(!doneTalking)
 		{
 			Erase();
 		}
-	}
-
-	public void StartSimonSays()
-	{
-		Erase();
-	}
+        doneTalking = true;
+    }
 
 	void Erase()
 	{
@@ -46,7 +46,8 @@ public class SimonSays : MonoBehaviour {
 	}
 	public void Round()
 	{
-		int amount = 2 + currRound;
+        mainCam.gameObject.SetActive(false);
+        int amount = 2 + currRound;
 
 		for(int i = 0; i < amount; i++)
 		{
@@ -56,20 +57,22 @@ public class SimonSays : MonoBehaviour {
 	}
 	IEnumerator StartGame()
 	{
+		yield return new WaitForSeconds(2);
 		for(int i = 0; i < used.Count; i++)
 		{
-
-			used[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(2.5f,2.5f,2.5f,2.5f));
+            used[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(2.5f,2.5f,2.5f,2.5f));
 			yield return new WaitForSeconds(0.7f);
 			used[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(1,1,1,1));
 			yield return new WaitForSeconds(0.5f);
 		}
-	}
+        mainCam.gameObject.SetActive(true);
+    }
+
 	public void Check(string currCandy)
 	{
 		if(used[0].name == currCandy)
 		{
-			used.Remove(used[0]);
+            used.Remove(used[0]);
 			
 			if(used.Count == 0)
 			{

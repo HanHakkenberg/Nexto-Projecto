@@ -52,7 +52,7 @@ public class OptionManager : MonoBehaviour {
 	void Update()
 	{
         Map();
-        //Pausing();
+        Pausing();
     }
 
 	public void MasterClick()
