@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320869669140106}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: 51.791035, y: 20.999998, z: -46.444588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldUnlockAbility: 0
   isQuestCollectable: 1
+  interactable: 0
   unlockIndex: 0
   animDuration: 0
   effect: {fileID: 1465933356335798, guid: d545c87e1ed4f5d44a1ade27f9e4e4f0, type: 2}
