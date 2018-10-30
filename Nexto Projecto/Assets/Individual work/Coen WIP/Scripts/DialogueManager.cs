@@ -75,11 +75,9 @@ public class DialogueManager : MonoBehaviour {
 		if(_Current) {
 			progressIndicator.SetActive(true);
 			continuationHint.SetActive(true);
-			tooltip.SetActive(true);
 		} else {
 			progressIndicator.SetActive(false);
 			continuationHint.SetActive(false);
-			tooltip.SetActive(false);
 		}
 	}
 
@@ -88,6 +86,7 @@ public class DialogueManager : MonoBehaviour {
 		canTalk = false;
         GameManager.gameManager.gameTimeout = true;
         target = _Target;
+		_Target.GetComponent<Animator>().SetTrigger("Converse");
         CutsceneManager.cutsceneManager.SetupDialogue(_Target);
         GameManager.gameManager.statisticsParent.SetActive(false);
 		currentlyUsedDialogue = _Dialogue;
@@ -139,6 +138,10 @@ public class DialogueManager : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.E)) {
 			if(currentlyUsedDialogue != null) {
 				if(dialogueBoxIndex < currentlyUsedDialogue.dialogue.Count - 1) {
+					if(target!= null) {
+					target.GetComponent<Animator>().ResetTrigger("Converse");
+					target.GetComponent<Animator>().SetTrigger("Converse");
+					}
 					dialogueBoxIndex++;
 					charIndex = 0;
 					progressIndicator.SetActive(false);
@@ -151,7 +154,10 @@ public class DialogueManager : MonoBehaviour {
 				StartCoroutine(ActivateFunctions(currentlyUsedDialogue));
 				continuationHint.SetActive(false);
 				dialogueBox.SetBool("Load", false);
+				if(target != null) {
+				target.GetComponent<Animator>().ResetTrigger("Converse");
                 target = null;
+				}
 				currentlyUsedDialogue = null;
 
 					if(CutsceneManager.cutsceneManager.cutscenePlaying == false) {

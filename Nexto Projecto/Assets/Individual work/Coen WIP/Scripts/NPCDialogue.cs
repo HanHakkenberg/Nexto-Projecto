@@ -13,6 +13,9 @@ public class NPCDialogue : MonoBehaviour
     [Header("Quest Info:")]
     public QuestTemplate quest;
 
+    [Header("Behaviour Settings:")]
+    public bool overrideRotation = true;
+
     public bool canLoadUpDialogue = false;
 
     Vector3 startRot;
@@ -30,11 +33,13 @@ public class NPCDialogue : MonoBehaviour
             {
                 if (DialogueManager.dialogueManager.target == gameObject.transform)
                 {
+                    if(overrideRotation == true)
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(GameManager.gameManager.player.transform.position - transform.position), overallSensitivity * Time.deltaTime);
                     return;
                 }
             }
-           
+
+            if(!GetComponent<RootmotionAI>() && overrideRotation == false)
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startRot), overallSensitivity * Time.deltaTime);
     }
 
@@ -47,8 +52,10 @@ public class NPCDialogue : MonoBehaviour
     {
         if (_C.transform.tag == "Player")
         {
-            canLoadUpDialogue = true;
+            if(DialogueManager.dialogueManager.canTalk == true && GameManager.gameManager.gameTimeout == false)
             DialogueManager.dialogueManager.tooltip.SetActive(true);
+
+            canLoadUpDialogue = true;
         }
     }
 
