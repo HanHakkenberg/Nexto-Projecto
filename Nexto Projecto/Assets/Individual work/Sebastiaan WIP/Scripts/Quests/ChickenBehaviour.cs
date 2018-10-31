@@ -18,11 +18,13 @@ public class ChickenBehaviour : MonoBehaviour
 
     private void OnTriggerStay(Collider _C)
     {
-        if (_C.transform.tag == "PlayerTriggerField")
+        if (_C.transform.tag == "Player")
             if (Input.GetKeyDown(KeyCode.E) && egg != null)
             {
-                anim.SetBool("Jumping", true);
+                anim.ResetTrigger("Jumping");
+                anim.SetTrigger("Jumping");
                 egg.SetActive(true);
+                print("memo");
             }
     }
 
@@ -31,7 +33,6 @@ public class ChickenBehaviour : MonoBehaviour
         if (canHideEgg && egg != null)
         {
             egg.SetActive(false);
-            anim.SetBool("Jumping", false);
             canHideEgg = false;
         }
 
