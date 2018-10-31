@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 114036992563753546}
   m_Layer: 9
   m_Name: Companion_body
-  m_TagString: Untagged
+  m_TagString: Companion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393002259388156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.568153, y: 20.999998, z: -43.490795}
+  m_LocalPosition: {x: -34.95828, y: 21.20586, z: -63.00294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4981846139201944}
@@ -378,6 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 5728f022ea9b7b140909b718937b731f, type: 2}
   quest: {fileID: 0}
+  overrideRotation: 1
   canLoadUpDialogue: 0
 --- !u!114 &114363054799067344
 MonoBehaviour:
@@ -392,6 +393,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasFullyInstantiated: 0
   timeTillControl: 2
+  companionMoveSpeedHor: 8
+  companionMoveSpeedVer: 8
 --- !u!135 &135628602409507502
 SphereCollider:
   m_ObjectHideFlags: 1
