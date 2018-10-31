@@ -7,6 +7,8 @@ public class CompanionMovement : MonoBehaviour {
     private Rigidbody rigidbody;
     public bool hasFullyInstantiated = false;
     public float timeTillControl = 2;
+    [SerializeField] float companionMoveSpeedHor = 10f;
+    [SerializeField] float companionMoveSpeedVer = 10f;
 
     private void Awake()
     {
@@ -44,16 +46,16 @@ public class CompanionMovement : MonoBehaviour {
         }
 
         if(hasFullyInstantiated == true) {
-        var forward = Camera.main.transform.TransformDirection(Vector3.forward*5);
-        var right = Camera.main.transform.TransformDirection(Vector3.right*5);
-        var up = Camera.main.transform.TransformDirection(Vector3.up * 5);
-            rigidbody.AddForce(forward* Input.GetAxis("Vertical"), ForceMode.Force);
-            rigidbody.AddForce(right*Input.GetAxis("Horizontal"), ForceMode.Force);
+        var forward = Camera.main.transform.TransformDirection(Vector3.forward* 5f);
+        var right = Camera.main.transform.TransformDirection(Vector3.right* 5f);
+        var up = Camera.main.transform.TransformDirection(Vector3.up * 5f);
+            rigidbody.AddForce(companionMoveSpeedHor * forward * Input.GetAxis("Vertical"), ForceMode.Force);
+            rigidbody.AddForce(companionMoveSpeedHor * right * Input.GetAxis("Horizontal"), ForceMode.Force);
 
          if (Input.GetButton("Shift"))
-            rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, -up, 2f * Time.deltaTime);
+            rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, -up, companionMoveSpeedVer * Time.deltaTime);
          if (Input.GetButton("Space"))
-            rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, up, 2f * Time.deltaTime);
+            rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, up, companionMoveSpeedVer * Time.deltaTime);
           
             rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, Vector3.zero, 5f * Time.deltaTime);
         }
