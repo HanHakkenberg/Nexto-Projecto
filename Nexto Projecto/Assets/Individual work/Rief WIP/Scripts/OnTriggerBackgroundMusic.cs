@@ -10,6 +10,7 @@ public class OnTriggerBackgroundMusic : MonoBehaviour {
     public GameObject cosmetics;
     public List<CosmeticInfo> extraDiaper;
     public List<CosmeticInfo> extraHair;
+    public int level;
 
 
 

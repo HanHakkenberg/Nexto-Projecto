@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 65335678997548738}
   - component: {fileID: 114468386315056090}
   - component: {fileID: 65077377933341616}
+  - component: {fileID: 95335654433339164}
   m_Layer: 0
   m_Name: SimonSaysTestNPC
   m_TagString: Untagged
@@ -267,7 +268,7 @@ GameObject:
   - component: {fileID: 224066606907392500}
   - component: {fileID: 222997394911366720}
   - component: {fileID: 114049774679609588}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StatusText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +303,7 @@ GameObject:
   - component: {fileID: 223565907809391448}
   - component: {fileID: 114295057765319172}
   - component: {fileID: 114263913636785380}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,9 +493,9 @@ Transform:
   - {fileID: 4028723172487662}
   - {fileID: 4407380489887462}
   - {fileID: 224344407285348506}
-  - {fileID: 224897936096123798}
-  - {fileID: 224405547452830658}
   - {fileID: 4580431372856744}
+  - {fileID: 224405547452830658}
+  - {fileID: 224897936096123798}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -509,7 +510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4516658905860564}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4604581111126684
 Transform:
@@ -1510,6 +1511,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2.25}
   m_Center: {x: 0, y: 0, z: 1.125}
+--- !u!95 &95335654433339164
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1204139496934440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da9450c79506f70448019da17d3968d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114018626658617332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1770,6 +1789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 9b47ec465da816e4a8508b5e018d4cda, type: 2}
   quest: {fileID: 0}
+  overrideRotation: 1
   canLoadUpDialogue: 0
 --- !u!114 &114623259134481342
 MonoBehaviour:
@@ -2025,7 +2045,7 @@ RectTransform:
   - {fileID: 4794923517397854}
   - {fileID: 4631105969347562}
   m_Father: {fileID: 4516658905860564}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -47,8 +47,8 @@ public class SimonSays : MonoBehaviour {
 	}
 	public void Round()
 	{
+		simonSaysCam.enabled = true;
         mainCam.enabled = false;
-        simonSaysCam.enabled = true;
         int amount = 2 + currRound;
 
 		for(int i = 0; i < amount; i++)
@@ -67,8 +67,8 @@ public class SimonSays : MonoBehaviour {
 			used[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(1,1,1,1));
 			yield return new WaitForSeconds(0.5f);
 		}
-        simonSaysCam.enabled = false;
         mainCam.enabled = true;
+		simonSaysCam.enabled = false;
     }
 
 	public void Check(string currCandy)
