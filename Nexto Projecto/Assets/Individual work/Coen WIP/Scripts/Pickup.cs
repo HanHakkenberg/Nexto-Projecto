@@ -24,7 +24,7 @@ public class Pickup : MonoBehaviour
             }
         }
 
-        if (_C.transform.tag == "PlayerTriggerField")
+        if (_C.transform.tag == "Player")
         {
             print("trigger");
             if (Input.GetKeyDown(KeyCode.E))

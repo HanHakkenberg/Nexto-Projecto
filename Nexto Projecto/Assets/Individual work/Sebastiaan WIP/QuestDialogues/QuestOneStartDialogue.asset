@@ -24,8 +24,8 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 1.4
   - name: Nigger Baby
-    currDialogueBox: I require 10 chocolate eggs but I'm not fast enough to get the
-      eggs from the chickens. Could you try to get them for me?
+    currDialogueBox: ' I require 10 chocolate eggs but I''m not fast enough to get,/
+      the eggs from the chickens. Could you try to get them for me?'
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4

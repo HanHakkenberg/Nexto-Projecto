@@ -8,39 +8,30 @@ public class ChickenBehaviour : MonoBehaviour
     public GameObject egg;
 
     private bool canHideEgg;
+    public float jumpTimer;
     private Animator anim;
 
     private void Awake()
     {
+        jumpTimer = Random.Range(5f, 15f);
         anim = GetComponent<Animator>();
         egg.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider _C)
+    private void Update()
     {
-        if (_C.transform.tag == "Player")
-            if (Input.GetKeyDown(KeyCode.E) && egg != null)
-            {
-                anim.ResetTrigger("Jumping");
-                anim.SetTrigger("Jumping");
-                egg.SetActive(true);
-                print("memo");
-            }
-    }
+        jumpTimer -=Time.deltaTime;
 
-    private void OnTriggerEnter(Collider _C)
-    {
-        if (canHideEgg && egg != null)
-        {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Anim_Jump"))
+            egg.SetActive(true);
+        else
             egg.SetActive(false);
-            canHideEgg = false;
+
+        if (jumpTimer <= 0)
+        {
+            jumpTimer = Random.Range(5f, 15f);
+            anim.SetTrigger("Jumping");
         }
 
-    }
-
-
-    private void OnTriggerExit(Collider _C)
-    {
-        canHideEgg = true;
     }
 }
