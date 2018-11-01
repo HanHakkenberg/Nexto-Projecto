@@ -38,11 +38,11 @@ ScriptedImporter:
       uid=\"3998725238\" type=\"0\" value=\"3.48\" />\n  <presetinput identifier=\"Iris_Iris_Detail_Color_Hue\"
       uid=\"3998723117\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Iris_Iris_Color_Hue\"
       uid=\"3998723392\" type=\"0\" value=\"0.26\" />\n  <presetinput identifier=\"Iris_Iris_Color_Saturation\"
-      uid=\"3998723394\" type=\"0\" value=\"0.768\" />\n  <presetinput identifier=\"Iris_Iris_Color_Lightness\"
-      uid=\"3998723396\" type=\"0\" value=\"0.451\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentHue\"
-      uid=\"3998724079\" type=\"0\" value=\"0.267\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentSaturation\"
-      uid=\"3998724065\" type=\"0\" value=\"0.525\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentLightness\"
-      uid=\"3998724067\" type=\"0\" value=\"0.496\" />\n  <presetinput identifier=\"Veins_Size_Scale\"
+      uid=\"3998723394\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"Iris_Iris_Color_Lightness\"
+      uid=\"3998723396\" type=\"0\" value=\"0.492\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentHue\"
+      uid=\"3998724079\" type=\"0\" value=\"0.271\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentSaturation\"
+      uid=\"3998724065\" type=\"0\" value=\"0.539\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentLightness\"
+      uid=\"3998724067\" type=\"0\" value=\"0.564\" />\n  <presetinput identifier=\"Veins_Size_Scale\"
       uid=\"3998721841\" type=\"0\" value=\"1.104\" />\n </sbspreset>\n"
     shaderName: Standard
     outputNames: Base Color,Normal,Metallic,Ambient Occlusion,Height
