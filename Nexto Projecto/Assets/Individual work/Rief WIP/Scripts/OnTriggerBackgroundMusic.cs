@@ -18,6 +18,7 @@ public class OnTriggerBackgroundMusic : MonoBehaviour {
 	{
         player.GetComponent<BackgroundMusic>().fading = true;
         player.GetComponent<BackgroundMusic>().currClip = songChoice;
+        Cosmetics.currLevel = level;
         CosmeticForloop();
 
     }

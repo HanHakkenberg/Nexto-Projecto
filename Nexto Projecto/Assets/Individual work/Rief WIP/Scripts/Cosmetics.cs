@@ -27,7 +27,7 @@ public class Cosmetics : MonoBehaviour {
     public List<Transform> cosmeticPos;
     public CinemachineFreeLook mainCam;
     public List<GameObject> cosmeticCamLoc;
-    public CinemachineVirtualCamera cosmeticCam;
+    public List<CinemachineVirtualCamera> cosmeticCam;
     public static int currLevel = 1;
 
 
@@ -237,7 +237,7 @@ public class Cosmetics : MonoBehaviour {
         oldRot = playerTrans.rotation;
         playerTrans.position = cosmeticPos[currLevel-1].position;
         playerTrans.LookAt(cosmeticCamLoc[currLevel-1].transform);
-        cosmeticCam.enabled = true;
+        cosmeticCam[currLevel - 1].enabled = true;
         mainCam.enabled = false;
 
 
@@ -246,7 +246,7 @@ public class Cosmetics : MonoBehaviour {
 	{
         playerTrans.position = oldPos;
         playerTrans.rotation = oldRot;
-        cosmeticCam.enabled = false;
+        cosmeticCam[currLevel - 1].enabled = false;
         mainCam.enabled = true;
 	}
 
