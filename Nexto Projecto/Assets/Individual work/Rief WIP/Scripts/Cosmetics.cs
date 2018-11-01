@@ -23,10 +23,11 @@ public class Cosmetics : MonoBehaviour {
 	public TextMeshProUGUI currencyText;
     public Transform playerTrans;
     Vector3 oldPos;
-    public Transform cosmeticPos;
+    public List<Transform> cosmeticPos;
     public CinemachineFreeLook mainCam;
     public CinemachineVirtualCamera cosmeticCam;
-    
+    public static int currLevel = 1;
+
 
 
     [Header ("Skin")]
@@ -229,7 +230,7 @@ public class Cosmetics : MonoBehaviour {
 	public void SetPosition()
 	{
         oldPos = playerTrans.position;
-        playerTrans.position = cosmeticPos.position;
+        playerTrans.position = cosmeticPos[currLevel-1].position;
         cosmeticCam.enabled = true;
         mainCam.enabled = false;
 

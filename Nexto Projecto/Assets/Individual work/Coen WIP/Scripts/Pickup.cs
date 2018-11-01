@@ -24,7 +24,7 @@ public class Pickup : MonoBehaviour
             }
         }
 
-        if (_C.transform.tag == "PlayerTriggerField")
+        if (_C.transform.tag == "Player")
         {
             print("trigger");
             if (Input.GetKeyDown(KeyCode.E))
@@ -45,7 +45,7 @@ public class Pickup : MonoBehaviour
             }
         }
 
-        if (_C.transform.tag == "PlayerTriggerField")
+        if (_C.transform.tag == "Player")
             DialogueManager.dialogueManager.tooltip.SetActive(true);
 
     }
@@ -55,7 +55,7 @@ public class Pickup : MonoBehaviour
         if(interactable == true)
         return;
         
-        if (_C.transform.tag == "PlayerTriggerField")
+        if (_C.transform.tag == "Player")
             DialogueManager.dialogueManager.tooltip.SetActive(false);
     }
 

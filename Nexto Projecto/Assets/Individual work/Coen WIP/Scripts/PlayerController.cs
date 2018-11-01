@@ -47,6 +47,17 @@ public class PlayerController : MonoBehaviour
     [Header("Collider Settings:")]
     public LayerMask ignoreMask;
 
+    [Header("Footprint references. Don't touch")]
+    public Transform leftFootPos;
+    public Transform rightFootPos;
+    public GameObject leftFootObject;
+    public GameObject rightFootObject;
+
+    [Header("Ground Slam particles")]
+    public ParticleSystem groundSlamParticles;
+    public Texture2D textureMap;
+
+
     #region Private References
     Rigidbody thisBody;
     Vector3 currentPosition;
@@ -296,15 +307,7 @@ public class PlayerController : MonoBehaviour
 
         groundSlamParticles.Play();
     }
-[Header("Footprint references. Don't touch")]
-    public Transform leftFootPos;
-    public Transform rightFootPos;
-    public GameObject leftFootObject;
-    public GameObject rightFootObject;
 
-    [Header("Ground Slam particles")]
-    public ParticleSystem groundSlamParticles;
-    public Texture2D textureMap;
 
     private void Jump()
     {

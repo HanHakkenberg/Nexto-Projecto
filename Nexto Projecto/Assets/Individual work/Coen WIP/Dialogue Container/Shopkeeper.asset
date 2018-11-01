@@ -13,11 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeTillNewChar: 0.05
   dialogue:
-  - name: Work In Progress
-    currDialogueBox: Rief moet dit nog ff fixe
+  - name: Shopkeeper
+    currDialogueBox: Welcome to the shop!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
-  shouldActivateFunctions: 0
-  functionsToBeActivated: {fileID: 0}
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: 35f3e4c9e4d8ccd489f3ee8402ee87c4,
+    type: 2}
   timeTillActivation: 1
