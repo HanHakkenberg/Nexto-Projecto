@@ -23,8 +23,10 @@ public class Cosmetics : MonoBehaviour {
 	public TextMeshProUGUI currencyText;
     public Transform playerTrans;
     Vector3 oldPos;
+ 	Quaternion oldRot;
     public List<Transform> cosmeticPos;
     public CinemachineFreeLook mainCam;
+    public List<GameObject> cosmeticCamLoc;
     public CinemachineVirtualCamera cosmeticCam;
     public static int currLevel = 1;
 
@@ -229,15 +231,21 @@ public class Cosmetics : MonoBehaviour {
 
 	public void SetPosition()
 	{
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
         oldPos = playerTrans.position;
+        oldRot = playerTrans.rotation;
         playerTrans.position = cosmeticPos[currLevel-1].position;
+        playerTrans.LookAt(cosmeticCamLoc[currLevel-1].transform);
         cosmeticCam.enabled = true;
         mainCam.enabled = false;
+
 
     }
 	public void ResetPosition()
 	{
         playerTrans.position = oldPos;
+        playerTrans.rotation = oldRot;
         cosmeticCam.enabled = false;
         mainCam.enabled = true;
 	}

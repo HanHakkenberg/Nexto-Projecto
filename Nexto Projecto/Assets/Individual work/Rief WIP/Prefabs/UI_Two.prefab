@@ -5284,7 +5284,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065518693949364}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c029a0a03c620a34bb37da60db242a34, type: 3}
   m_Name: 
@@ -12287,8 +12287,11 @@ MonoBehaviour:
   currency: 0
   currencyText: {fileID: 0}
   playerTrans: {fileID: 0}
-  cosmeticPos: []
+  cosmeticPos:
+  - {fileID: 0}
   mainCam: {fileID: 0}
+  cosmeticCamLoc:
+  - {fileID: 0}
   cosmeticCam: {fileID: 0}
   playerSkin: {fileID: 0}
   skinTone:
@@ -14369,6 +14372,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114504444276038652}
         m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: CosmeticFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19238,6 +19252,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114504444276038652}
         m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: CosmeticFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
