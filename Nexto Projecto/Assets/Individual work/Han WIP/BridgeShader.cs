@@ -6,9 +6,11 @@ public class BridgeShader : MonoBehaviour {
     [SerializeField] Renderer rend;
     [SerializeField] float amount;
     [SerializeField] float Addspeed;
+    [SerializeField] MeshCollider mycCol;
 
     public void StartShader() {
         StartCoroutine(Shader());
+        mycCol.enabled = true;
     }
 
     IEnumerator Shader() {
