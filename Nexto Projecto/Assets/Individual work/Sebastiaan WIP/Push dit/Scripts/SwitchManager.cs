@@ -24,13 +24,17 @@ public class SwitchManager : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.gameManager.gameTimeout == true)
+        ToggleController(false);
+    }
+
+    public void ToggleController(bool _ForceOverride) {
+        if (GameManager.gameManager.gameTimeout == true && _ForceOverride == false)
         {
             camTarget.position = Vector3.Lerp(camTarget.transform.position, dialogueTarget.transform.position + new Vector3(0, 0.7f, 0), 4f * Time.deltaTime);
             return;
         }
 
-        if (Input.GetButtonDown("SwitchKey"))
+        if (Input.GetButtonDown("SwitchKey") || _ForceOverride == true)
         {
             if (!followsCompanion)
             {

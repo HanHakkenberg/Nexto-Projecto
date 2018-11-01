@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Ivan_Cutscene_002
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: Ivan
+    currDialogueBox: 'If you explore the lands and see these signs,/
+
+      that means that you can use me to interact with/
+
+      something nearby!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Ivan
+    currDialogueBox: So be sure to be on the look out for them!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: 47d4df57fa95d2741a880364d297160d,
+    type: 2}
+  timeTillActivation: 1

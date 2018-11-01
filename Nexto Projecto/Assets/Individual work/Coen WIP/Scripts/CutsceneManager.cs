@@ -29,6 +29,9 @@ public class CutsceneManager : MonoBehaviour {
 		public float cameraSwitchDuration;
 		public float endingDuration;
 
+		[Header("Start Game-Event:")]
+		public GameEvent startEvent;
+
 		[Header("Focussed-Npc:")]
 		public GameObject npc;
 		public Dialogue endDialogue;
@@ -63,6 +66,11 @@ public class CutsceneManager : MonoBehaviour {
 	void Start() {
 		if(playStartscene == true)
 		StartCoroutine(StartCutscene(0));
+	}
+
+	public void Update() {
+		if(Input.GetKeyDown(KeyCode.J) && cutscenePlaying == false)
+		StartCoroutine(StartCutscene(1));
 	}
 
 	public void StartLoadCamera(int _ID) {
@@ -123,6 +131,8 @@ public class CutsceneManager : MonoBehaviour {
 		currentScene.cameras[0].enabled = true;
 		yield return new WaitForSeconds(currentScene.cameraSwitchDuration);
 		blackscreen.SetBool("IsFading", false);
+		if(currentScene.startEvent != null)
+			currentScene.startEvent.Raise();
 		yield return new WaitForSeconds(currentScene.startDialogueTimer);
 		DialogueManager.dialogueManager.LoadCutsceneDialogue(currentScene.dialogues[0]);
 
