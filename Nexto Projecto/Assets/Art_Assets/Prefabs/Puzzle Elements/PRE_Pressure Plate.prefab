@@ -147,8 +147,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690709046421914}
-  m_LocalRotation: {x: -0, y: 0.25881863, z: -0, w: 0.965926}
-  m_LocalPosition: {x: 68.789, y: 64.993256, z: 127.887}
+  m_LocalRotation: {x: -0, y: 0.60876024, z: -0, w: 0.79335433}
+  m_LocalPosition: {x: 75.469, y: 27.74, z: 24.206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4308762744944934}
@@ -156,7 +156,7 @@ Transform:
   - {fileID: 4758901186672170}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 75, z: 0}
 --- !u!4 &4879289190520956
 Transform:
   m_ObjectHideFlags: 1
@@ -264,8 +264,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1, z: 0.27}
-  m_Center: {x: 0, y: 0, z: 0.19999991}
+  m_Size: {x: 1.1, y: 1.1, z: 0.2924933}
+  m_Center: {x: 0.000000015850853, y: 0.000000010859819, z: 0.21124658}
 --- !u!65 &65273471106590774
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -276,8 +276,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1.0000001, z: 0.40000007}
-  m_Center: {x: 0, y: 0, z: 0.19999991}
+  m_Size: {x: 0.99999994, y: 1.0000001, z: 0.36783117}
+  m_Center: {x: 0.000000008291738, y: 0.000000009454775, z: 0.18391547}
 --- !u!65 &65282264629138910
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -312,8 +312,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2, z: 0.15}
-  m_Center: {x: 0, y: 0, z: 0.19999991}
+  m_Size: {x: 1.2, y: 1.2, z: 0.16952632}
+  m_Center: {x: 0.000000015440554, y: 0.0000000107835545, z: 0.20976308}
 --- !u!65 &65741034321503946
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -572,8 +572,8 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -622,8 +622,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_MethodName: Pause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
