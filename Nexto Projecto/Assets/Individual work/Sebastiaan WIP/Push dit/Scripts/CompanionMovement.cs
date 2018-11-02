@@ -7,11 +7,13 @@ public class CompanionMovement : MonoBehaviour
 
     private Rigidbody rigidbody;
     public bool hasFullyInstantiated = false;
+    public float movementSpeed = 15;
     public float timeTillControl = 2;
     public float flyspeed = 1f;
 
     private Vector2 inputs { get { return new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); } }
     public Animator companionAnim;
+    public Animator companionSpawnAnim;
 
     [SerializeField] float companionMoveSpeedHor = 10f;
     [SerializeField] float companionMoveSpeedVer = 10f;
@@ -39,12 +41,13 @@ public class CompanionMovement : MonoBehaviour
             }
         }
 
-        GetComponent<Animator>().enabled = false;
+        companionSpawnAnim.enabled = false;
         hasFullyInstantiated = true;
     }
 
     private void Update()
     {
+        if(companionSpawnAnim.enabled == false)
         Move();
 
     }
@@ -60,9 +63,9 @@ public class CompanionMovement : MonoBehaviour
 
         if (hasFullyInstantiated == true)
         {
-            var forward = Camera.main.transform.TransformDirection(Vector3.forward * 5f);
-            var right = Camera.main.transform.TransformDirection(Vector3.right * 5f);
-            var up = Camera.main.transform.TransformDirection(Vector3.up * 5f);
+            var forward = Camera.main.transform.TransformDirection(Vector3.forward * movementSpeed);
+            var right = Camera.main.transform.TransformDirection(Vector3.right * movementSpeed);
+            var up = Camera.main.transform.TransformDirection(Vector3.up * movementSpeed);
 
 
 

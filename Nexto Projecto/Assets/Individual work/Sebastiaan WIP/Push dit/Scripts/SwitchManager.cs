@@ -34,15 +34,16 @@ public class SwitchManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("SwitchKey") || _ForceOverride == true)
+        if ((Input.GetButtonDown("SwitchKey") || _ForceOverride == true) && GameManager.gameManager.player.GetComponent<PlayerController>().canSummonCompanion == true)
         {
             if (!followsCompanion)
             {
                 followsCompanion = true;
                 baby.GetComponent<PlayerController>().ToggleController(false);
                 companion = Instantiate(companionInstance, baby.transform.position, Quaternion.identity);
-                companion = companion.transform.GetChild(0).GetChild(2).gameObject;
-                camTarget.SetParent(companion.transform);
+                companion.transform.SetParent(baby.transform);
+                companion.transform.localPosition = Vector3.zero;
+                camTarget.SetParent(companion.transform.GetChild(0).transform);
 
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 1f;
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 2f;
@@ -53,7 +54,7 @@ public class SwitchManager : MonoBehaviour
                 followsCompanion = false;
                 baby.GetComponent<PlayerController>().ToggleController(true);
                 camTarget.SetParent(baby.transform);
-                Destroy(companion.transform.parent.gameObject);
+                Destroy(companion.gameObject);
 
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 2f;
                 Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 4f;

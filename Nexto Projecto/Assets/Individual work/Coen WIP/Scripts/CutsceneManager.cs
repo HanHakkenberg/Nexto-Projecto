@@ -65,13 +65,11 @@ public class CutsceneManager : MonoBehaviour {
 	}
 
 	void Start() {
-		if(playStartscene == true)
-		StartCoroutine(StartCutscene(0));
-	}
-
-	public void Update() {
-		if(Input.GetKeyDown(KeyCode.J) && cutscenePlaying == false)
-		StartCoroutine(StartCutscene(1));
+        if (playStartscene == true) {
+            StartCoroutine(StartCutscene(0));
+        } else {
+            mainCam.enabled = true;
+        }
 	}
 
 	public void StartLoadCamera(int _ID) {
@@ -125,7 +123,6 @@ public class CutsceneManager : MonoBehaviour {
 	}
 
     public void LoadStartCutscene(int _I) {
-        print(_I);
         StartCoroutine(StartCutscene(_I));
     }
 

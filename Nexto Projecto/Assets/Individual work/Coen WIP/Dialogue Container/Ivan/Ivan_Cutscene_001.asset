@@ -14,7 +14,7 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Ivan
-    currDialogueBox: Hey! I was already looking or you!
+    currDialogueBox: Hey! I was already looking for you!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

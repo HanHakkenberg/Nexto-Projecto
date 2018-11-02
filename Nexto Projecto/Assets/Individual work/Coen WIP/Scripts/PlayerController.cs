@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool dash;
     public bool smash;
     public bool chargeJump;
+    public bool canSummonCompanion;
 
     [Header("Ability Settings:")]
     public int maxJumpAmount = 2;
