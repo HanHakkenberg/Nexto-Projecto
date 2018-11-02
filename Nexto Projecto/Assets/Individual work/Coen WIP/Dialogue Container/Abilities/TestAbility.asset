@@ -14,7 +14,7 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Jump
-    currDialogueBox: You have unlocked the "Super-Jump" ability.
+    currDialogueBox: You have unlocked the "Jump" ability.
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4

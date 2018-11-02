@@ -296,16 +296,17 @@ public class PlayerController : MonoBehaviour
     }
     public void CheckSlamColor()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out hit))
-        {
-            textureMap = hit.transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
-            Vector2 pixelUV = hit.textureCoord;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit)) {
+            if (hit.transform.GetComponent<Renderer>()) {
+                textureMap = hit.transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
+                Vector2 pixelUV = hit.textureCoord;
 
 
-            groundSlamParticles.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = textureMap.GetPixel(Mathf.FloorToInt(pixelUV.x), Mathf.FloorToInt(pixelUV.y));
+                groundSlamParticles.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = textureMap.GetPixel(Mathf.FloorToInt(pixelUV.x), Mathf.FloorToInt(pixelUV.y));
+
+            groundSlamParticles.Play();
+            }
         }
-
-        groundSlamParticles.Play();
     }
 
 
