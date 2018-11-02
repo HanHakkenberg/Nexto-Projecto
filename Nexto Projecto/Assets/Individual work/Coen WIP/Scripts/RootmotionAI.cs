@@ -30,7 +30,6 @@ public class RootmotionAI : MonoBehaviour {
 	}
 
 	public void Timer() {
-		print(IsWithinDistance());
 		if(IsWithinDistance() == false) {
 			timer += Time.deltaTime;
 
@@ -113,11 +112,11 @@ public class RootmotionAI : MonoBehaviour {
 		Vector3 newStartCoords = new Vector3(_RandomizedX, wayPointCentral.y + 4, _RandomizedZ);
 
 		if(Physics.SphereCast(newStartCoords, 0.1f, Vector3.down, out hit, Mathf.Infinity, allowedRaySurfaces)) {
-			Debug.Log("Created new waypoint for: " +gameObject.name +" at: " +hit.point);
+			//Debug.Log("Created new waypoint for: " +gameObject.name +" at: " +hit.point);
 			return hit.point;
 		}  
 
-			Debug.Log("Failed to create a waypoint for: "+gameObject.name);
+			//Debug.Log("Failed to create a waypoint for: "+gameObject.name);
 			return transform.position;
 	}
 }

@@ -30,6 +30,10 @@ public class QuestCollectable : QuestTemplate {
         if (QuestManager.questManager.currentActiveQuest == this)
             if (collectablesNeeded <= GameManager.gameManager.questCollectables)
             {
+                if(toCollect != null)
+                   foreach(GameObject _LeftOver in toCollect)
+                        _LeftOver.SetActive(false);
+              
                 StartCoroutine(GiveReward());
                 return;
             }

@@ -27,6 +27,7 @@ public class CutsceneManager : MonoBehaviour {
 		public string cutsceneName;
 		public float startDialogueTimer;
 		public float cameraSwitchDuration;
+        public float timeTillEndingDuration = 0f;
 		public float endingDuration;
 
 		[Header("Start Game-Event:")]
@@ -105,8 +106,11 @@ public class CutsceneManager : MonoBehaviour {
 	
 
 	IEnumerator LoadEndCutscene() {
-		cutscenePlaying = false;
+        yield return new WaitForSeconds(currentScene.timeTillEndingDuration);
+        cutscenePlaying = false;
 		blackscreen.SetBool("IsFading", true);
+        foreach (Cinemachine.CinemachineVirtualCamera _Cam in currentScene.cameras)
+            _Cam.enabled = false;
 		mainCam.enabled = true;
 		yield return new WaitForSeconds(currentScene.endingDuration);
 		blackscreen.SetBool("IsFading", false);
@@ -119,6 +123,11 @@ public class CutsceneManager : MonoBehaviour {
 			
 		}
 	}
+
+    public void LoadStartCutscene(int _I) {
+        print(_I);
+        StartCoroutine(StartCutscene(_I));
+    }
 
 	public IEnumerator StartCutscene(int _I) {
 		GameManager.gameManager.gameTimeout = true;
@@ -134,7 +143,9 @@ public class CutsceneManager : MonoBehaviour {
 		if(currentScene.startEvent != null)
 			currentScene.startEvent.Raise();
 		yield return new WaitForSeconds(currentScene.startDialogueTimer);
-		DialogueManager.dialogueManager.LoadCutsceneDialogue(currentScene.dialogues[0]);
+
+        if(currentScene.dialogues.Count != 0)
+		        DialogueManager.dialogueManager.LoadCutsceneDialogue(currentScene.dialogues[0]);
 
 	}
 

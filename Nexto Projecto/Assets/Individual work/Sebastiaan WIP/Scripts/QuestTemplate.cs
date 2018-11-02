@@ -15,6 +15,11 @@ public class QuestTemplate : MonoBehaviour
     public bool finished;
     public bool started = false;
 
+    [Header("Cutscene Settings:")]
+    public bool shouldDoCutscene = false;
+    public bool doneCutscene = false;
+    public int cutsceneID = 0;
+
     //add self and child to list
     protected virtual void Start()
     {

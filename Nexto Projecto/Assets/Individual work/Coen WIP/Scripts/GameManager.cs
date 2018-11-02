@@ -49,13 +49,19 @@ public class GameManager : MonoBehaviour {
 		collectableText.text = diapers.ToString();
 	}
 
-    public void AddQuestCollectable(int _Add)
-    {
+    public void AddQuestCollectable(int _Add) {
         QuestCollectable _ColQuest = (QuestCollectable)QuestManager.questManager.currentActiveQuest;
         questCollectablesAnim.ResetTrigger("In");
         questCollectablesAnim.SetTrigger("In");
         questCollectables += _Add;
-        questCollectablesText.text = questCollectables.ToString() + "/" +_ColQuest.collectablesNeeded;
+        questCollectablesText.text = questCollectables.ToString() + "/" + _ColQuest.collectablesNeeded;
+
+        if (_ColQuest.collectablesNeeded <= questCollectables)
+            if (_ColQuest.shouldDoCutscene == true)
+                if (_ColQuest.doneCutscene == false) {
+                    _ColQuest.doneCutscene = true;
+                    CutsceneManager.cutsceneManager.LoadStartCutscene(_ColQuest.cutsceneID);
+                }
     }
 	
 	public IEnumerator AddAbility() {
