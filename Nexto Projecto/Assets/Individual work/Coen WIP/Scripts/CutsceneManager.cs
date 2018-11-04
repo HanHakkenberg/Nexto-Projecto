@@ -141,6 +141,7 @@ public class CutsceneManager : MonoBehaviour {
 			currentScene.startEvent.Raise();
 		yield return new WaitForSeconds(currentScene.startDialogueTimer);
 
+        if(currentScene != null)
         if(currentScene.dialogues.Count != 0)
 		        DialogueManager.dialogueManager.LoadCutsceneDialogue(currentScene.dialogues[0]);
 
