@@ -18,11 +18,11 @@ public class QuestCollectable : QuestTemplate {
 
     public void Update()
     {
-        if(QuestManager.questManager.currentActiveQuest == this)
-        if (collectablesNeeded <= GameManager.gameManager.questCollectables && !finished)
-        {
-            finished = true;
-        }
+        if (QuestManager.questManager.currentActiveQuest == this)
+            if (collectablesNeeded <= GameManager.gameManager.questCollectables && !finished)
+            {
+                finished = true;
+            }
     }
 
     public override void UpdateQuestStatus()

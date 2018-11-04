@@ -26,10 +26,8 @@ public class Pickup : MonoBehaviour
 
         if (_C.transform.tag == "Player")
         {
-            print("trigger");
             if (Input.GetKeyDown(KeyCode.E))
             {
-                print("key pressed");
                 DialogueManager.dialogueManager.tooltip.SetActive(false);
                 Collect();
             }

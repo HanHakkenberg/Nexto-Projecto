@@ -22,9 +22,9 @@ public class ChickenBehaviour : MonoBehaviour
     {
         jumpTimer -=Time.deltaTime;
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Anim_Jump"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Anim_Jump") && egg !=null)
             egg.SetActive(true);
-        else
+        else if(egg !=null)
             egg.SetActive(false);
 
         if (jumpTimer <= 0)
