@@ -34,25 +34,21 @@ public class OptionManager : MonoBehaviour {
 
 	[Header("Pausing")]
 	public GameObject pauseScreen;
+	public GameObject startScreen;
 
-    void Start () 
+    public void Start () 
 	{
 		allSliders.Add(musicSlider);
 		allSliders.Add(effectSlider);
 		allSliders.Add(environmentSlider);
         allSliders.Add(uiSlider);
-		StartCoroutine(StatingScreen());
     }
-	IEnumerator StatingScreen()
-	{
-		yield return new WaitForSeconds(0.1f);
-		Time.timeScale = 0;
-	}
 
 	void Update()
 	{
         Map();
         Pausing();
+		TimeScale();
     }
 
 	public void MasterClick()
@@ -113,15 +109,9 @@ public class OptionManager : MonoBehaviour {
 
 	public void Pausing()
 	{
-        if (pauseScreen.activeInHierarchy == true)
+        if (pauseScreen.activeInHierarchy == true || startScreen.activeInHierarchy == true)
         {
-            Time.timeScale = 0;
             inGame = false;
-        }
-		else
-		{
-            Time.timeScale = 1;
-            inGame = true;
         }
     }
 

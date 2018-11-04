@@ -7,7 +7,7 @@ public class CompanionMovement : MonoBehaviour
 
     private Rigidbody rigidbody;
     public bool hasFullyInstantiated = false;
-    public float movementSpeed = 15;
+    public float movementSpeed = 7.5f;
     public float timeTillControl = 2;
     public float flyspeed = 1f;
 
@@ -15,8 +15,8 @@ public class CompanionMovement : MonoBehaviour
     public Animator companionAnim;
     public Animator companionSpawnAnim;
 
-    [SerializeField] float companionMoveSpeedHor = 10f;
-    [SerializeField] float companionMoveSpeedVer = 10f;
+    [SerializeField] float companionMoveSpeedHor = 5f;
+    [SerializeField] float companionMoveSpeedVer = 5f;
 
     private void Awake()
     {

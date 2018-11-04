@@ -5,14 +5,13 @@ using UnityEngine;
 public class DonutOnTrigger : MonoBehaviour {
 
     public GameObject puzzleInfo;
-    public int timeAdd;
 
 
     public void OnTriggerEnter(Collider hit)
 	{
         if (hit.tag == "Companion")
         {
-            puzzleInfo.GetComponent<DonutPuzzle>().time += timeAdd;
+            puzzleInfo.GetComponent<DonutPuzzle>().hit+=1;
         }
         if(hit.tag == "Finish")
         {

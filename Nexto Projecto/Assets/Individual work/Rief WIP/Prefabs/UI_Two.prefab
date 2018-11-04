@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114185123825815692}
   - component: {fileID: 114150927337988928}
   - component: {fileID: 114184099439509038}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HairButtonDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 114705309012341626}
   - component: {fileID: 114996701019913936}
   - component: {fileID: 114912507430925518}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HairduePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224001814098065402}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Currency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 224569135925597692}
   - component: {fileID: 222642879755990050}
   - component: {fileID: 114950972016934196}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 4938273689560600}
   - component: {fileID: 114504444276038652}
   - component: {fileID: 114034882486735742}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cosmetics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 95151506426870160}
   - component: {fileID: 114174740261651630}
   - component: {fileID: 114307779716958782}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaperButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 224740161073401636}
   - component: {fileID: 222560223951763580}
   - component: {fileID: 114688641904927150}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RunOrb_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 95500594969789904}
   - component: {fileID: 114585605717163514}
   - component: {fileID: 114098187494387842}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224735073074114006}
   - component: {fileID: 114880230009226324}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VerticalLayout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 4275341579384838}
   - component: {fileID: 114642891143278946}
   - component: {fileID: 114935356549085628}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 114927136828397612}
   - component: {fileID: 114278732648576186}
   - component: {fileID: 95909126685156968}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveFile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 95088667188145796}
   - component: {fileID: 114183983216266232}
   - component: {fileID: 114598752331790078}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 224404226211188320}
   - component: {fileID: 222446977333294432}
   - component: {fileID: 114473775471359164}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaperText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 224774586274507998}
   - component: {fileID: 222827080427622378}
   - component: {fileID: 114666109216157380}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 224106730016747632}
   - component: {fileID: 222236463258267538}
   - component: {fileID: 114856088015276742}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EyesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 95934768110174626}
   - component: {fileID: 114060637126143440}
   - component: {fileID: 114229455123082426}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SkinToneButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224375411169854000}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Save3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 224170767628105672}
   - component: {fileID: 222099560698658866}
   - component: {fileID: 114518222054930496}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 224239485043844826}
   - component: {fileID: 222705856278555590}
   - component: {fileID: 114930944822423332}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 224985480753492504}
   - component: {fileID: 222324493809079192}
   - component: {fileID: 114885109065645066}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RunOrb_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 114270031184110716}
   - component: {fileID: 114712782063266508}
   - component: {fileID: 95340601619016114}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveFile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 95257893515119848}
   - component: {fileID: 114305733645057594}
   - component: {fileID: 114100552443031732}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EyesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 224325562664678524}
   - component: {fileID: 222230798136180896}
   - component: {fileID: 114267235955660778}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrEyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 224346748642871436}
   - component: {fileID: 222007291130246794}
   - component: {fileID: 114911693544767504}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 4564484834478196}
   - component: {fileID: 114555735170156254}
   - component: {fileID: 114929968442203200}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1183,7 +1183,7 @@ GameObject:
   - component: {fileID: 224784216017413792}
   - component: {fileID: 222175546930295160}
   - component: {fileID: 114629378318957868}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RunOrb_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 224673472629564744}
   - component: {fileID: 222362445845036450}
   - component: {fileID: 114222698172651178}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 224256853729317674}
   - component: {fileID: 222533127096518526}
   - component: {fileID: 114099964241385774}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 222072956660951362}
   - component: {fileID: 114564903154586168}
   - component: {fileID: 114927548173929304}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fart_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 95072754507251968}
   - component: {fileID: 114532457889528716}
   - component: {fileID: 114661941607186866}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SkinBuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 114262773681800018}
   - component: {fileID: 114846615679013982}
   - component: {fileID: 114382148452133592}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HairButtonUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 95884317584144562}
   - component: {fileID: 114785120212614292}
   - component: {fileID: 114232588564618164}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1418,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224826868995838678}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Save2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1452,7 +1452,7 @@ GameObject:
   - component: {fileID: 224502075944234694}
   - component: {fileID: 222128320002175482}
   - component: {fileID: 114498759372794646}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 114121592771969482}
   - component: {fileID: 114601207949509356}
   - component: {fileID: 114588064799635322}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InGameUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,7 +1574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4169062412270324}
   - component: {fileID: 82300023781263532}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Music_Effect_001
   m_TagString: MusicEffects
   m_Icon: {fileID: 0}
@@ -1605,7 +1605,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224555775050007510}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1623,7 +1623,7 @@ GameObject:
   - component: {fileID: 222024753310381862}
   - component: {fileID: 114739712952994222}
   - component: {fileID: 114516946773009712}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fart_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1660,7 +1660,7 @@ GameObject:
   - component: {fileID: 114238411511826120}
   - component: {fileID: 114457492282122422}
   - component: {fileID: 114166839799179216}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SkinButtonUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 224904357299932402}
   - component: {fileID: 222968818908297906}
   - component: {fileID: 114445912191408624}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1713,7 +1713,7 @@ GameObject:
   - component: {fileID: 114521835108503880}
   - component: {fileID: 82982659045923228}
   - component: {fileID: 114448879145940072}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI_Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 95498499758342370}
   - component: {fileID: 114603724230424460}
   - component: {fileID: 114505579354400718}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,7 +1785,7 @@ GameObject:
   - component: {fileID: 224534677214188934}
   - component: {fileID: 222497551489651586}
   - component: {fileID: 114686123942372008}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RunOrb_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,7 +1802,7 @@ GameObject:
   - component: {fileID: 224048280583257210}
   - component: {fileID: 222690675914160118}
   - component: {fileID: 114791438870099366}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RunOrb_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 224357007806495124}
   - component: {fileID: 222661004255599988}
   - component: {fileID: 114416910581728994}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1933,7 +1933,7 @@ GameObject:
   - component: {fileID: 225000047231498674}
   - component: {fileID: 95983218584171578}
   - component: {fileID: 114363377598084314}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CosmeticScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1950,7 +1950,7 @@ GameObject:
   - component: {fileID: 4364301222093224}
   - component: {fileID: 114198242402610344}
   - component: {fileID: 114695715191392022}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Menus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1989,7 +1989,7 @@ GameObject:
   - component: {fileID: 114762678337480412}
   - component: {fileID: 95487652167542522}
   - component: {fileID: 114682281303540660}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EyesBuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2044,7 @@ GameObject:
   - component: {fileID: 95572774601153418}
   - component: {fileID: 114683298196119362}
   - component: {fileID: 114754672716594770}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HairBuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2066,7 +2066,7 @@ GameObject:
   - component: {fileID: 95108468506562082}
   - component: {fileID: 114738048637146946}
   - component: {fileID: 114603063681834846}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HairTypeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 95209590852272290}
   - component: {fileID: 114284033911257034}
   - component: {fileID: 114857448297879430}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LoadButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2125,7 +2125,7 @@ GameObject:
   - component: {fileID: 95562373778508700}
   - component: {fileID: 114633735062319170}
   - component: {fileID: 114486198401935668}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LoadButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2142,7 +2142,7 @@ GameObject:
   - component: {fileID: 224682272662780712}
   - component: {fileID: 222480467345206176}
   - component: {fileID: 114795345172129936}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2176,7 +2176,7 @@ GameObject:
   - component: {fileID: 224364959795786878}
   - component: {fileID: 222548750872394226}
   - component: {fileID: 114753097909682240}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HairText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2236,7 +2236,7 @@ GameObject:
   - component: {fileID: 114409978499785482}
   - component: {fileID: 114868114557197760}
   - component: {fileID: 114417660734125402}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaperButtonUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2302,7 +2302,7 @@ GameObject:
   - component: {fileID: 224168747542702106}
   - component: {fileID: 222260180753468874}
   - component: {fileID: 114954269633594998}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 114868144799643604}
   - component: {fileID: 114212304402480686}
   - component: {fileID: 95803152821679076}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveFile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,7 +2371,7 @@ GameObject:
   - component: {fileID: 224300669693553100}
   - component: {fileID: 222288042557875044}
   - component: {fileID: 114750575222810604}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InteractImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 95662663944773682}
   - component: {fileID: 114289907588895352}
   - component: {fileID: 114038876693357152}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ApplyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2434,7 +2434,7 @@ GameObject:
   - component: {fileID: 222657952712684480}
   - component: {fileID: 114371877155253996}
   - component: {fileID: 114203827745356682}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fart_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,7 +2535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4601959706276918}
   - component: {fileID: 82152290019079624}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Music_Environmental_001
   m_TagString: MusicEnvironment
   m_Icon: {fileID: 0}
@@ -2552,7 +2552,7 @@ GameObject:
   - component: {fileID: 224207983922022738}
   - component: {fileID: 222145724138758366}
   - component: {fileID: 114229128732015876}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 224150058504819904}
   - component: {fileID: 222917223480377194}
   - component: {fileID: 114541628105885084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2692,7 +2692,7 @@ GameObject:
   - component: {fileID: 95924123652258482}
   - component: {fileID: 114794822316814470}
   - component: {fileID: 114767828748784520}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackPauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2735,7 +2735,7 @@ GameObject:
   - component: {fileID: 95710972690017768}
   - component: {fileID: 114535686725773352}
   - component: {fileID: 114149011871664794}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2769,7 +2769,7 @@ GameObject:
   - component: {fileID: 224971909216026280}
   - component: {fileID: 222319824885664862}
   - component: {fileID: 114499749419474432}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrDiaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2868,7 +2868,7 @@ GameObject:
   - component: {fileID: 95186370677707350}
   - component: {fileID: 114815291442900226}
   - component: {fileID: 114290355526018088}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LoadButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2986,7 +2986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4641872445278228}
   - component: {fileID: 114274834054773878}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: _Volumes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3025,7 +3025,7 @@ GameObject:
   - component: {fileID: 225271702686529754}
   - component: {fileID: 95493724323633022}
   - component: {fileID: 114226771574959768}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3045,7 +3045,7 @@ GameObject:
   - component: {fileID: 114337369363586914}
   - component: {fileID: 114799150110039808}
   - component: {fileID: 114127742175403494}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EyesButtonDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3061,7 +3061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4797896590512904}
   - component: {fileID: 82196139428868082}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Music_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3113,7 @@ GameObject:
   - component: {fileID: 224260460070228462}
   - component: {fileID: 222688332105561006}
   - component: {fileID: 114697564901146830}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3138,7 +3138,7 @@ GameObject:
   - component: {fileID: 225625640700283030}
   - component: {fileID: 95941556183558942}
   - component: {fileID: 114482804181244030}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3158,7 +3158,7 @@ GameObject:
   - component: {fileID: 114592320436896150}
   - component: {fileID: 114317508945894834}
   - component: {fileID: 114426822225354718}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaperButtonDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3195,7 +3195,7 @@ GameObject:
   - component: {fileID: 114429845233558182}
   - component: {fileID: 114970609713035740}
   - component: {fileID: 114945797479054812}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaperPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3212,7 +3212,7 @@ GameObject:
   - component: {fileID: 224950907828636208}
   - component: {fileID: 222223180044489062}
   - component: {fileID: 114022333139102068}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,7 +3229,7 @@ GameObject:
   - component: {fileID: 224197325644156848}
   - component: {fileID: 222718477456234302}
   - component: {fileID: 114092161178207200}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ColourText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3302,7 +3302,7 @@ GameObject:
   - component: {fileID: 95490295580800908}
   - component: {fileID: 114572965083425148}
   - component: {fileID: 114804010056556928}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaperBuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3322,7 +3322,7 @@ GameObject:
   - component: {fileID: 114287247965713694}
   - component: {fileID: 114735821923065194}
   - component: {fileID: 114955165026058526}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SkinButtonDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3354,7 +3354,7 @@ GameObject:
   - component: {fileID: 224750279121193158}
   - component: {fileID: 222944267783501216}
   - component: {fileID: 114453452829456610}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrColour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3372,7 +3372,7 @@ GameObject:
   - component: {fileID: 222382293235572318}
   - component: {fileID: 114955322731453902}
   - component: {fileID: 114768174878835790}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fart_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3390,7 +3390,7 @@ GameObject:
   - component: {fileID: 222652950685369098}
   - component: {fileID: 114928025523459612}
   - component: {fileID: 95686461343163822}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrencyOrb_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3450,7 +3450,7 @@ GameObject:
   - component: {fileID: 114178201718447172}
   - component: {fileID: 114220360393183294}
   - component: {fileID: 114291108299550242}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EyesPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3502,7 +3502,7 @@ GameObject:
   - component: {fileID: 222070733423822682}
   - component: {fileID: 114967259735568584}
   - component: {fileID: 114535709366332646}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fart_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3556,7 +3556,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224801403555807890}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RunStamina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3590,7 +3590,7 @@ GameObject:
   - component: {fileID: 224368050742874098}
   - component: {fileID: 222434815884644112}
   - component: {fileID: 114195309378304802}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ChangeYourAppearanceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3607,7 +3607,7 @@ GameObject:
   - component: {fileID: 224549865794660432}
   - component: {fileID: 222039247570990560}
   - component: {fileID: 114854755664307636}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3673,7 +3673,7 @@ GameObject:
   - component: {fileID: 114636823514541620}
   - component: {fileID: 114255817075975084}
   - component: {fileID: 114444215035591172}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SkinTonePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3690,7 +3690,7 @@ GameObject:
   - component: {fileID: 224874982080388496}
   - component: {fileID: 222337897379265724}
   - component: {fileID: 114257568862577656}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3722,7 +3722,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224316766348462986}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Farts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3760,7 +3760,7 @@ GameObject:
   - component: {fileID: 114940627211381454}
   - component: {fileID: 114562842569826920}
   - component: {fileID: 114447273972096182}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EyesButtonUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3775,7 +3775,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224827211840840678}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Save1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11808,6 +11808,7 @@ MonoBehaviour:
   cutscenes: 1
   map: {fileID: 1825181199523600}
   pauseScreen: {fileID: 1775738523004164}
+  startScreen: {fileID: 1169567866407690}
 --- !u!114 &114473775471359164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12292,7 +12293,8 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   cosmeticCamLoc:
   - {fileID: 0}
-  cosmeticCam: {fileID: 0}
+  cosmeticCam:
+  - {fileID: 0}
   playerSkin: {fileID: 0}
   skinTone:
   - name: White
@@ -14381,7 +14383,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114504444276038652}
+      - m_Target: {fileID: 0}
         m_MethodName: ApplyStartCosmetics
         m_Mode: 1
         m_Arguments:

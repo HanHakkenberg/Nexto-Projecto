@@ -5,8 +5,10 @@ using TMPro;
 
 public class DonutPuzzle : MonoBehaviour {
     
+    public GameObject donutCanvas;
     public TextMeshProUGUI timeText;
     public int time;
+    public int hit;
     public bool finished;
     public bool failed;
     bool busy;
@@ -15,6 +17,7 @@ public class DonutPuzzle : MonoBehaviour {
 
     void Start () 
     {
+        time = 120;
         //StartPuzzle();
         //ToStart();
     }
@@ -65,6 +68,7 @@ public class DonutPuzzle : MonoBehaviour {
 
     public void StartPuzzle()
     {
+        donutCanvas.SetActive(true);
         timeText.text = "Press K to start flying!";
         puzzleActive = true;
     }
@@ -84,6 +88,12 @@ public class DonutPuzzle : MonoBehaviour {
         {
             failed = true;
             puzzleActive = false;
+            StartCoroutine(DeactivateCanvas());
         }
+    }
+    IEnumerator DeactivateCanvas()
+    {
+        yield return new WaitForSeconds(5);
+        donutCanvas.SetActive(false);
     }
 }

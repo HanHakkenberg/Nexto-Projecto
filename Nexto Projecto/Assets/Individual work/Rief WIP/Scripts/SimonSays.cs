@@ -11,6 +11,7 @@ public class SimonSays : MonoBehaviour {
 	public int currRound;
 	public int roundToFinish;
 	public TextMeshProUGUI statusText;
+	public GameObject gameCanvas;
 
 	bool wrong;
     bool doneTalking = false;
@@ -59,7 +60,7 @@ public class SimonSays : MonoBehaviour {
 	}
 	IEnumerator StartGame()
 	{
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(2.5f);
 		for(int i = 0; i < used.Count; i++)
 		{
             used[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(2.5f,2.5f,2.5f,2.5f));
@@ -99,6 +100,12 @@ public class SimonSays : MonoBehaviour {
 		else
 		{
 			statusText.text = "You did it!";
+			StartCoroutine(EndGame());
 		}
+	}
+	IEnumerator EndGame()
+	{
+		yield return new WaitForSeconds(5);
+		gameCanvas.SetActive(false);
 	}
 }
