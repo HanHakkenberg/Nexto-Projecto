@@ -425,7 +425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1138909231421124
 GameObject:
   m_ObjectHideFlags: 1
@@ -3389,7 +3389,6 @@ GameObject:
   - component: {fileID: 224303808220245686}
   - component: {fileID: 222652950685369098}
   - component: {fileID: 114928025523459612}
-  - component: {fileID: 95686461343163822}
   m_Layer: 5
   m_Name: CurrencyOrb_001
   m_TagString: Untagged
@@ -4819,24 +4818,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95686461343163822
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1893048075652838}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95702281784927262
 Animator:
   serializedVersion: 3
@@ -5295,17 +5276,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114504444276038652}
         m_MethodName: OpenCosmetics
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114468551125381070}
-        m_MethodName: TimeScale
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11809,6 +11779,7 @@ MonoBehaviour:
   map: {fileID: 1825181199523600}
   pauseScreen: {fileID: 1775738523004164}
   startScreen: {fileID: 1169567866407690}
+  cosmeticScreen: {fileID: 1560168503741242}
 --- !u!114 &114473775471359164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12329,9 +12300,40 @@ MonoBehaviour:
     cost: 0
   currSkinText: {fileID: 114092161178207200}
   skinBuyButton: {fileID: 1407489933632076}
-  hairType: []
+  hairType:
+  - name: None
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Pink Hairband
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Panda Hairband
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Candycane Hat
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Party Hat
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Propellor Hat
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
   currHairText: {fileID: 114753097909682240}
   hairBuyButton: {fileID: 1588559345059222}
+  currHair: 0
   diaperModel: {fileID: 0}
   myDiapers:
   - name: Green Pink
