@@ -10,7 +10,7 @@ public class CosmeticInfo
 {
 	public string name;
     public Material colour;
-    public Mesh hairType;
+    public GameObject hairType;
     public bool locked;
     public int cost;
 }
@@ -44,7 +44,7 @@ public class Cosmetics : MonoBehaviour {
 	//public GameObject playerHair;
 	public TextMeshProUGUI currHairText;
 	public GameObject hairBuyButton;
-	int currHair;
+	public int currHair;
 
 	[Header("Diaper")]
 	public GameObject diaperModel;
@@ -67,7 +67,7 @@ public class Cosmetics : MonoBehaviour {
     Material startSkin;
     Material startDiaper;
     Material startEyes;
-    Mesh startHair;
+    GameObject startHair;
 
     int skinNumb;
     int diaperNumb;
@@ -91,6 +91,12 @@ public class Cosmetics : MonoBehaviour {
         diaperModel.GetComponent<Renderer>().material = diaperColour;
         eyeRight.GetComponent<Renderer>().material = eyeColour;
 		eyeLeft.GetComponent<Renderer>().material = eyeColour;
+
+        for (int i = 0; i < hairType.Count; i++)
+		{
+            hairType[i].hairType.SetActive(false);
+        }
+        hairType[currHair].hairType.SetActive(true);
     }
 
     public void SaveCurrent()
@@ -98,11 +104,12 @@ public class Cosmetics : MonoBehaviour {
 		skinNumb = currSkin;
         diaperNumb = currDiaper;
         eyeNumb = currEyes;
+        hairNumb = currHair;
         startSkin = skinColour;
         startDiaper = diaperColour;
         startEyes = eyeColour;
 		UpdateColours();
-        //startHair = playerHair.GetComponent<Mesh>();
+        
     }
 
 	public void ApplyStartCosmetics()
@@ -113,7 +120,7 @@ public class Cosmetics : MonoBehaviour {
         skinColour = startSkin;
         diaperColour = startDiaper;
 		eyeColour = startEyes;
-		UpdateColours();
+        UpdateColours();
 		//starthair
     }
 
@@ -217,6 +224,7 @@ public class Cosmetics : MonoBehaviour {
         currSkinText.text = skinTone[currSkin].name;
         currDiaperText.text = myDiapers[currDiaper].name;
         currEyesText.text = eyeType[currEyes].name;
+        currHairText.text = hairType[currHair].name;
     }
 
 	public void OpenCosmetics()
@@ -225,7 +233,7 @@ public class Cosmetics : MonoBehaviour {
 		{
 			cosmeticPanel_temp.SetActive(true);
             CosmeticUpdate();
-			OptionManager.inGame = false;
+			//OptionManager.inGame = false;
 		}
 	}
 

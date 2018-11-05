@@ -21,7 +21,11 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1101 &1101069714040730724
+=======
+--- !u!1101 &1101430109378115370
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -29,7 +33,11 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
   m_DstState: {fileID: 1102270399537345918}
+=======
+  m_DstState: {fileID: 1102369244379245400}
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -42,7 +50,11 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &1101628243777422168
+=======
+--- !u!1101 &1101543872937731342
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -63,7 +75,61 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1102 &1102270399537345918
+=======
+--- !u!1102 &1102006945736833250
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Mine_Cart_Animation 1
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 7d3eda3b7ce4db54ab1898882256dbb9, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &1102080939088350584
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Mine_Cart_Animation 2
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 433d5d22116659743bcf43f7d84f32d6, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &1102369244379245400
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 3
@@ -73,7 +139,11 @@ AnimatorState:
   m_Speed: -0.125
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< HEAD
   - {fileID: 1101628243777422168}
+=======
+  - {fileID: 1101543872937731342}
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -99,7 +169,11 @@ AnimatorState:
   m_Speed: 0.125
   m_CycleOffset: 0
   m_Transitions:
+<<<<<<< HEAD
   - {fileID: 1101069714040730724}
+=======
+  - {fileID: 1101430109378115370}
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -127,8 +201,19 @@ AnimatorStateMachine:
     m_State: {fileID: 1102796416028681728}
     m_Position: {x: 36, y: 60, z: 0}
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: 1102270399537345918}
     m_Position: {x: 276, y: 60, z: 0}
+=======
+    m_State: {fileID: 1102369244379245400}
+    m_Position: {x: 348, y: 84, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102006945736833250}
+    m_Position: {x: 383, y: 149, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102080939088350584}
+    m_Position: {x: 418, y: 214, z: 0}
+>>>>>>> 95de9c9f8c5bb7a895ecc3c49565d648974a700e
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
