@@ -32,6 +32,7 @@ public class QuestCollectable : QuestTemplate {
             {
                 if(toCollect != null)
                    foreach(GameObject _LeftOver in toCollect)
+                        if(_LeftOver != null)
                         _LeftOver.SetActive(false);
               
                 StartCoroutine(GiveReward());
