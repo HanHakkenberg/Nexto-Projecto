@@ -27,19 +27,20 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Eye_Procedural_Generator\" label=\"\" >\n
-      \ <presetinput identifier=\"$outputsize\" uid=\"2613470585\" type=\"8\" value=\"10,10\"
-      />\n  <presetinput identifier=\"Pupil_Size\" uid=\"3998712971\" type=\"0\" value=\"0.155\"
+      \ <presetinput identifier=\"$outputsize\" uid=\"2613470585\" type=\"8\" value=\"9,9\"
+      />\n  <presetinput identifier=\"Pupil_Size\" uid=\"3998712971\" type=\"0\" value=\"0.18\"
       />\n  <presetinput identifier=\"Iris_Detail_Opacity\" uid=\"3998712188\" type=\"0\"
       value=\"0\" />\n  <presetinput identifier=\"Iris_Detail_Hardness\" uid=\"3998712570\"
+      type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Pupil_ColorGlow\" uid=\"3998726354\"
       type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Pupil_Color_Hue\" uid=\"3998725269\"
-      type=\"0\" value=\"0.677\" />\n  <presetinput identifier=\"Pupil_Color_Saturation\"
+      type=\"0\" value=\"0.5\" />\n  <presetinput identifier=\"Pupil_Color_Saturation\"
       uid=\"3998725374\" type=\"0\" value=\"0.515\" />\n  <presetinput identifier=\"Pupil_Color_Lightness\"
       uid=\"3998725338\" type=\"0\" value=\"0.312\" />\n  <presetinput identifier=\"Pupil_Color_Hardness\"
       uid=\"3998725238\" type=\"0\" value=\"3.48\" />\n  <presetinput identifier=\"Iris_Iris_Detail_Color_Hue\"
       uid=\"3998723117\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Iris_Iris_Color_Hue\"
       uid=\"3998723392\" type=\"0\" value=\"0.26\" />\n  <presetinput identifier=\"Iris_Iris_Color_Saturation\"
       uid=\"3998723394\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"Iris_Iris_Color_Lightness\"
-      uid=\"3998723396\" type=\"0\" value=\"0.492\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentHue\"
+      uid=\"3998723396\" type=\"0\" value=\"0.42\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentHue\"
       uid=\"3998724079\" type=\"0\" value=\"0.271\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentSaturation\"
       uid=\"3998724065\" type=\"0\" value=\"0.539\" />\n  <presetinput identifier=\"Iris_Color_Accent_Iris_Color_AccentLightness\"
       uid=\"3998724067\" type=\"0\" value=\"0.564\" />\n  <presetinput identifier=\"Veins_Size_Scale\"
@@ -78,8 +79,8 @@ ScriptedImporter:
       bOverride: 0
       bLockRatio: 1
       bHighQuality: 0
-      textureWidth: 1024
-      textureHeight: 1024
+      textureWidth: 512
+      textureHeight: 512
       textureFormat: 0
       loadBehavior: 0
     - label: Standalone
