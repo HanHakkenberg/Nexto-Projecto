@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour {
     public void OnTriggerEnter()
 	{
         var tempColor = GetComponent<Image>().color;
-        tempColor.a = 1f;
+        tempColor.a += 1f * Time.deltaTime;
         interactImage.GetComponent<Image>().sprite = typeImage;
         interactImage.GetComponent<Image>().color = tempColor;
         interactBool.SetBool("Interaction", true);
@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour {
 	public void OnTriggerExit()
 	{
 		var tempColor = GetComponent<Image>().color;
-        tempColor.a = 0f;
+        tempColor.a -= 1f * Time.deltaTime;
         interactImage.GetComponent<Image>().sprite = resetImage;
 		interactImage.GetComponent<Image>().color = tempColor;
 		interactBool.SetBool("Interaction", false);
