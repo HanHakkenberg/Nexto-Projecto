@@ -22,6 +22,13 @@ public class SwitchManager : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
+    private void Awake()
+    {
+        Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 2f;
+        Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 4f;
+        Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 2f;
+    }
+
     void Update()
     {
         ToggleController(false);
