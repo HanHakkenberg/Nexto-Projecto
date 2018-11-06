@@ -25,6 +25,19 @@ MonoBehaviour:
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
-  shouldActivateFunctions: 0
-  functionsToBeActivated: {fileID: 0}
+  - name: Spike
+    currDialogueBox: 'If you could use the "Ground-Stomp" ability to smash those rocks/
+
+      with the exclemation mark above them then that would be great!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Spike
+    currDialogueBox: If you unlocked that ability use 'X' midair to stomp to the ground.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: a09f2d2d4131fc34693dcc5754048ff1,
+    type: 2}
   timeTillActivation: 1
