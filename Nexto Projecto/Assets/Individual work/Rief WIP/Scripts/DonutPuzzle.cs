@@ -9,6 +9,7 @@ public class DonutPuzzle : MonoBehaviour {
     public TextMeshProUGUI timeText;
     public int time;
     public int hit;
+    public int allHit = 19;
     public bool finished;
     public bool failed;
     bool busy;
@@ -61,7 +62,7 @@ public class DonutPuzzle : MonoBehaviour {
             if(busy)
             {
                 busy = false;
-                time = 10;
+                time = 120;
             }
         }
     }
@@ -75,6 +76,10 @@ public class DonutPuzzle : MonoBehaviour {
 
     public void Finish()
     {
+        if(hit == allHit)
+        {
+            finished = true;
+        }
         if(finished)
         {
             timeText.text = "Press K to fly back!";
