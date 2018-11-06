@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: SimonSaysDialogue
   m_EditorClassIdentifier: 
-  timeTillNewChar: 0.15
+  timeTillNewChar: 0.05
   dialogue:
-  - name: Dude
+  - name: Simon
     currDialogueBox: Simon Says! Complete all 4 rounds and receive a nice reward!
     options:
       shouldWaitAtSpace: 0

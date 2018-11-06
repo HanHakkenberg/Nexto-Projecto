@@ -38786,11 +38786,25 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 1.2
+    functionName: CallAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.2666667
     functionName: FootStepLeft
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 50d36c8f7539604429107d767dba3336,
       type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.2666667
+    functionName: CallAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

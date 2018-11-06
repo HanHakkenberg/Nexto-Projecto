@@ -13,7 +13,13 @@ public class SimonSays : MonoBehaviour {
 	public TextMeshProUGUI statusText;
 	public GameObject gameCanvas;
 
-	bool wrong;
+    public Dialogue beforeCompletion;
+    public Dialogue completion;
+    public Dialogue afterCompletion;
+
+    public NPCDialogue questNPC;
+
+    bool wrong;
     bool doneTalking = false;
 
     public CinemachineFreeLook mainCam;
@@ -96,13 +102,19 @@ public class SimonSays : MonoBehaviour {
 		if(currRound <= roundToFinish)
 		{
 			statusText.text = "Round " + currRound;
-		}
+        }
 		else
 		{
 			statusText.text = "You did it!";
 			StartCoroutine(EndGame());
-		}
+            questNPC.dialogue = completion;
+
+        }
 	}
+	public void AfterCompletionText()
+	{
+        questNPC.dialogue = afterCompletion;
+    }
 	IEnumerator EndGame()
 	{
 		yield return new WaitForSeconds(5);

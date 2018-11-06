@@ -3,132 +3,139 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionManager : MonoBehaviour {
+public class OptionManager : MonoBehaviour
+{
 
-	[Header("Lists")]
-	public List <AudioSource> music;
-	public List<AudioSource> effects;
-	public List<AudioSource> environmental;
+    [Header("Lists")]
+    public List<AudioSource> music;
+    public List<AudioSource> effects;
+    public List<AudioSource> environmental;
     public AudioSource uiAudio;
 
     [Header("Sliders")]
-	public Slider musicSlider;
-	public Slider effectSlider;
-	public Slider environmentSlider;
+    public Slider musicSlider;
+    public Slider effectSlider;
+    public Slider environmentSlider;
     public Slider uiSlider;
     List<Slider> allSliders = new List<Slider>();
 
-	[Header("Booleans")]
-	public bool subtitles = true;
-	public bool cutscenes = true;
-	bool masterOn = true;
-	bool musicOn = true;
-	bool effectsOn = true;
-	bool envirOn = true;
+    [Header("Booleans")]
+    public bool subtitles = true;
+    public bool cutscenes = true;
+    bool masterOn = true;
+    bool musicOn = true;
+    bool effectsOn = true;
+    bool envirOn = true;
     bool uiOn = true;
     public static bool inGame = false;
-	public static bool started = false;
+    public static bool started = false;
 
     [Header("Map")]
     public GameObject map;
 
-	[Header("Pausing")]
-	public GameObject pauseScreen;
-	public GameObject startScreen;
+    [Header("Pausing")]
+    public GameObject pauseScreen;
+    public GameObject startScreen;
+    public GameObject cosmeticScreen;
 
-    public void Start () 
-	{
-		allSliders.Add(musicSlider);
-		allSliders.Add(effectSlider);
-		allSliders.Add(environmentSlider);
+    public void Start()
+    {
+        allSliders.Add(musicSlider);
+        allSliders.Add(effectSlider);
+        allSliders.Add(environmentSlider);
         allSliders.Add(uiSlider);
     }
 
-	void Update()
-	{
+    void Update()
+    {
         Map();
         Pausing();
-		TimeScale();
+        TimeScale();
     }
 
-	public void MasterClick()
-	{
-		masterOn = !masterOn;
+    public void MasterClick()
+    {
+        masterOn = !masterOn;
 
-	}
-	public void MusicClick()
-	{
-		musicOn = !musicOn;
-	}
-	public void EffectsClick()
-	{
-		effectsOn = !effectsOn;
-	}
-	public void EnvironmentalClick()
-	{
-		envirOn = !envirOn;
-	}
-	public void UIClick()
-	{
+    }
+    public void MusicClick()
+    {
+        musicOn = !musicOn;
+    }
+    public void EffectsClick()
+    {
+        effectsOn = !effectsOn;
+    }
+    public void EnvironmentalClick()
+    {
+        envirOn = !envirOn;
+    }
+    public void UIClick()
+    {
         uiOn = !uiOn;
     }
-	public void SubtitleClick()
-	{
-		subtitles = !subtitles;
-	}
-	public void CutsceneClick()
-	{
-		cutscenes = !cutscenes;
-	}
+    public void SubtitleClick()
+    {
+        subtitles = !subtitles;
+    }
+    public void CutsceneClick()
+    {
+        cutscenes = !cutscenes;
+    }
 
-	void Map()
-	{
-		if(Input.GetButtonDown("Map") && inGame) //Moet nog worden aangemaakt
-		{
-            if(map.activeInHierarchy == false)
-			{
+    void Map()
+    {
+        if (Input.GetButtonDown("Map") && inGame) //Moet nog worden aangemaakt
+        {
+            if (map.activeInHierarchy == false)
+            {
                 map.SetActive(true);
             }
-			else
-			{
+            else
+            {
                 map.SetActive(false);
             }
         }
-	}
-	
-	public void InGame()
-	{
-		started = true;
+    }
+
+    public void InGame()
+    {
+        started = true;
         inGame = true;
         TimeScale();
     }
-	public void ResetStarted()
-	{
-		started = false;
-	}
+    public void ResetStarted()
+    {
+        started = false;
+    }
 
-	public void Pausing()
-	{
+    public void Pausing()
+    {
         if (pauseScreen.activeInHierarchy == true || startScreen.activeInHierarchy == true)
         {
             inGame = false;
         }
     }
 
-	public void TimeScale()
-	{
-		if(inGame)
-		{
+    public void TimeScale()
+    {
+
+        if (inGame)
+        {
             Time.timeScale = 1;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-		else
+        else
 		{
             Time.timeScale = 0;
-            Cursor.visible = true;
-			Cursor.lockState = CursorLockMode.None;
         }
+
+		if(Time.timeScale == 0 || cosmeticScreen.activeInHierarchy == true)
+		{
+			 Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+		}
 	}
 
 	public void MasterVolume(Slider masterSlider)
