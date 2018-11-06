@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour {
 
-    public IEnumerator DestroySelf(float _DestroyTimer) {
-        yield return new WaitForSeconds(_DestroyTimer);
+    public IEnumerator DestroySelf() {
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 }

@@ -18,6 +18,7 @@ public class GemRockBehaviour : MonoBehaviour {
                 rock.SetActive(false);
                 particles.Play();
                 GameManager.gameManager.AddQuestCollectable(1);
+                AudioManager.audioManager.PlayAudio(2, transform);
             }
         }
     }

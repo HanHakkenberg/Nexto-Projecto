@@ -157,7 +157,7 @@ public class CutsceneManager : MonoBehaviour {
 		abilityCam.enabled = true;
 		yield return new WaitForSeconds(2);
 		blackscreen.SetBool("IsFading", false);
-		DialogueManager.dialogueManager.LoadInAbilityDialogue(cutSceneDialogue[0]);
+		DialogueManager.dialogueManager.LoadInAbilityDialogue(cutSceneDialogue[_Index]);
 	
 		for(int i = 0; i < Mathf.Infinity; i++) {
 			yield return new WaitForSeconds(2);

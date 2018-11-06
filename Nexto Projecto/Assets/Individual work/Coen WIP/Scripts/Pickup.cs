@@ -67,7 +67,6 @@ public class Pickup : MonoBehaviour
             if (shouldUnlockAbility)
             {
                 CutsceneManager.cutsceneManager.LoadAbilityCutscene(unlockIndex);
-                StartCoroutine(GameManager.gameManager.AddAbility());
                 UnlockAbility(unlockIndex);
             }
             else
