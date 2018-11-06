@@ -54,6 +54,7 @@ public class OptionManager : MonoBehaviour
         Map();
         Pausing();
         TimeScale();
+        //UglyPausing();
     }
 
     public void MasterClick()
@@ -124,6 +125,22 @@ public class OptionManager : MonoBehaviour
         }
     }
 
+    public void UglyPausing()
+    {
+        if(Input.GetButtonDown("Cancel"))
+        {
+            if(pauseScreen.activeInHierarchy == false)
+            {
+                pauseScreen.SetActive(true);
+                inGame = false;
+            }
+            else if(pauseScreen.activeInHierarchy == true)
+            {
+                InGame();
+            }
+        }
+    }
+
     public void TimeScale()
     {
 
@@ -140,7 +157,7 @@ public class OptionManager : MonoBehaviour
 
 		if(Time.timeScale == 0 || cosmeticScreen.activeInHierarchy == true)
 		{
-			 Cursor.visible = true;
+			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None;
 		}
 	}

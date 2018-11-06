@@ -5397,6 +5397,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: eebc4c0a4b8f66b4cbdcba47ca4de8db, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114034882486735742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5602,6 +5607,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 411914552d4a4a447b618c6fb6d925a0, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114044733748651218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5902,6 +5912,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 111a786e5d3a5a2428e8bdbf65aa2a72, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114088655614113306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6393,6 +6408,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 8b4b240e02ea11e469c7212cfcdb9357, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114100552443031732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7328,6 +7348,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 0f6934e5bc4487d4880c15a69774966a, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114178201718447172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10596,7 +10621,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!114 &114374667883145740
@@ -10652,6 +10677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 4d8b9fec73a0b7d4c9e159ff73e07459, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114382064704287724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10882,6 +10912,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 2342226566c016447a29214f7620b68e, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114400727933403598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11420,6 +11455,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 2342226566c016447a29214f7620b68e, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114433735059354018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13078,16 +13118,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inCombat: 0
-  loadTime: 0.5
+  loadTime: 0.25
   currentLoad: 0
-  fartStamina: 5
+  fartStamina: 3
   beginFarts:
   - {fileID: 114564903154586168}
   - {fileID: 114739712952994222}
+  obtainableFarts:
   - {fileID: 114955322731453902}
   - {fileID: 114371877155253996}
   - {fileID: 114967259735568584}
-  obtainableFarts: []
   staminaOrb:
   - {fileID: 114885109065645066}
   - {fileID: 114686123942372008}
@@ -13826,7 +13866,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316099806800912}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c029a0a03c620a34bb37da60db242a34, type: 3}
   m_Name: 
@@ -14102,6 +14142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 411914552d4a4a447b618c6fb6d925a0, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114571316170393364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14200,6 +14245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 411914552d4a4a447b618c6fb6d925a0, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114572965083425148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14253,6 +14303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: b22a6373c060afd408c813db00ec5844, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114577167234841490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14279,6 +14334,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: e4ca5066216a72d4f8286f5f273e19aa, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114585504167146370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14999,6 +15059,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: e4ca5066216a72d4f8286f5f273e19aa, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114613633572508108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17217,6 +17282,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 3daab535d14ef194498f9e6e51cf88dc, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114728514633757298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18034,6 +18104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 4546b4b19bd5c6e488eb4b048f83ba01, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114776223724830956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18073,6 +18148,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: d9a81d4acf83c614da63b3eb1eb344dd, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114778814102136136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20016,6 +20096,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: efd68f3b1f7703d498cdff0789b191ad, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114884240024965372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20305,6 +20390,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 411914552d4a4a447b618c6fb6d925a0, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114912507430925518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20628,6 +20718,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEvent: {fileID: 11400000, guid: 60f6d32e9bd18aa4b8c01be1113f8b8f, type: 2}
+  unityEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114930944822423332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21374,7 +21469,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!114 &114955899653173572
@@ -21531,7 +21626,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
 --- !u!114 &114970609713035740

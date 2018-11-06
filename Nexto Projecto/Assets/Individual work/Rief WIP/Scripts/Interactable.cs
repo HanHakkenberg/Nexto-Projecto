@@ -11,23 +11,29 @@ public class Interactable : MonoBehaviour {
     public Animator interactBool;
 
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider _P)
 	{
-        var tempColor = GetComponent<Image>().color;
-        tempColor.a += 1f * Time.deltaTime;
-        interactImage.GetComponent<Image>().sprite = typeImage;
-        interactImage.GetComponent<Image>().color = tempColor;
-        interactBool.SetBool("Interaction", true);
+        if(_P.tag == "Player")
+        {
+            var tempColor = GetComponent<Image>().color;
+            tempColor.a += 1f * Time.deltaTime;
+            interactImage.GetComponent<Image>().sprite = typeImage;
+            interactImage.GetComponent<Image>().color = tempColor;
+            interactBool.SetBool("Interaction", true);
+        }
 		//glow toevoegen
     }
 
-	public void OnTriggerExit()
+	public void OnTriggerExit(Collider _P)
 	{
-		var tempColor = GetComponent<Image>().color;
-        tempColor.a -= 1f * Time.deltaTime;
-        interactImage.GetComponent<Image>().sprite = resetImage;
-		interactImage.GetComponent<Image>().color = tempColor;
-		interactBool.SetBool("Interaction", false);
+        if(_P.tag == "Player")
+        {
+            var tempColor = GetComponent<Image>().color;
+            tempColor.a -= 1f * Time.deltaTime;
+            interactImage.GetComponent<Image>().sprite = resetImage;
+            interactImage.GetComponent<Image>().color = tempColor;
+            interactBool.SetBool("Interaction", false);
+        }
 		//glow toevoegen
     }
 }
