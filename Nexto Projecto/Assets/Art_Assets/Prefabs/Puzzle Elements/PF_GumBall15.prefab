@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4147534146552346}
   - component: {fileID: 135217184144386974}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: Breakable Trigger
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 95669907685660912}
   - component: {fileID: 114923864840895942}
   - component: {fileID: 82735616829370442}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: GumBall (1)
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4154086822686382}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: PF_GumBall15
   m_TagString: Projectile
   m_Icon: {fileID: 0}
