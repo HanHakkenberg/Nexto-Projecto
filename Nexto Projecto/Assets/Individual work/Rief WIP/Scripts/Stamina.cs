@@ -22,8 +22,13 @@ public class Stamina : MonoBehaviour {
     public static bool isRunning;
     bool waitToRegen;
     float regenTimer = 3;
-    public Animator playerAnim;
 
+
+    Animator playerAnim;
+
+    void Awake() {
+        playerAnim = GameManager.gameManager.player.GetComponent<Animator>();
+    }
 
     void Start () 
 	{
@@ -42,6 +47,7 @@ public class Stamina : MonoBehaviour {
         StaminaUpdate();
         AbilityUse(1);
         StaminaTest();
+        playerAnim.SetBool("StamDepleted", waitToRegen);
     }
 
 	void FartUpdate()

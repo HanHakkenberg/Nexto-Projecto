@@ -56,6 +56,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: StamDepleted
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -364,8 +370,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: WalkingState
     m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: Stamina
+  - m_ConditionMode: 1
+    m_ConditionEvent: StamDepleted
     m_EventTreshold: 99
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102294804354167602}
@@ -724,9 +730,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: Stamina
-    m_EventTreshold: 99
+  - m_ConditionMode: 2
+    m_ConditionEvent: StamDepleted
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102279035331047486}
   m_Solo: 0
@@ -976,6 +982,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: WalkingState
     m_EventTreshold: 2
+  - m_ConditionMode: 1
+    m_ConditionEvent: StamDepleted
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102005015027736866}
   m_Solo: 0
@@ -1396,8 +1405,8 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: Stamina
+  - m_ConditionMode: 2
+    m_ConditionEvent: StamDepleted
     m_EventTreshold: 99
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102279035331047486}
@@ -1546,6 +1555,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: WalkingState
     m_EventTreshold: 1
+  - m_ConditionMode: 1
+    m_ConditionEvent: StamDepleted
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102005015027736866}
   m_Solo: 0
