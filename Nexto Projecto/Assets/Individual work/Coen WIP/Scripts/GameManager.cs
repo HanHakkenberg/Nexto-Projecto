@@ -34,9 +34,6 @@ public class GameManager : MonoBehaviour {
 	bool died = false;
 
 	void Awake() {
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.Confined;
-
 		if(gameManager != null)
 		return;
 		else

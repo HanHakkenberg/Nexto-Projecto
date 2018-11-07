@@ -28,12 +28,13 @@ MonoBehaviour:
   - name: Spike
     currDialogueBox: 'If you could use the "Ground-Stomp" ability to smash those rocks/
 
-      with the exclemation mark above them then that would be great!'
+      with the question mark above them then that would be great!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Spike
-    currDialogueBox: If you unlocked that ability use 'X' midair to stomp to the ground.
+    currDialogueBox: If you unlocked that ability use 'Left Alt' midair to stomp to
+      the ground.
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
