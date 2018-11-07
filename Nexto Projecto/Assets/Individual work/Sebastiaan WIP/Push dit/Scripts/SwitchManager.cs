@@ -50,11 +50,11 @@ public class SwitchManager : MonoBehaviour
                 companion = Instantiate(companionInstance, baby.transform.position, Quaternion.identity);
                 companion.transform.SetParent(baby.transform);
                 companion.transform.localPosition = Vector3.zero;
-                camTarget.SetParent(companion.transform.GetChild(0).transform);
+                camTarget.SetParent(companion.transform.GetChild(0).GetChild(3).transform);
 
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 1f;
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 2f;
-                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 1f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 0.75f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 1.25f;
+                Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 0.75f;
             }
             else
             {

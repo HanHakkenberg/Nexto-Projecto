@@ -7,7 +7,7 @@ public class CompanionMovement : MonoBehaviour
 
     private Rigidbody rigidbody;
     public bool hasFullyInstantiated = false;
-    public float movementSpeed = 7.5f;
+    public float movementSpeed = 3f;
     public float timeTillControl = 2;
     public float flyspeed = 1f;
 
