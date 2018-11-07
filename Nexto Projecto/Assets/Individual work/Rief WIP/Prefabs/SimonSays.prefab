@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 4516658905860564}
   - component: {fileID: 114062606490074480}
   - component: {fileID: 114919802832192152}
+  - component: {fileID: 114307060049407642}
   m_Layer: 0
   m_Name: SimonSays
   m_TagString: Untagged
@@ -1389,6 +1390,9 @@ GameObject:
   - component: {fileID: 114592123165344284}
   - component: {fileID: 65340430471263188}
   - component: {fileID: 114818282714147324}
+  - component: {fileID: 82544552673531372}
+  - component: {fileID: 114599276087978010}
+  - component: {fileID: 114902891699485064}
   m_Layer: 0
   m_Name: NPC_Baby_SimonSays
   m_TagString: Untagged
@@ -3650,6 +3654,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 1, z: 0.41}
   m_Center: {x: 0, y: 0.41, z: 0}
+--- !u!82 &82544552673531372
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916899476236984}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95276746671901348
 Animator:
   serializedVersion: 3
@@ -3658,7 +3757,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916899476236984}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2355e31769a447e47b669be713f37e7d, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 80675eed4068e9840a85df9b9ff0a809, type: 2}
   m_Controller: {fileID: 9100000, guid: 2bab94094a3a4e146b554a85139cf9f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -3829,6 +3928,10 @@ MonoBehaviour:
   roundToFinish: 3
   statusText: {fileID: 114049774679609588}
   gameCanvas: {fileID: 1720300651627616}
+  beforeCompletion: {fileID: 11400000, guid: 9b47ec465da816e4a8508b5e018d4cda, type: 2}
+  completion: {fileID: 11400000, guid: 2941e2a8bf42ab94b9d11cddfec79d17, type: 2}
+  afterCompletion: {fileID: 11400000, guid: 37b365838109a7048a2995a80adcde8c, type: 2}
+  questNPC: {fileID: 114818282714147324}
   mainCam: {fileID: 0}
   simonSaysCam: {fileID: 114760072433937210}
 --- !u!114 &114122014083843588
@@ -3916,6 +4019,47 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114307060049407642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711005538540466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb37139d0f22f34db0f4557ac708bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myGameEvent: {fileID: 11400000, guid: 69b13d8f3392d26469ee8047beda268c, type: 2}
+  listenOnEnable: 1
+  listenOnDisable: 0
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: AddDiaper
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114062606490074480}
+        m_MethodName: AfterCompletionText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114592123165344284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3927,11 +4071,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3422a7619b4767d41a6c4714ef32ab77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingAreaRadius: 5
+  walkingAreaRadius: 2
   allowedRaySurfaces:
     serializedVersion: 2
-    m_Bits: 16384
-  wayPointCentral: {x: 28.27, y: 13.9, z: -54.1}
+    m_Bits: 16385
+  wayPointCentral: {x: -30.5, y: 21.3, z: -50.9}
+--- !u!114 &114599276087978010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916899476236984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a1321453e859f4e9871148aa33eebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114623259134481342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4055,6 +4210,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   simonSays: {fileID: 1711005538540466}
+--- !u!114 &114902891699485064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916899476236984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979f377a9113e334592a2626b257469c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shouldOverrideStaticList: 0
+  newStaticAudioList: []
 --- !u!114 &114919802832192152
 MonoBehaviour:
   m_ObjectHideFlags: 1

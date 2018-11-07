@@ -5,17 +5,16 @@ using UnityEngine;
 public class DonutOnTrigger : MonoBehaviour {
 
     public GameObject puzzleInfo;
+    bool hit = false;
 
 
-    public void OnTriggerEnter(Collider hit)
+    public void OnTriggerEnter()
 	{
-        if (hit.tag == "Companion")
+        if(!hit)
         {
             puzzleInfo.GetComponent<DonutPuzzle>().hit+=1;
+            hit = true;
         }
-        if(hit.tag == "Finish")
-        {
-            puzzleInfo.GetComponent<DonutPuzzle>().finished = true;
-        }
+            
     }
 }

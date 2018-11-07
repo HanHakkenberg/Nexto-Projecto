@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class OptionManager : MonoBehaviour
 {
@@ -20,8 +21,10 @@ public class OptionManager : MonoBehaviour
     List<Slider> allSliders = new List<Slider>();
 
     [Header("Booleans")]
-    public bool subtitles = true;
+    public CinemachineFreeLook mainCam;
     public bool cutscenes = true;
+    public bool invertHor;
+    public bool invertVer;
     bool masterOn = true;
     bool musicOn = true;
     bool effectsOn = true;
@@ -51,6 +54,7 @@ public class OptionManager : MonoBehaviour
         Map();
         Pausing();
         TimeScale();
+        //UglyPausing();
     }
 
     public void MasterClick()
@@ -74,13 +78,17 @@ public class OptionManager : MonoBehaviour
     {
         uiOn = !uiOn;
     }
-    public void SubtitleClick()
-    {
-        subtitles = !subtitles;
-    }
     public void CutsceneClick()
     {
         cutscenes = !cutscenes;
+    }
+    public void InvertHorClick()
+    {
+        invertHor = !invertHor;
+    }
+    public void InvertVerClick()
+    {
+        invertVer = !invertVer;
     }
 
     void Map()
@@ -117,6 +125,22 @@ public class OptionManager : MonoBehaviour
         }
     }
 
+    public void UglyPausing()
+    {
+        if(Input.GetButtonDown("Cancel"))
+        {
+            if(pauseScreen.activeInHierarchy == false)
+            {
+                pauseScreen.SetActive(true);
+                inGame = false;
+            }
+            else if(pauseScreen.activeInHierarchy == true)
+            {
+                InGame();
+            }
+        }
+    }
+
     public void TimeScale()
     {
 
@@ -133,7 +157,7 @@ public class OptionManager : MonoBehaviour
 
 		if(Time.timeScale == 0 || cosmeticScreen.activeInHierarchy == true)
 		{
-			 Cursor.visible = true;
+			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None;
 		}
 	}
@@ -203,11 +227,24 @@ public class OptionManager : MonoBehaviour
             }
 		}
 
-		//CUTSCENES RELATED
-		if(cutscenes)
-		{
-			//Weet nog niet hoe de cutscenes gedaan worden, als ik dat weet kan ik hier mee verder
-		}
+
+        if(invertHor)
+        {
+            mainCam.m_XAxis.m_InvertInput = true;
+        }
+        else
+        {
+            mainCam.m_XAxis.m_InvertInput = false;
+        }
+
+        if(invertVer)
+        {
+            mainCam.m_YAxis.m_InvertInput = true;
+        }
+        else
+        {
+            mainCam.m_YAxis.m_InvertInput = false;
+        }
 	}
 	public void Quit()
 	{
