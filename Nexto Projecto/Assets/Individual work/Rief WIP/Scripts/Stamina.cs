@@ -26,12 +26,10 @@ public class Stamina : MonoBehaviour {
 
     Animator playerAnim;
 
-    void Awake() {
-        playerAnim = GameManager.gameManager.player.GetComponent<Animator>();
-    }
 
     void Start () 
 	{
+        playerAnim = GameManager.gameManager.player.GetComponent<Animator>();
         FartCount();
     }
 
