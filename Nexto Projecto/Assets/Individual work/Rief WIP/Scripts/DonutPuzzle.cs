@@ -9,12 +9,16 @@ public class DonutPuzzle : MonoBehaviour {
     public TextMeshProUGUI timeText;
     public int time;
     public int hit;
-    public int allHit = 19;
+    public int allHit;
     public bool finished;
     public bool failed;
     bool busy;
     public bool puzzleActive = true;
-    //public GameObject manager;
+    public NPCDialogue startBaby;
+    public Dialogue beforeStart;
+    public Dialogue duringStart;
+    public Dialogue afterStart;
+    public GameObject endBaby;
 
     void Start () 
     {
@@ -58,6 +62,7 @@ public class DonutPuzzle : MonoBehaviour {
             if(failed)
             {
                 timeText.text = "";
+                startBaby.dialogue = beforeStart;
             }
             if(busy)
             {
@@ -72,6 +77,7 @@ public class DonutPuzzle : MonoBehaviour {
         donutCanvas.SetActive(true);
         timeText.text = "Press K to start flying!";
         puzzleActive = true;
+        startBaby.dialogue = duringStart;
     }
 
     public void Finish()
@@ -79,12 +85,14 @@ public class DonutPuzzle : MonoBehaviour {
         if(hit == allHit)
         {
             finished = true;
+            endBaby.SetActive(true);
         }
-        if(finished)
-        {
+    }
+    public void IsFinished()
+    {
             timeText.text = "Press K to fly back!";
             puzzleActive = false;
-        }
+            startBaby.dialogue = afterStart;
     }
 
     public void Failed()

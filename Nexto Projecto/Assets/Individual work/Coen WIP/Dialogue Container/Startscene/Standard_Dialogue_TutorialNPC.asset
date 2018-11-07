@@ -13,37 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeTillNewChar: 0.05
   dialogue:
-  - name: Micheal
-    currDialogueBox: 'Welcome back!
-
-'
+  - name: Jake
+    currDialogueBox: Thank you so much for bringing this to me! I had these laying
+      around, I think they're more of use with you.
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
-  - name: Micheal
-    currDialogueBox: Do you understand what your goal is yet?
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 0
-  - name: Micheal
-    currDialogueBox: 'Remember./
-
-      Pick up those yellow shiny candy to unlock new abilities.
-
-'
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 0
-  - name: Micheal
-    currDialogueBox: And pickup the regular ones for cosmetics for the shops.
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 0
-  - name: Micheal
-    currDialogueBox: You can find a shop in every biome.
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 0
-  shouldActivateFunctions: 0
+  shouldActivateFunctions: 1
   functionsToBeActivated: {fileID: 0}
   timeTillActivation: 1

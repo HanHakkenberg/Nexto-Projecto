@@ -8,12 +8,12 @@ public class DonutOnTrigger : MonoBehaviour {
     bool hit = false;
 
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider _C)
 	{
-        if(!hit)
+        if(!hit && _C.tag == "Companion")
         {
-            puzzleInfo.GetComponent<DonutPuzzle>().hit+=1;
             hit = true;
+            puzzleInfo.GetComponent<DonutPuzzle>().hit+=1;
         }
             
     }

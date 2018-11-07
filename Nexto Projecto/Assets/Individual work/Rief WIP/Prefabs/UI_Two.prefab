@@ -13137,7 +13137,6 @@ MonoBehaviour:
   staCurrLoad: 4
   runStamina: 0
   maxStamina: 4
-  playerAnim: {fileID: 0}
 --- !u!114 &114524051425029656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13866,7 +13865,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316099806800912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c029a0a03c620a34bb37da60db242a34, type: 3}
   m_Name: 
@@ -24204,10 +24203,10 @@ RectTransform:
   - {fileID: 224057842682138084}
   - {fileID: 224276285222744780}
   - {fileID: 224003289438871976}
+  - {fileID: 224754453988758100}
   - {fileID: 224585134724747582}
   - {fileID: 224613414691910472}
   - {fileID: 224651742599832542}
-  - {fileID: 224754453988758100}
   m_Father: {fileID: 4364301222093224}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25581,7 +25580,7 @@ RectTransform:
   m_Children:
   - {fileID: 224456315477955154}
   m_Father: {fileID: 224255382113794254}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87875015, y: 0.055554546}
   m_AnchorMax: {x: 0.96375, y: 0.13111365}
@@ -25744,7 +25743,7 @@ RectTransform:
   - {fileID: 224622980562973858}
   - {fileID: 224840616825864608}
   m_Father: {fileID: 224255382113794254}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25836,7 +25835,7 @@ RectTransform:
   m_Children:
   - {fileID: 224820296583247554}
   m_Father: {fileID: 224255382113794254}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7775, y: 0.055554546}
   m_AnchorMax: {x: 0.86125004, y: 0.13111365}
@@ -26250,7 +26249,7 @@ RectTransform:
   m_Children:
   - {fileID: 224345022151605438}
   m_Father: {fileID: 224255382113794254}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87875015, y: 0.055554546}
   m_AnchorMax: {x: 0.96375, y: 0.13111365}
