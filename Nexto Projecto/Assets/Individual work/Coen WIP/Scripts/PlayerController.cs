@@ -73,6 +73,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider _C)
     {
+        if (_C.gameObject.GetComponent<PlatformBehaviour>())
+            transform.SetParent(_C.transform);
+
         if (_C.transform != objectCarried)
             if (_C.transform.tag == "Pickup")
                 currentObjectInRange = _C.gameObject.GetComponent<Rigidbody>();
@@ -80,6 +83,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider _C)
     {
+        if (_C.gameObject.GetComponent<PlatformBehaviour>())
+            transform.parent = null;
+
         if (_C.GetComponent<Rigidbody>())
             if (currentObjectInRange == _C.GetComponent<Rigidbody>())
                 currentObjectInRange = null;
