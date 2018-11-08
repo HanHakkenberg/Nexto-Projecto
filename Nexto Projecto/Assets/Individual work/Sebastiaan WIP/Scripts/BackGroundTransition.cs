@@ -9,7 +9,8 @@ public class BackGroundTransition : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        skyboxMat.color = skyboxColor;
+        if (col.transform.tag == "Player");
+        print("E");
     }
 }
 
