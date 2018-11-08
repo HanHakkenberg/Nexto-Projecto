@@ -22,8 +22,12 @@ GameObject:
   - component: {fileID: 33677266490651340}
   - component: {fileID: 23164417811991414}
   - component: {fileID: 95245073889517352}
+<<<<<<< HEAD
+  - component: {fileID: 65959166090201586}
+=======
   - component: {fileID: 114725126469412374}
   - component: {fileID: 65978923455290994}
+>>>>>>> 3d4e31cc5b1deb41545a30b10ef4761c92a97b74
   m_Layer: 0
   m_Name: Mushroom_002
   m_TagString: Untagged
@@ -51,7 +55,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1955216122378996}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -86,7 +90,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1955216122378996}
   m_Mesh: {fileID: 4300000, guid: 073fd58255044d64a87c2283e8677ce3, type: 3}
+<<<<<<< HEAD
+--- !u!65 &65959166090201586
+=======
 --- !u!65 &65978923455290994
+>>>>>>> 3d4e31cc5b1deb41545a30b10ef4761c92a97b74
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

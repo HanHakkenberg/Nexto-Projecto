@@ -219,7 +219,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 0.5254902, b: 0.79607844, a: 0.5019608}
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
@@ -229,7 +229,11 @@ Material:
     - _SkyTint: {r: 0, g: 1, b: 0.8714161, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Tint: {r: 1, g: 0.5235849, b: 0.79509026, a: 0.5}
+<<<<<<< HEAD
+    - _Tint: {r: 0.44706818, g: 0.9921438, b: 0.69803286, a: 0.50195086}
+=======
+    - _Tint: {r: 0.9450971, g: 0.51764596, b: 0.6313715, a: 0.5019605}
+>>>>>>> 57b3602b6e79d2ca6800c48c51579d7e2622488d
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
