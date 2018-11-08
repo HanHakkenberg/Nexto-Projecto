@@ -37,14 +37,16 @@ public class Cosmetics : MonoBehaviour {
 	public List<CosmeticInfo> skinTone = new List<CosmeticInfo>();
 	public TextMeshProUGUI currSkinText;
 	public GameObject skinBuyButton;
-	int currSkin;
+    public TextMeshProUGUI skinBuyText;
+    int currSkin;
 
 	[Header ("Hair")]
 	public List<CosmeticInfo> hairType;
 	//public GameObject playerHair;
 	public TextMeshProUGUI currHairText;
 	public GameObject hairBuyButton;
-	public int currHair;
+    public TextMeshProUGUI hairBuyText;
+    public int currHair;
 
 	[Header("Diaper")]
 	public GameObject diaperModel;
@@ -52,7 +54,8 @@ public class Cosmetics : MonoBehaviour {
 	//public GameObject playerDiaper;
 	public TextMeshProUGUI currDiaperText;
 	public GameObject diaperBuyButton;
-	int currDiaper;
+    public TextMeshProUGUI diaperBuyText;
+    int currDiaper;
 
 	[Header ("Eyes")]
     public GameObject eyeLeft;
@@ -60,8 +63,10 @@ public class Cosmetics : MonoBehaviour {
     public List<CosmeticInfo> eyeType = new List<CosmeticInfo>();
     public TextMeshProUGUI currEyesText;
 	public GameObject eyesBuyButton;
+	public TextMeshProUGUI eyeBuyText;
     int currEyes;
 
+	[Header ("Other")]
     public GameObject cosmeticPanel_temp;
 
     Material startSkin;
@@ -69,10 +74,10 @@ public class Cosmetics : MonoBehaviour {
     Material startEyes;
     GameObject startHair;
 
-    int skinNumb;
+    public int skinNumb;
     int diaperNumb;
     int eyeNumb;
-    int hairNumb;
+    public int hairNumb;
 
     public Material skinColour;
     public Material diaperColour;
@@ -84,6 +89,7 @@ public class Cosmetics : MonoBehaviour {
         skinNumb = currSkin;
         diaperNumb = currDiaper;
         eyeNumb = currEyes;
+        hairNumb = currHair;
     }
 	void UpdateColours()
 	{
@@ -109,7 +115,6 @@ public class Cosmetics : MonoBehaviour {
         startDiaper = diaperColour;
         startEyes = eyeColour;
 		UpdateColours();
-        
     }
 
 	public void ApplyStartCosmetics()
@@ -120,8 +125,13 @@ public class Cosmetics : MonoBehaviour {
         skinColour = startSkin;
         diaperColour = startDiaper;
 		eyeColour = startEyes;
-        UpdateColours();
-		//starthair
+		UpdateColours();
+        for (int i = 0; i < hairType.Count; i++)
+		{
+            hairType[i].hairType.SetActive(false);
+        }
+        hairType[hairNumb].hairType.SetActive(true);
+		
     }
 
 
@@ -151,7 +161,8 @@ public class Cosmetics : MonoBehaviour {
 		else
 		{
 			skinBuyButton.SetActive(true);
-		}
+            skinBuyText.text = "Buy " + skinTone[currSkin].cost + "c";
+        }
 
 		if(myDiapers[currDiaper].locked == false)
 		{
@@ -161,7 +172,8 @@ public class Cosmetics : MonoBehaviour {
 		else
 		{
 			diaperBuyButton.SetActive(true);
-		}
+            diaperBuyText.text = "Buy " + myDiapers[currDiaper].cost + "c";
+        }
 
 		if(eyeType[currEyes].locked == false)
 		{
@@ -171,7 +183,17 @@ public class Cosmetics : MonoBehaviour {
 		else
 		{
 			eyesBuyButton.SetActive(true);
-		}
+            eyeBuyText.text = "Buy " + eyeType[currEyes].cost + "c";
+        }
+		if(hairType[currHair].locked == false)
+		{
+            hairBuyButton.SetActive(false);
+        }
+		else
+		{
+            hairBuyButton.SetActive(true);
+			hairBuyText.text = "Buy " + hairType[currHair].cost + "c";
+        }
 	}
 
 	public void SkinBuy()
@@ -182,13 +204,13 @@ public class Cosmetics : MonoBehaviour {
         }
 	}
 
-	/*public void HairBuy()
+		public void HairBuy()
 	{
-		if(hairType[currHair].GetComponent<CosmeticCost>().cost <= currency)
+		if(hairType[currHair].cost <= currency)
 		{
-			skinTone[currSkin].GetComponent<CosmeticCost>().locked = false;
+			hairType[currHair].locked = false;
 		}
-	}*/
+	}
 
 	public void DiaperBuy()
 	{
