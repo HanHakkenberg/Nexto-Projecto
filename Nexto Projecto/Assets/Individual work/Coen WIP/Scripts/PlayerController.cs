@@ -113,21 +113,24 @@ public class PlayerController : MonoBehaviour
         hat.SetBool("Flying", !CheckGrounded());
         Rotate();
         IncrementStam();
-        ChargeJump();
 
         if (GameManager.gameManager.gameTimeout == false && canControl == true)
         {
-            Jump();
             Move();
             Stomp();
             Pickup();
-            
+            ChargeJump();
             return;
         }
 
 
 
         anim.SetInteger("WalkingState", 0);
+    }
+
+    public void LateUpdate() {
+        if(GameManager.gameManager.gameTimeout == false && canControl == true)
+            Jump();
     }
 
     void OnCollisionStay(Collision _C)
@@ -146,7 +149,6 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.transform.gameObject.tag != "Player")
             {
-                ResetJumpCount();
 
                 if (stomping == true)
                 {
@@ -327,8 +329,10 @@ public class PlayerController : MonoBehaviour
          {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpCount++;
+                    print(jumpCount);
+                jumpCount += 1;
                 anim.SetInteger("JumpState", jumpCount);
+                return;
                }
             }
         }
@@ -368,7 +372,6 @@ public class PlayerController : MonoBehaviour
     {
         thisBody.velocity = Vector3.zero;
         thisBody.AddForce(new Vector3(0, _Force, 0), ForceMode.Impulse);
-        jumpCount++;
     }
 
     private void SwitchMovement(int _MoveID)

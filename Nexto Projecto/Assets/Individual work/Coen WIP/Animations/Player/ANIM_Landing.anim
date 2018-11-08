@@ -20867,7 +20867,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.13333334
+  - time: 0
+    functionName: ResetJumpCount
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 50d36c8f7539604429107d767dba3336,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
     functionName: FootStepLeft
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 50d36c8f7539604429107d767dba3336,
@@ -20875,7 +20883,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.13333334
+  - time: 0
     functionName: FootStepRight
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 50d36c8f7539604429107d767dba3336,
@@ -20883,7 +20891,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.13333334
+  - time: 0
     functionName: CheckSlamColor
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 50d36c8f7539604429107d767dba3336,
@@ -20891,7 +20899,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.13333334
+  - time: 0
     functionName: CallAudio
     data: 
     objectReferenceParameter: {fileID: 0}

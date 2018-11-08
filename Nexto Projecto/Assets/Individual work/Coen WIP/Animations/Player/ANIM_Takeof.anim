@@ -16539,10 +16539,11 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.26666668
+  - time: 0
     functionName: Jump
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: ac2db931431c31b45942473fe5011f79,
+      type: 3}
     floatParameter: 6.5
     intParameter: 0
     messageOptions: 0

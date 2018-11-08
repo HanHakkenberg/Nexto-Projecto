@@ -7,7 +7,7 @@ public class GemRockBehaviour : MonoBehaviour {
     public GameObject rock;
     public ParticleSystem particles;
     public LayerMask mask;
-
+    public bool shouldGiveQuestCollectable = true;
     private bool gaveCollectable = false;
 
     private void OnTriggerEnter(Collider _C) {
@@ -17,6 +17,7 @@ public class GemRockBehaviour : MonoBehaviour {
                 gaveCollectable = true;
                 rock.SetActive(false);
                 particles.Play();
+                if(shouldGiveQuestCollectable == true)
                 GameManager.gameManager.AddQuestCollectable(1);
                 AudioManager.audioManager.PlayAudio(2, transform);
             }
