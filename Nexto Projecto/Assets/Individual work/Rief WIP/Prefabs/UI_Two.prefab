@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 222705856278555590}
   - component: {fileID: 114930944822423332}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DiaperBuyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2246,7 +2246,7 @@ GameObject:
   - component: {fileID: 222480467345206176}
   - component: {fileID: 114795345172129936}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HairBuyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2406,7 +2406,7 @@ GameObject:
   - component: {fileID: 222260180753468874}
   - component: {fileID: 114954269633594998}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SkinBuyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3234,7 +3234,7 @@ GameObject:
   - component: {fileID: 222688332105561006}
   - component: {fileID: 114697564901146830}
   m_Layer: 5
-  m_Name: Text
+  m_Name: EyeBuyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10616,7 +10616,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 39d8167d00365f743ad34a0ab9f967d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd907cc65ab00d42b8b2af8180670d8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12757,6 +12757,7 @@ MonoBehaviour:
     cost: 0
   currSkinText: {fileID: 114092161178207200}
   skinBuyButton: {fileID: 1407489933632076}
+  skinBuyText: {fileID: 114954269633594998}
   hairType:
   - name: None
     colour: {fileID: 0}
@@ -12766,8 +12767,8 @@ MonoBehaviour:
   - name: Pink Hairband
     colour: {fileID: 0}
     hairType: {fileID: 0}
-    locked: 0
-    cost: 0
+    locked: 1
+    cost: 10
   - name: Panda Hairband
     colour: {fileID: 0}
     hairType: {fileID: 0}
@@ -12788,8 +12789,29 @@ MonoBehaviour:
     hairType: {fileID: 0}
     locked: 0
     cost: 0
+  - name: Pumpkin Head
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Crown
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Mining Hat
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Snow Hat
+    colour: {fileID: 0}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
   currHairText: {fileID: 114753097909682240}
   hairBuyButton: {fileID: 1588559345059222}
+  hairBuyText: {fileID: 114795345172129936}
   currHair: 0
   diaperModel: {fileID: 0}
   myDiapers:
@@ -12810,6 +12832,7 @@ MonoBehaviour:
     cost: 0
   currDiaperText: {fileID: 114473775471359164}
   diaperBuyButton: {fileID: 1864873462835896}
+  diaperBuyText: {fileID: 114930944822423332}
   eyeLeft: {fileID: 0}
   eyeRight: {fileID: 0}
   eyeType:
@@ -12820,7 +12843,10 @@ MonoBehaviour:
     cost: 0
   currEyesText: {fileID: 114856088015276742}
   eyesBuyButton: {fileID: 1570524955420356}
+  eyeBuyText: {fileID: 114697564901146830}
   cosmeticPanel_temp: {fileID: 1560168503741242}
+  skinNumb: 0
+  hairNumb: 0
   skinColour: {fileID: 2100000, guid: e3f006826602407449d5c5d48c2af4d4, type: 2}
   diaperColour: {fileID: 2100000, guid: 53c5de1a32afd0b449491042903013f0, type: 2}
   eyeColour: {fileID: 2100000, guid: 4c0854629b959c443b857257497e8f55, type: 3}
@@ -14053,7 +14079,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 39d8167d00365f743ad34a0ab9f967d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd907cc65ab00d42b8b2af8180670d8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14880,18 +14906,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: CosmeticFalse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114504444276038652}
         m_MethodName: ApplyStartCosmetics
         m_Mode: 1
         m_Arguments:
@@ -15322,7 +15337,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b16ba57867203844bfd25bc348c9e40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a7ce022a316c6d41853407adc323ec9, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16507,7 +16522,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b16ba57867203844bfd25bc348c9e40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a7ce022a316c6d41853407adc323ec9, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16534,7 +16549,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b16ba57867203844bfd25bc348c9e40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a7ce022a316c6d41853407adc323ec9, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17516,7 +17531,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 39d8167d00365f743ad34a0ab9f967d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd907cc65ab00d42b8b2af8180670d8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18418,7 +18433,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b16ba57867203844bfd25bc348c9e40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a7ce022a316c6d41853407adc323ec9, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20146,7 +20161,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0b16ba57867203844bfd25bc348c9e40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a7ce022a316c6d41853407adc323ec9, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20634,7 +20649,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8796e84a31bd2c04f9fdbb794783fef6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: defd8084234cfff4ab90addd32a315b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21463,7 +21478,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 39d8167d00365f743ad34a0ab9f967d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd907cc65ab00d42b8b2af8180670d8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21620,7 +21635,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 39d8167d00365f743ad34a0ab9f967d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd907cc65ab00d42b8b2af8180670d8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SwitchManager : MonoBehaviour
 {
 
+    public static SwitchManager switchManager;
+
     public Cinemachine.CinemachineFreeLook Vcam { get { return GameObject.Find("Main Virtual Camera").GetComponent<Cinemachine.CinemachineFreeLook>(); } }
     public GameObject companionInstance;
 
@@ -24,6 +26,15 @@ public class SwitchManager : MonoBehaviour
 
     private void Awake()
     {
+        if (switchManager != null)
+        {
+            return;
+        }
+        else
+        {
+            switchManager = this;
+        }
+        
         Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[0].m_Radius = 2f;
         Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[1].m_Radius = 4f;
         Vcam.GetComponent<Cinemachine.CinemachineFreeLook>().m_Orbits[2].m_Radius = 2f;

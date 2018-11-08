@@ -11,6 +11,7 @@ public class OnTriggerBackgroundMusic : MonoBehaviour {
     public List<CosmeticInfo> extraDiaper;
     public List<CosmeticInfo> extraHair;
     public int level;
+    public bool hasAdded;
 
 
 
@@ -24,16 +25,20 @@ public class OnTriggerBackgroundMusic : MonoBehaviour {
     }
     public void CosmeticForloop()
     {
-        for (int i = extraHair.Count - 1; i >= 0; i--)
+        if (!hasAdded)
         {
-            cosmetics.GetComponent<Cosmetics>().hairType.Add(extraHair[0]);
-            extraHair.Remove(extraHair[0]);
-        }
+            for (int i = extraHair.Count - 1; i >= 0; i--)
+            {
+                cosmetics.GetComponent<Cosmetics>().hairType.Add(extraHair[0]);
+                extraHair.Remove(extraHair[0]);
+            }
 
-        for (int i = extraDiaper.Count - 1; i >= 0; i--)
-        {
-            cosmetics.GetComponent<Cosmetics>().myDiapers.Add(extraDiaper[0]);
-            extraDiaper.Remove(extraDiaper[0]);
+            for (int i = extraDiaper.Count - 1; i >= 0; i--)
+            {
+                cosmetics.GetComponent<Cosmetics>().myDiapers.Add(extraDiaper[0]);
+                extraDiaper.Remove(extraDiaper[0]);
+            }
         }
+        hasAdded = false;
     }
 }

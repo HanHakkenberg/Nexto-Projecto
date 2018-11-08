@@ -107,7 +107,7 @@ public class SimonSays : MonoBehaviour {
 		else
 		{
 			statusText.text = "You did it!";
-			StartCoroutine(EndGame());
+            StartCoroutine(EndGame());
             questNPC.dialogue = completion;
 
         }
