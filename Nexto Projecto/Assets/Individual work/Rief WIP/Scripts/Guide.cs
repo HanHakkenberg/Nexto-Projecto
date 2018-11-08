@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Guide : MonoBehaviour {
 
-	void Start () {
+
+    void Start () {
 		
 	}
 	
@@ -12,8 +13,13 @@ public class Guide : MonoBehaviour {
 		
 	}
 
-	public void OpenCompanion()
+	public void CompanionOpen()
 	{
-		
+        SwitchManager.switchManager.ToggleController(true);
+        GameManager.gameManager.gameTimeout = true;
+    }
+	public void CompanionClose()
+	{
+
 	}
 }
