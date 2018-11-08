@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
+  m_Name: Ending_001
+  m_EditorClassIdentifier: 
+  timeTillNewChar: 0.05
+  dialogue:
+  - name: Ivan
+    currDialogueBox: And so our journey for now is at an end.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Ivan
+    currDialogueBox: 'We did what no one else has done before, and gotten hands
+
+      on the legendary golden diaper.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Ivan
+    currDialogueBox: And now that we got it, it's finally time for some rest.
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Ivan
+    currDialogueBox: '''Till the next adventure!
+
+'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  shouldActivateFunctions: 1
+  functionsToBeActivated: {fileID: 11400000, guid: 38fdf5c73b1df5b4d852e3189f54c34e,
+    type: 2}
+  timeTillActivation: 1

@@ -85,6 +85,7 @@ public class CutsceneManager : MonoBehaviour {
         currentScene.cameras[_ID].enabled = true;
         yield return new WaitForSeconds(currentScene.cameraSwitchDuration);
 
+    if(currentScene.animatedObjects != null)
         if(currentScene.animatedObjects[_ID] != null)
             currentScene.animatedObjects[_ID].enabled = true;
         blackscreen.SetBool("IsFading", false);
