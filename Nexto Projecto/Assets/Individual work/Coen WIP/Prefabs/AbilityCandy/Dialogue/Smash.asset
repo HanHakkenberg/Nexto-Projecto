@@ -13,26 +13,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeTillNewChar: 0.05
   dialogue:
-  - name: Smash
-    currDialogueBox: Congratulations! You have unlocked the "Smash" ability!
+  - name: Ground-Stomp
+    currDialogueBox: Congratulations! You have unlocked the "Ground-Stomp" ability!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
-  - name: Smash
+  - name: Ground-Stomp
     currDialogueBox: 'To use this ability, press left "ALT" on your keyboard while
-      midair/
+      midair
 
       and see your character SMASH! into the ground!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
-  - name: Smash
+  - name: Ground-Stomp
     currDialogueBox: This can be used to break several objects, mostly in missions.
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
-  - name: Smash
-    currDialogueBox: There are a few more candys to lookout where, why not find them!
+  - name: Ground-Stomp
+    currDialogueBox: 'There is one more ability left to get in this world,
+
+      let''s hunt for it!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

@@ -14,9 +14,9 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Ivan
-    currDialogueBox: 'If you explore the lands and see these signs,/
+    currDialogueBox: 'If you explore the lands and see these signs,
 
-      that means that you can use me to interact with/
+      that means that you can use me to interact with
 
       something nearby!'
     options:

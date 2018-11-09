@@ -11,20 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: QuestOneCompletedDialogue
   m_EditorClassIdentifier: 
-  timeTillNewChar: 0.01
+  timeTillNewChar: 0.05
   dialogue:
-  - name: Nigger Baby
-    currDialogueBox: "Cheers nigga imma get real high with those memes\t"
+  - name: Farmer Joe
+    currDialogueBox: Oh thank you so much!
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4
-  - name: You xDDDD
-    currDialogueBox: "No problem lollll give me some heroine candy\t"
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 1.4
-  - name: Nigger Baby
-    currDialogueBox: Here nigga, 10 heroine candies
+  - name: Farmer Joe
+    currDialogueBox: 'It seems like these chickens layed some candy
+
+      as well, I don''t need them, why don''t you take
+
+      them with you instead?'
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4

@@ -11,31 +11,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: QuestOneStartDialogue
   m_EditorClassIdentifier: 
-  timeTillNewChar: 0.01
+  timeTillNewChar: 0.05
   dialogue:
-  - name: Farmvillian
-    currDialogueBox: "Hey you there! Can you help me out?\t"
+  - name: Farmer Joe
+    currDialogueBox: Could you please help me collect some eggs?
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4
-  - name: You
-    currDialogueBox: "What's the matter?\t"
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 1.4
-  - name: Nigger Baby
-    currDialogueBox: ' I require 10 chocolate eggs but I''m not fast enough to get,/
+  - name: Farmer Joe
+    currDialogueBox: 'I require 10 chocolate eggs but I''m not fast enough to get
+
       the eggs from the chickens. Could you try to get them for me?'
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4
-  - name: You xDDDD
-    currDialogueBox: "Sure, but the door seems locked. How do I get in?\t"
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 1.4
-  - name: Nigger Baby
-    currDialogueBox: Don't worry about that, I'll open the door for you. Be careful!
+  - name: Farmer Joe
+    currDialogueBox: Here I'll open the door for you, be carefull!
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4

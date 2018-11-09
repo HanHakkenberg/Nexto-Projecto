@@ -14,7 +14,7 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Ivan
-    currDialogueBox: That's all i wanted to tell you i think!
+    currDialogueBox: That's all for now I think..
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
@@ -24,21 +24,21 @@ MonoBehaviour:
       shouldWaitAtSpace: 1
       waitTime: 1
   - name: Ivan
-    currDialogueBox: 'If you want to switch back to your character be/
+    currDialogueBox: 'If you want to switch back to your character be
 
-      sure to press ''k'' once more!'
+      sure to press ''K'' once more!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ivan
-    currDialogueBox: 'That was all! And remember press ''k'' to/
+    currDialogueBox: 'That was all! And remember press ''K'' to
 
       make me appear!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ivan
-    currDialogueBox: Byebye!
+    currDialogueBox: Bye bye!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

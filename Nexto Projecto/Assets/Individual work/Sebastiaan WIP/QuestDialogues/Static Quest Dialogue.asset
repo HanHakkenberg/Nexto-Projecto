@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: Static Quest Dialogue
   m_EditorClassIdentifier: 
-  timeTillNewChar: 0.01
+  timeTillNewChar: 0.05
   dialogue:
-  - name: Nigger
-    currDialogueBox: Whomst've
+  - name: Villager
+    currDialogueBox: Good luck on your journey!
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4

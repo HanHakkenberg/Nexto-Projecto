@@ -14,12 +14,12 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Spike
-    currDialogueBox: Hey old man, i was just looking for a helping hand!
+    currDialogueBox: Hey old man, I was just looking for a helping hand!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Spike
-    currDialogueBox: 'My workers here work hard everyday of the week,/
+    currDialogueBox: 'My workers here work hard every day of the week,
 
       but we do not get enough work done nowadays unfortunately..'
     options:

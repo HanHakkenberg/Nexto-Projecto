@@ -20,14 +20,14 @@ MonoBehaviour:
       waitTime: 0
   - name: Charge-Jump
     currDialogueBox: 'To use it hold ''X'', the longer you hold this button, the higher
-      you/
+      you
 
       will jump!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Charge-Jump
-    currDialogueBox: 'Although this ability can not be used with the regular jumps/
+    currDialogueBox: 'Although this ability can not be used with the regular jumps
 
       it is certainly needed for some obstacles!'
     options:
