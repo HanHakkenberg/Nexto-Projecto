@@ -64,7 +64,7 @@ public class Cosmetics : MonoBehaviour {
     public TextMeshProUGUI currEyesText;
 	public GameObject eyesBuyButton;
 	public TextMeshProUGUI eyeBuyText;
-    int currEyes;
+    public int currEyes;
 
 	[Header ("Other")]
     public GameObject cosmeticPanel_temp;
@@ -338,7 +338,7 @@ public class Cosmetics : MonoBehaviour {
 
 	public void EyesUp()
 	{
-		if(currEyes > eyeType.Count-1)
+		if(currEyes < eyeType.Count-1)
 		{
             currEyes++;
             CosmeticUpdate();

@@ -19,21 +19,22 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Dash
-    currDialogueBox: 'To use it simply press the middlemouse button,/
+    currDialogueBox: 'To use it simply press the middlemouse button,
 
       When done so the player with launch forth.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Dash
-    currDialogueBox: 'The ability is usable with the jump, so try using this combo/
+    currDialogueBox: 'The ability is usable with the jump, so try using this combo
 
       to overcome seemingly impossible obstacles!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Dash
-    currDialogueBox: There are more hidden throughout the world, why not find them?
+    currDialogueBox: "There are more abilities hidden throughout the world, \nwhy
+      not find them?"
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

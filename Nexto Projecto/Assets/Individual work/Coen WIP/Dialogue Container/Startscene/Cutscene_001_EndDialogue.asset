@@ -14,9 +14,9 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: ???
-    currDialogueBox: 'Oh yeah! I haven''t told you my name yet,/
+    currDialogueBox: 'Oh yeah! I haven''t told you my name yet,
 
-      haven''t i?'
+      haven''t I?'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
@@ -28,9 +28,9 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'We children here have been drooling about the thoughts/
+    currDialogueBox: 'We children here have been drooling about the thoughts
 
-      of getting that Rattle ourselves, but as we are now/'
+      of getting that Diaper ourselves, but as we are now.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
@@ -40,69 +40,68 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'And a fairy named "Ivan", has told us that you are the one/
-
-      that may be one of our race that gets born every 100 years or so.
-
-'
+    currDialogueBox: "And a fairy named \"Ivan\", has told us \nthat you are the one
+      that may be the one\n to be able to claim the \"Treasure\"!"
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'So we decided that we as our people, would teach you the/
+    currDialogueBox: 'So we decided that we would teach you the
 
       ways of everything we have learned so far!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'Around this world there has been scattered several/
+    currDialogueBox: 'Several Legendary Candies have been scattered around
 
-      legendary candies that give the person who eats it/
-
-      immense powers!'
+      this beautiful world. They give great powers once you eat them.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'These powers give you the ability to overcome obstacles.
-
-      And reach further into our world that we have come to be.'
+    currDialogueBox: "These powers give you the ability to overcome obstacles\nyou
+      couldn't before to reach further into this world \nof deliciousness"
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'To go to the other island, every cake slice has several/
-
-      quests and puzzles to complete.'
+    currDialogueBox: "To be able to progress, you will have to complete \nquests and
+      puzzles on every cake slice you reach,\nstarting with this one"
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'The babys that need help all have a picture drawn/
+    currDialogueBox: 'The babies that need help all have a picture drawn
 
       above their heads!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'To talk to them, simply walk up to them and press "E"./
+    currDialogueBox: 'To talk to them, simply walk up to them and press "E".
 
       It''s not bad to socialize every so often y''know!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: 'After you completed a task that''s been given by them,/
-
-      they''ll be sure to reward you or to make your life/
-
-      a bit easier!'
+    currDialogueBox: "After you completed a task that's been given by them,\nthey'll
+      be sure to reward you or make your life a bit \neasier!"
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Micheal
-    currDialogueBox: If you need any help be sure to pass by anytime!
+    currDialogueBox: 'You see that baby over there walking in circles?
+
+      I''m sure he needs some help, go take a look!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Micheal
+    currDialogueBox: 'If you need anything, be sure to stop by any
+
+      time!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

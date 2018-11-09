@@ -19,7 +19,7 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ivan
-    currDialogueBox: Oh! I haven't introduced myself yet!
+    currDialogueBox: Oh! I haven't properly introduced myself yet!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
@@ -34,16 +34,16 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ivan
-    currDialogueBox: 'From now on if you need to help, you can/
+    currDialogueBox: 'From now on if you need to help, you can
 
-      press ''k'' to summon me!'
+      press ''K'' to summon me!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ivan
-    currDialogueBox: 'You can use me to reach obstacles where you/
+    currDialogueBox: 'You can use me to reach obstacles where you
 
-      cannot get yourself. And interact with several objects/
+      cannot get yourself. And interact with several objects
 
       that are out of reach!'
     options:

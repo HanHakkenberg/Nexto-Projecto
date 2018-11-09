@@ -14,33 +14,33 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: ???
-    currDialogueBox: This is a "Ability-Candy"
+    currDialogueBox: This is an "Ability-Candy"
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: 'When you pick up one of these sweet legendary,
+    currDialogueBox: 'When you eat one of these yummy sweets,
 
-      sweets you''ll unlock an ability!'
+      you''ll unlock a useful ability'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: 'They are pretty rare though,/
+    currDialogueBox: 'They are pretty rare though,
 
-      there are only a several spread around this land.'
+      there are only a couple spread around this land.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: Though these things are definitely worth picking up!
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 0
-  - name: ???
-    currDialogueBox: 'So when you see one you know what to do!
+    currDialogueBox: 'But they are very delicious, and help you out
 
-'
+      a whole lot.'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: So when you see one you know what to do!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

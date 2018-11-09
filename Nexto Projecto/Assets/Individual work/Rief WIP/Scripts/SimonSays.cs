@@ -118,7 +118,7 @@ public class SimonSays : MonoBehaviour {
     }
 	IEnumerator EndGame()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(2.5f);
 		gameCanvas.SetActive(false);
 	}
 }

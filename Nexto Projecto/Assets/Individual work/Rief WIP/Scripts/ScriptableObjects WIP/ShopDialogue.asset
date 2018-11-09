@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: ShopDialogue
   m_EditorClassIdentifier: 
-  timeTillNewChar: 0.15
+  timeTillNewChar: 0.05
   dialogue:
   - name: Shopkeeper
-    currDialogueBox: Now entering the shop!
+    currDialogueBox: Welcome to my shop!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

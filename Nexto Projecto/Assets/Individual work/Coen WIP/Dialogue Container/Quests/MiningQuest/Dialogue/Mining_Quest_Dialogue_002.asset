@@ -14,7 +14,7 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Spike
-    currDialogueBox: 'There are several rocks we have been mining for days,/
+    currDialogueBox: 'There are several rocks we have been mining for days,
 
       trying to collect those minerals.'
     options:
@@ -26,9 +26,9 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Spike
-    currDialogueBox: 'If you could use the "Ground-Stomp" ability to smash those rocks/
+    currDialogueBox: 'If you could use the "Ground-Stomp" ability to smash some rocks
 
-      with the question mark above them then that would be great!'
+      for me to help me out, that would be great!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

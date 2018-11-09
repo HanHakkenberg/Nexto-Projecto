@@ -24,19 +24,19 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: Ah, such a colorful world, full of peace and quiet.
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 0
-  - name: ???
-    currDialogueBox: '...                  /
+    currDialogueBox: 'Ah, such a colorful world.
 
-      Well... not so quiet.'
+      Full of peace and quiet.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: 'But certainly a place where an adventure/
+    currDialogueBox: "...\nWell... \nNot that quiet."
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: ???
+    currDialogueBox: 'But certainly a place where an adventure
 
       can take place, and a legendary one at that.'
     options:
