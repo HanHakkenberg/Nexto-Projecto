@@ -5,8 +5,8 @@ using UnityEngine;
 public class OnTriggerBackgroundMusic : MonoBehaviour {
 
 
-    public int songChoice;
-    public GameObject player;
+    //public int songChoice;
+    //public GameObject player;
     public GameObject cosmetics;
     public List<CosmeticInfo> extraDiaper;
     public List<CosmeticInfo> extraHair;
@@ -17,8 +17,8 @@ public class OnTriggerBackgroundMusic : MonoBehaviour {
 
     public void OnTriggerEnter()
 	{
-        player.GetComponent<BackgroundMusic>().fading = true;
-        player.GetComponent<BackgroundMusic>().currClip = songChoice;
+       // player.GetComponent<BackgroundMusic>().fading = true;
+       // player.GetComponent<BackgroundMusic>().currClip = songChoice;
         Cosmetics.currLevel = level;
         CosmeticForloop();
 

@@ -368,7 +368,6 @@ GameObject:
   - component: {fileID: 23417885877084906}
   - component: {fileID: 64168047552344058}
   - component: {fileID: 65525535183294662}
-  - component: {fileID: 114306556820852430}
   - component: {fileID: 65660698929931480}
   - component: {fileID: 114625746301848078}
   m_Layer: 0
@@ -420,7 +419,6 @@ GameObject:
   - component: {fileID: 23949598714608396}
   - component: {fileID: 64395560841626104}
   - component: {fileID: 65193991531448014}
-  - component: {fileID: 114544045996552668}
   - component: {fileID: 65932827779446912}
   - component: {fileID: 114856196483056592}
   m_Layer: 0
@@ -457,7 +455,6 @@ GameObject:
   - component: {fileID: 23836582503455724}
   - component: {fileID: 64981529307758038}
   - component: {fileID: 65546658881157496}
-  - component: {fileID: 114489313992373388}
   - component: {fileID: 65766021119951906}
   - component: {fileID: 114726678765005886}
   m_Layer: 0
@@ -724,7 +721,6 @@ GameObject:
   - component: {fileID: 23489002889965714}
   - component: {fileID: 64846047624191742}
   - component: {fileID: 65981102930637634}
-  - component: {fileID: 114537953520551304}
   - component: {fileID: 65186762586363494}
   - component: {fileID: 114030224061433274}
   m_Layer: 0
@@ -931,7 +927,6 @@ GameObject:
   - component: {fileID: 23024065236618438}
   - component: {fileID: 64635374025580610}
   - component: {fileID: 65090320012215816}
-  - component: {fileID: 114621893825773622}
   - component: {fileID: 65718475109368494}
   - component: {fileID: 114292874776339788}
   m_Layer: 0
@@ -1014,7 +1009,6 @@ GameObject:
   - component: {fileID: 23069835268102436}
   - component: {fileID: 64635726205380068}
   - component: {fileID: 65302141426560842}
-  - component: {fileID: 114358845462705632}
   - component: {fileID: 65108725818873700}
   - component: {fileID: 114435985432016174}
   m_Layer: 0
@@ -1081,7 +1075,6 @@ GameObject:
   - component: {fileID: 23681563558858460}
   - component: {fileID: 64901884825823224}
   - component: {fileID: 65466967494267380}
-  - component: {fileID: 114686606651507650}
   - component: {fileID: 65791162792400326}
   - component: {fileID: 114187701875655252}
   m_Layer: 0
@@ -1148,7 +1141,6 @@ GameObject:
   - component: {fileID: 23147242649339032}
   - component: {fileID: 64532314296693332}
   - component: {fileID: 65638792633023214}
-  - component: {fileID: 114531643159392334}
   - component: {fileID: 65070677307292656}
   - component: {fileID: 114987652231583780}
   m_Layer: 0
@@ -1252,6 +1244,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1459567436029042
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224502598986476738}
+  - component: {fileID: 65703028838694528}
+  - component: {fileID: 114684523130964936}
+  m_Layer: 0
+  m_Name: DonutCutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1460185873408150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1273,6 @@ GameObject:
   - component: {fileID: 23643040768792256}
   - component: {fileID: 64735132123084508}
   - component: {fileID: 65780471644321648}
-  - component: {fileID: 114280256075941430}
   - component: {fileID: 65185828174118810}
   - component: {fileID: 114226696191964710}
   m_Layer: 0
@@ -1331,7 +1339,6 @@ GameObject:
   - component: {fileID: 23904364711281620}
   - component: {fileID: 64322488929622878}
   - component: {fileID: 65583032062180452}
-  - component: {fileID: 114808657551498506}
   - component: {fileID: 65260605562631810}
   - component: {fileID: 114616346080917330}
   m_Layer: 0
@@ -1353,7 +1360,6 @@ GameObject:
   - component: {fileID: 23983451003501400}
   - component: {fileID: 64877286016511276}
   - component: {fileID: 65785989042331566}
-  - component: {fileID: 114420206760680436}
   - component: {fileID: 65697597159766408}
   - component: {fileID: 114507036866261340}
   m_Layer: 0
@@ -1481,7 +1487,6 @@ GameObject:
   - component: {fileID: 23116595130658444}
   - component: {fileID: 64824803332047260}
   - component: {fileID: 65011367689116034}
-  - component: {fileID: 114569272734232418}
   - component: {fileID: 65123607152842290}
   - component: {fileID: 114684432691208050}
   m_Layer: 0
@@ -1729,7 +1734,6 @@ GameObject:
   - component: {fileID: 23430533408422500}
   - component: {fileID: 64779470354019258}
   - component: {fileID: 65255883170486010}
-  - component: {fileID: 114909737228638336}
   - component: {fileID: 65612309342624994}
   - component: {fileID: 114746726922536844}
   m_Layer: 0
@@ -1928,7 +1932,6 @@ GameObject:
   - component: {fileID: 23464523909407422}
   - component: {fileID: 64578115841401760}
   - component: {fileID: 65798423241251496}
-  - component: {fileID: 114362120498045542}
   - component: {fileID: 65095393874134442}
   - component: {fileID: 114213063566333876}
   m_Layer: 0
@@ -2227,7 +2230,6 @@ GameObject:
   - component: {fileID: 23009132549767084}
   - component: {fileID: 64903231188701312}
   - component: {fileID: 65490326355637290}
-  - component: {fileID: 114485210455797942}
   - component: {fileID: 65505735468180012}
   - component: {fileID: 114856082680776092}
   m_Layer: 0
@@ -2309,7 +2311,6 @@ GameObject:
   - component: {fileID: 23444063528862786}
   - component: {fileID: 64333535985348522}
   - component: {fileID: 65799180079528434}
-  - component: {fileID: 114188200086318578}
   - component: {fileID: 65070306082564900}
   - component: {fileID: 114772947035277988}
   m_Layer: 0
@@ -2318,6 +2319,23 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1808422318928050
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224812022558979708}
+  - component: {fileID: 222933755902967376}
+  - component: {fileID: 114602319980493358}
+  m_Layer: 0
+  m_Name: ChocoAmount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1813636537676430
 GameObject:
@@ -2331,7 +2349,6 @@ GameObject:
   - component: {fileID: 23784467207407620}
   - component: {fileID: 64418354897150498}
   - component: {fileID: 65279108311798892}
-  - component: {fileID: 114416394999023648}
   - component: {fileID: 65454545393071136}
   - component: {fileID: 114918315263737072}
   m_Layer: 0
@@ -2465,7 +2482,6 @@ GameObject:
   - component: {fileID: 23364595622746618}
   - component: {fileID: 64207962971835614}
   - component: {fileID: 65442579810521136}
-  - component: {fileID: 114616014834186278}
   - component: {fileID: 65444298750932644}
   - component: {fileID: 114950339083200158}
   m_Layer: 0
@@ -2633,7 +2649,6 @@ GameObject:
   - component: {fileID: 23449189402574892}
   - component: {fileID: 64220489570366028}
   - component: {fileID: 65131729667965656}
-  - component: {fileID: 114195079739841432}
   - component: {fileID: 65748686421945692}
   - component: {fileID: 114839680147433748}
   m_Layer: 0
@@ -7048,6 +7063,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65703028838694528
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459567436029042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65718475109368494
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -7436,6 +7463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114170947581304068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7478,30 +7506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114188200086318578
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798928565108406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114195079739841432
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1911097949828266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114213063566333876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7514,6 +7519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114226696191964710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7526,6 +7532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114234357816955558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7537,18 +7544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3ebb2c6f47f964b955ba6215e31c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114280256075941430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1460185873408150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114292874776339788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7561,18 +7556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114306556820852430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111584534399894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114327312419707966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7584,58 +7568,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cd70f5ae77c82448ff2cb5f09c1138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 2ff1ac9028088c946b50201eece54a99, type: 2}
+  dialogue: {fileID: 11400000, guid: 555f03538bb670e4393464136332258c, type: 2}
   quest: {fileID: 0}
   overrideRotation: 1
   canLoadUpDialogue: 0
---- !u!114 &114358845462705632
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1330180023977358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114362120498045542
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1693989210419020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114416394999023648
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1813636537676430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114420206760680436
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1498313210782812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114435985432016174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7648,18 +7584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114485210455797942
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1778460862654760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114486374677439136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7671,18 +7596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3ebb2c6f47f964b955ba6215e31c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114489313992373388
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1114631068557680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114507036866261340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7695,6 +7608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114512815364806754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7714,42 +7628,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 36993869dbaaf824197fee99c61ac00e, type: 3}
   - {fileID: 8300000, guid: 78f3ba464e5f3a9408ab2ae3228d1c7a, type: 3}
   - {fileID: 8300000, guid: 96401a97736f580468acd3bdb62a71db, type: 3}
---- !u!114 &114531643159392334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398650486623016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114537953520551304
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1215332905062874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114544045996552668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1113956834733174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114553991710711610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7766,18 +7644,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114569272734232418
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539013167719264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114582300271384812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7808,18 +7674,121 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114616014834186278
+--- !u!114 &114602319980493358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855890339862288}
+  m_GameObject: {fileID: 1808422318928050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: 19 / 19 Chocolates
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b97fc14412ce76644a1ea88e93ce1a63, type: 2}
+  m_sharedMaterial: {fileID: 21968198386866098, guid: b97fc14412ce76644a1ea88e93ce1a63,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 257
+  m_isAlignmentEnumConverted: 1
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: 8
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 59.90338, w: -33.989883}
+  m_textInfo:
+    textComponent: {fileID: 114602319980493358}
+    characterCount: 18
+    spriteCount: 0
+    spaceCount: 3
+    wordCount: 3
+    linkCount: 0
+    lineCount: 2
+    pageCount: 1
+    materialCount: 1
+  m_havePropertiesChanged: 0
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_isInputParsingRequired: 0
+  m_inputSource: 0
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114616346080917330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7832,18 +7801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114621893825773622
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1284466376834176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114625746301848078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7856,6 +7814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114668012754900738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7943,18 +7902,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114686606651507650
+  chocolate: {fileID: 0}
+--- !u!114 &114684523130964936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1367389436498848}
+  m_GameObject: {fileID: 1459567436029042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
+  m_Script: {fileID: 11500000, guid: dfb9aa3b48e513d439d797fcb4d3530d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114688807195336666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7979,9 +7938,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donutCanvas: {fileID: 1441571317063088}
   timeText: {fileID: 114955618631088466}
+  chocoAmount: {fileID: 114602319980493358}
   time: 120
   hit: 0
-  allHit: 38
+  allHit: 19
   finished: 0
   failed: 0
   puzzleActive: 0
@@ -8002,6 +7962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114746726922536844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8014,6 +7975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114772947035277988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8026,6 +7988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114782349965292704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8047,18 +8010,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114808657551498506
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1495538987966374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
 --- !u!114 &114839680147433748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8071,6 +8022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114856082680776092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8083,6 +8035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114856196483056592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8095,18 +8048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
---- !u!114 &114909737228638336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1619456207288630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92983466a9824d4a9b51c7ac5473681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114918315263737072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8119,6 +8061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114950339083200158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8131,6 +8074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!114 &114955618631088466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8258,6 +8202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleInfo: {fileID: 1728392301242080}
+  chocolate: {fileID: 0}
 --- !u!137 &137106428112155636
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -17874,6 +17819,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1232197174238030}
+--- !u!222 &222933755902967376
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808422318928050}
 --- !u!223 &223199691085581528
 Canvas:
   m_ObjectHideFlags: 1
@@ -17966,12 +17917,31 @@ RectTransform:
   - {fileID: 4381380945031428}
   - {fileID: 4457717447376640}
   - {fileID: 4727102259835210}
+  - {fileID: 224502598986476738}
   m_Father: {fileID: 4647283118531536}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 104.215004, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.13, y: 40.4}
+  m_AnchoredPosition: {x: 7.13, y: 40.142}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224502598986476738
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459567436029042}
+  m_LocalRotation: {x: -0, y: 0.18995598, z: -0, w: 0.98179257}
+  m_LocalPosition: {x: 0, y: 0, z: 0.978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224366285849663952}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 21.900002, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.029, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224610659885921698
@@ -18007,6 +17977,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224149853551846800}
+  - {fileID: 224812022558979708}
   m_Father: {fileID: 4647283118531536}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18015,3 +17986,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!224 &224812022558979708
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808422318928050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224790806395434078}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -203, y: 134}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}

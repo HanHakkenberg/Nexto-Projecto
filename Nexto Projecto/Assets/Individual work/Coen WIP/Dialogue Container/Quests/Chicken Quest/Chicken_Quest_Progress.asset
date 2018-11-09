@@ -14,7 +14,9 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Bucket
-    currDialogueBox: Have you rescued the chicken yet?
+    currDialogueBox: 'Have you rescued the chicken yet?!
+
+      Get him out of there please!!!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

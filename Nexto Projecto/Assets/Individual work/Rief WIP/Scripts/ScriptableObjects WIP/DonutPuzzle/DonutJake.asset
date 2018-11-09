@@ -14,8 +14,9 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Jake
-    currDialogueBox: What's this? Oh are these from Macy? How sweet! Let her know
-      I got them!
+    currDialogueBox: 'What''s this? Oh are these from Macy? How sweet!
+
+      Let her know I got them!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

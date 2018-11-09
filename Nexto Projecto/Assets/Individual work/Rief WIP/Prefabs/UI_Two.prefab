@@ -12718,10 +12718,22 @@ MonoBehaviour:
   playerTrans: {fileID: 0}
   cosmeticPos:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCam: {fileID: 0}
   cosmeticCamLoc:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cosmeticCam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   playerSkin: {fileID: 0}
   skinTone:
@@ -12837,13 +12849,44 @@ MonoBehaviour:
   eyeRight: {fileID: 0}
   eyeType:
   - name: Blue
-    colour: {fileID: 2100000, guid: 4c0854629b959c443b857257497e8f55, type: 3}
+    colour: {fileID: 2100000, guid: bab7e3661bd19ea4b9c8b59fd54db05c, type: 2}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Green
+    colour: {fileID: 2100000, guid: 287556df0f60680429780e349986bb53, type: 2}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Brown
+    colour: {fileID: 2100000, guid: d133eb2a0c3a9f746aa3fb3aefbb7531, type: 2}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Pink
+    colour: {fileID: 2100000, guid: d5b0f959f0a67574586e79e913415f0b, type: 2}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Purple
+    colour: {fileID: 2100000, guid: 36c016c31a2177743903a2e36927125d, type: 2}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: White
+    colour: {fileID: 2100000, guid: 30e84f96ccbc25d45b441583c73e4360, type: 2}
+    hairType: {fileID: 0}
+    locked: 0
+    cost: 0
+  - name: Gold
+    colour: {fileID: 2100000, guid: f0ca0c9e221716541a43a6f40624179e, type: 2}
     hairType: {fileID: 0}
     locked: 0
     cost: 0
   currEyesText: {fileID: 114856088015276742}
   eyesBuyButton: {fileID: 1570524955420356}
   eyeBuyText: {fileID: 114697564901146830}
+  currEyes: 0
   cosmeticPanel_temp: {fileID: 1560168503741242}
   skinNumb: 0
   hairNumb: 0

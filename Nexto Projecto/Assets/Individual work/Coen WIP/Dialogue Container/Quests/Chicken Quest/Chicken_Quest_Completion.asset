@@ -19,14 +19,14 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Bucket
-    currDialogueBox: 'Here have this candy, i don''t need it and maybe/
+    currDialogueBox: 'Here have this candy, I don''t need it and maybe
 
       you can get a use out of it!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Bucket
-    currDialogueBox: Thanks again!!
+    currDialogueBox: Thanks again!! Oh I'm so happy!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
