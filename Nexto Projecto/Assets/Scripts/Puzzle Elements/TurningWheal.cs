@@ -14,14 +14,14 @@ public class TurningWheal : MonoBehaviour {
     void Update() {
         newSpeed = speed * Time.deltaTime;
 
-        if(Input.GetButton("Fire1") && currentProgression + newSpeed < maxRot) {
-            transform.localEulerAngles += new Vector3(0, newSpeed);
+        if(Input.GetButton("Fire1") && currentProgression + newSpeed < 0) {
+            transform.localEulerAngles += new Vector3(0, 0, newSpeed);
             currentProgression += newSpeed;
             UpdateProgression();
             myAudio.Play();
         }
-        else if(Input.GetButton("Fire2") && currentProgression - newSpeed > 0) {
-            transform.localEulerAngles -= new Vector3(0, newSpeed);
+        else if(Input.GetButton("Fire2") && currentProgression - newSpeed > -90) {
+            transform.localEulerAngles -= new Vector3(0, 0, newSpeed);
             currentProgression -= newSpeed;
             UpdateProgression();
             myAudio.Play();
