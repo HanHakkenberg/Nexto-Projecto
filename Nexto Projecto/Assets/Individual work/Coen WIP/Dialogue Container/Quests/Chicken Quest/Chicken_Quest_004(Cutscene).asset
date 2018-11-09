@@ -19,7 +19,9 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Bucket
-    currDialogueBox: Return to me for your reward!
+    currDialogueBox: 'You need to be rewarded, return to me to get
+
+      your reward!!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

@@ -7,6 +7,7 @@ public class DonutPuzzle : MonoBehaviour {
     
     public GameObject donutCanvas;
     public TextMeshProUGUI timeText;
+    public TextMeshProUGUI chocoAmount;
     public int time;
     public int hit;
     public int allHit;
@@ -36,6 +37,8 @@ public class DonutPuzzle : MonoBehaviour {
         Finish();
         Inputs();
         Failed();
+
+        chocoAmount.text = hit + " / " + allHit;
     }
 
     public IEnumerator Countdown()

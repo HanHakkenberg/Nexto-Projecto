@@ -5,6 +5,7 @@ using UnityEngine;
 public class DonutOnTrigger : MonoBehaviour {
 
     public GameObject puzzleInfo;
+    public GameObject chocolate;
     bool hit = false;
 
 
@@ -14,6 +15,7 @@ public class DonutOnTrigger : MonoBehaviour {
         {
             hit = true;
             puzzleInfo.GetComponent<DonutPuzzle>().hit+=1;
+            Destroy(chocolate);
         }
             
     }

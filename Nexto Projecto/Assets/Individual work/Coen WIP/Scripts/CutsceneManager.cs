@@ -113,8 +113,8 @@ public class CutsceneManager : MonoBehaviour {
             _Cam.enabled = false;
         mainCam.enabled = true;
         yield return new WaitForSeconds(currentScene.endingDuration);
-        //pauseMenu.SetActive(true);
-        //GameManager.gameManager.statisticsParent.SetActive(true);
+        pauseMenu.SetActive(true);
+        GameManager.gameManager.statisticsParent.SetActive(true);
         blackscreen.SetBool("IsFading", false);
         if(currentScene.npc != null && currentScene.endDialogue != null) {
             DialogueManager.dialogueManager.LoadInNewDialogue(currentScene.endDialogue, currentScene.npc.transform);

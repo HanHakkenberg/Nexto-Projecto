@@ -32,6 +32,13 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ground-Stomp
+    currDialogueBox: 'You can destroy those annoying chocolate cages
+
+      too! Give it a try sometime!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Ground-Stomp
     currDialogueBox: 'There is one more ability left to get in this world,
 
       let''s hunt for it!'

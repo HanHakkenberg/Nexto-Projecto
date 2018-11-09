@@ -14,9 +14,11 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Bucket
-    currDialogueBox: 'Hey, i was already looking for some help!/
+    currDialogueBox: 'Hey, I was already looking for some help!
 
-      would you mind helping me?'
+      would you mind helping me?
+
+      Oh please help me!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

@@ -14,7 +14,9 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Bucket
-    currDialogueBox: If you want to help me then that'd be great!
+    currDialogueBox: 'Please help me get him out! He''s so lonely in
+
+      there...'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

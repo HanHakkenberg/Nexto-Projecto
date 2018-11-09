@@ -14,21 +14,27 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Bucket
-    currDialogueBox: There's this chicken and he's stuck in this cage here.
+    currDialogueBox: 'There''s a chicken stuck in this cage
+
+      made out of chocolate!!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Bucket
-    currDialogueBox: 'He''s stuck there and i want to get him out.
+    currDialogueBox: 'He''s stuck there and I want to get him out!
+
+      Oh please help him!
 
 '
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Bucket
-    currDialogueBox: 'There are several levers spread around the level,/
+    currDialogueBox: 'There are several levers spread around the level,
 
-      maybe try activating those, there are 3 of them i think.'
+      maybe try activating those, there are 3 of them I think..
+
+      Please do something!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
