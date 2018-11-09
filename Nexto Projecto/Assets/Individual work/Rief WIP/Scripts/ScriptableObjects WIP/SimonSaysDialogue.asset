@@ -14,7 +14,17 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Simon
-    currDialogueBox: Simon Says! Complete all rounds and receive a nice reward!
+    currDialogueBox: Please help me, I don't know how to solve this!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Simon
+    currDialogueBox: Lights blink, but I don't know what to do afterwards!
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 0
+  - name: Ivan
+    currDialogueBox: I think you need to press the ones that light up!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

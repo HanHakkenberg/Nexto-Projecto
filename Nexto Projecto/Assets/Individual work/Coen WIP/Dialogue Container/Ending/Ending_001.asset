@@ -21,12 +21,12 @@ MonoBehaviour:
   - name: Ivan
     currDialogueBox: 'We did what no one else has done before, and gotten hands
 
-      on the legendary golden diaper.'
+      on the Legendary Golden Diaper.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Ivan
-    currDialogueBox: And now that we got it, it's finally time for some rest.
+    currDialogueBox: And now that we got it, it's finally time for some snacks!
     options:
       shouldWaitAtSpace: 0
       waitTime: 0

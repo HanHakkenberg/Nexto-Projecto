@@ -14,21 +14,21 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Double-Jump
-    currDialogueBox: 'Congratulations! You have unlocked the "Double-Jump"/
+    currDialogueBox: 'Congratulations! You have unlocked the "Double-Jump"
 
       ability!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Double-Jump
-    currDialogueBox: 'To use it, simply press the space bar twice, this makes you/
+    currDialogueBox: 'To use it, simply press the space bar twice, this makes you
 
       jump even higher!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: Double-Jump
-    currDialogueBox: 'There are a few more candies hidden around the land,/
+    currDialogueBox: 'There are a few more candies hidden around the land,
 
       why not find them?
 

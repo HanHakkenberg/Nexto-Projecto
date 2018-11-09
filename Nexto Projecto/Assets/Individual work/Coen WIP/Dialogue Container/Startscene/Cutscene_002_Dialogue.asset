@@ -19,37 +19,47 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: 'There are alot of citizens that need help,/
+    currDialogueBox: 'There are a lot of citizens that need help,
 
       and really are NOT older then the age of... 1 and a half...'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: 'But that doesn''t matter!/
+    currDialogueBox: 'But that doesn''t matter!
 
 '
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: 'But you <Insert name here>,/
+    currDialogueBox: 'Your goal is to achieve what the other
 
-      your goal is to achieve what the other.
-
-      baby''s could not accomplish in the past 1.5 years...'
+      babies couldn''t in the past 1.5 years...'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: Its the...
+    currDialogueBox: Its..
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
   - name: ???
-    currDialogueBox: The Golden Rattle.
+    currDialogueBox: The Golden Diaper!
     options:
       shouldWaitAtSpace: 1
+      waitTime: 0.75
+  - name: ???
+    currDialogueBox: 'This diaper will make your dreams become
+
+      reality. You''ll be set for life!'
+    options:
+      shouldWaitAtSpace: 0
+      waitTime: 1
+  - name: ???
+    currDialogueBox: But even you will need a little bit of help..
+    options:
+      shouldWaitAtSpace: 0
       waitTime: 1
   shouldActivateFunctions: 1
   functionsToBeActivated: {fileID: 11400000, guid: 87b19002b110cb24390f5f79b8be5471,

@@ -11,22 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b05962aa0254bc43bdeeef36254c458, type: 3}
   m_Name: QuestOneActiveDialogue
   m_EditorClassIdentifier: 
-  timeTillNewChar: 0.01
+  timeTillNewChar: 0.05
   dialogue:
-  - name: Nigger Baby
-    currDialogueBox: "Suhhhhh Nigga got me some memes yet?\t"
+  - name: Farmer Joe
+    currDialogueBox: Please help me collect the eggs from these chickens
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4
-  - name: You xDDDD
-    currDialogueBox: Nahhh dawg xDDDDDDDD
-    options:
-      shouldWaitAtSpace: 0
-      waitTime: 1.4
-  - name: Nigger Baby
-    currDialogueBox: 'nigga wtf xD go get me some
+  - name: Farmer Joe
+    currDialogueBox: 'They''re delicious chocolate eggs and we need them
 
-'
+      to feed our village.'
     options:
       shouldWaitAtSpace: 0
       waitTime: 1.4
