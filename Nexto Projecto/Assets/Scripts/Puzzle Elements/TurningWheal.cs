@@ -11,6 +11,10 @@ public class TurningWheal : MonoBehaviour {
 
     float newSpeed;
 
+    private void Start() {
+        currentProgression = progression.Value;
+    }
+
     void Update() {
         newSpeed = speed * Time.deltaTime;
 

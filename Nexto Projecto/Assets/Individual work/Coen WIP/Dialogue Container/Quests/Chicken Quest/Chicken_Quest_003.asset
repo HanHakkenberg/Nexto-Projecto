@@ -19,5 +19,6 @@ MonoBehaviour:
       shouldWaitAtSpace: 0
       waitTime: 0
   shouldActivateFunctions: 0
-  functionsToBeActivated: {fileID: 0}
+  functionsToBeActivated: {fileID: 11400000, guid: e67656e0764f60d4d913a1337b1473e4,
+    type: 2}
   timeTillActivation: 1
