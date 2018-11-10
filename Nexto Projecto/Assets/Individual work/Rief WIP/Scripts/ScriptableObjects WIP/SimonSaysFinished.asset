@@ -14,7 +14,9 @@ MonoBehaviour:
   timeTillNewChar: 0.05
   dialogue:
   - name: Simon
-    currDialogueBox: Oh wow! You're amazing! meer weet ik niet dus succes Soraya.
+    currDialogueBox: 'Oh wow! You''re amazing! Take these candies
+
+      as my thanks!'
     options:
       shouldWaitAtSpace: 0
       waitTime: 0
